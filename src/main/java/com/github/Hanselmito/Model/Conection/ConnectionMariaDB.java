@@ -7,16 +7,16 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConectionMariaDB {
-    private final static String FILE="Conection.xml";
+    private final static String FILE="connection.xml";
     private static ConectionMariaDB _instance;
     private static Connection conn;
 
     private ConectionMariaDB(){
-        ConectionPropeties propeties = (ConectionPropeties) XMLmanager.readXML(new ConectionPropeties(),FILE);
+        ConnectionProperties properties = (ConnectionProperties) XMLmanager.readXML(new ConnectionProperties(),FILE);
 
         try {
             conn = DriverManager.getConnection
-                    (propeties.getURL(),propeties.getUser(), propeties.getPassword()
+                    (properties.getURL(),properties.getUser(), properties.getPassword()
                     );
         } catch (SQLException e) {
             e.printStackTrace();

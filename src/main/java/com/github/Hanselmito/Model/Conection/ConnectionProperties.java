@@ -5,9 +5,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
-@XmlRootElement(name="Conection")
+@XmlRootElement(name="Connection")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ConectionPropeties implements Serializable {
+public class ConnectionPropeties implements Serializable {
     private static final long serialVersionUID=1L;
     private String server;
     private String port;
@@ -15,10 +15,10 @@ public class ConectionPropeties implements Serializable {
     private String user;
     private String password;
 
-    public ConectionPropeties() {
+    public ConnectionPropeties() {
     }
 
-    public ConectionPropeties(String server, String port, String database, String user, String password) {
+    public ConnectionPropeties(String server, String port, String database, String user, String password) {
         this.server = server;
         this.port = port;
         this.database = database;
