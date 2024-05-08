@@ -1,0 +1,20 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãå8Ö†º¸õ1J$8702ae02-1680-4756-8cdb-b1ced0d625e5
+Ê
+java:S26813"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(ÒıÆœ8Ú†º¸õ1J$71e38d55-d11e-4e07-b2b4-1a86c36caaf6
+É
+java:S1186a"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8ø†º¸õ1J$dc85c718-2669-4777-8ab2-937aebc3ce5a
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÕÅˆ°ıÿÿÿÿ8€‡º¸õ1J$d0587bca-cbea-48bd-ad84-20ccfa1093d0
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ùĞ–ó8€‡º¸õ1J$696a855c-72f5-4d35-a698-06972b1f8fa3
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(úàà8‡º¸õ1J$26200546-1f4f-449f-a537-4bafaf211341
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¼àáú8‡º¸õ1J$3eb82bcf-df6d-427b-88cd-46cb228c27ed
+h
+java:S1128"FRemove this unused import 'com.github.Hanselmito.Model.Entity.object'.(’åÑñÿÿÿÿÿ8ƒĞ¸õ1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ƒĞ¸õ1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ƒĞ¸õ1

@@ -1,0 +1,8 @@
+
+‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßñôøÿÿÿÿJ$8a9878e3-99e0-46df-b8e3-ea8c487e172a
+‘	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï£”ãùÿÿÿÿJ$e7a70253-8284-402b-84ea-71716c205bff
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶üçŞıÿÿÿÿJ$80b4d127-16c6-4437-b930-ac5f2aa2f13a
+	java:S116
+"RRename this field "IDBiome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í˜ÅšJ$49a63aea-2e85-4b3e-950c-52ea60918f66
+”	java:S116"TRename this field "NameBiome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©‡ÑìøÿÿÿÿJ$406a4204-29fb-42ca-84e5-36c0c5e80dcc
+	java:S116"^Rename this field "GenerationDificulty" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ˆ÷’ûÿÿÿÿJ$7d335abb-8d61-4495-9707-fba0b81dbc98

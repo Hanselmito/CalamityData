@@ -1,6 +1,8 @@
 module com.github.Hanselmito {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires java.xml.bind;
 
     opens com.github.Hanselmito to javafx.fxml;
     opens com.github.Hanselmito.Model.Conection to java.xml.bind;

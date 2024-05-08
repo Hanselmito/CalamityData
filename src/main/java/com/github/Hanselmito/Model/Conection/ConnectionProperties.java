@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @XmlRootElement(name="Connection")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ConnectionPropeties implements Serializable {
+public class ConnectionProperties implements Serializable {
     private static final long serialVersionUID=1L;
     private String server;
     private String port;
@@ -15,10 +15,10 @@ public class ConnectionPropeties implements Serializable {
     private String user;
     private String password;
 
-    public ConnectionPropeties() {
+    public ConnectionProperties() {
     }
 
-    public ConnectionPropeties(String server, String port, String database, String user, String password) {
+    public ConnectionProperties(String server, String port, String database, String user, String password) {
         this.server = server;
         this.port = port;
         this.database = database;
@@ -68,7 +68,7 @@ public class ConnectionPropeties implements Serializable {
 
     @Override
     public String toString() {
-        return "ConenctionPropeties{" +
+        return "ConnectionProperties{" +
                 "server='" + server + '\'' +
                 ", port='" + port + '\'' +
                 ", database='" + database + '\'' +
