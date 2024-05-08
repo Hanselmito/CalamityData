@@ -1,0 +1,8 @@
+
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ È÷
+k	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÎÊ€ıÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÌÃôÓ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶üçŞıÿÿÿÿ
+h	java:S116	"SRename this field "IDObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬±±å
+j	java:S116"URename this field "NameObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ç
+k	java:S116"QRename this field "Effect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à™æîûÿÿÿÿ

@@ -1,0 +1,18 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Òëòüÿÿÿÿ8 „¸õ1
+c
+java:S2095"FUse try-with-resources or close this "BiomeDAO" in a "finally" clause.(Û¸Ö˜8ª„¸õ1
+i
+java:S2095""GUse try-with-resources or close this "EnemysDAO" in a "finally" clause.(ÂÓ¢¯ıÿÿÿÿ8ª„¸õ1
+L	java:S106$"+Replace this use of System.out by a logger.(¤Ìğ üÿÿÿÿ8³„¸õ1
+h
+java:S1128"FRemove this unused import 'com.github.Hanselmito.Model.Dao.ObjectDAO'.(Î±ŒÕÿÿÿÿÿ8´„¸õ1
+b
+java:S1128"ERemove this unused import 'com.github.Hanselmito.Model.Dao.WorldDAO'.(„ü¥ï8µ„¸õ1
+g
+java:S1128
+"ERemove this unused import 'com.github.Hanselmito.Model.Entity.World'.(ÕéÕÿÿÿÿÿ8µ„¸õ1
+h
+java:S1128"FRemove this unused import 'com.github.Hanselmito.Model.Entity.object'.(’åÑñÿÿÿÿÿ8¶„¸õ1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¶„¸õ1

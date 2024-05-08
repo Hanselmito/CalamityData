@@ -6,9 +6,6 @@
 <h1 style="font-size: 45px; text-align: center; color: rgb(144,21,30)">WikiCalamity</h1>
 </head>
 <body>
-<div style="text-align: right;">
-    <img height="200" src="src/main/resources/Icons/logoCala.jpg" width="200"/>
-    </div>
 <div style="text-align: left;">
     <p>
     WikiCalamity es una enciclopedia basada en el mod Calamity del juego Terraria 

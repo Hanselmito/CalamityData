@@ -1,0 +1,22 @@
+
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãåJ$3fcea726-27a5-4109-87e7-35371c588d23
+Â
+java:S1186s"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿJ$05b8b185-12ac-46b4-b141-ac97f2721f53
+†
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ïÁäåüÿÿÿÿJ$6bdfa2b1-e00a-4809-a590-aaeb54bc830a
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Â¡½§J$191c7405-cf39-4ac1-b273-98f8605e8fdf
+†
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µ»ÆæøÿÿÿÿJ$293c5a7a-c75c-4b0d-9d6d-d674385cc834
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ù›”¦J$8c2240a9-b315-468f-8bf8-c48d1bbf9ce4
+†
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(õó¢¥ÿÿÿÿÿJ$756e4ca9-d24c-49b3-942f-abceb59453b9
+’
+java:S1128"QRemove this unused import 'com.github.Hanselmito.Model.Entity.Enums.TipeEnemies'.(¥¥àøÿÿÿÿJ$13588057-f36d-4083-82bf-21e4b1d99e9a
+†
+java:S1128"ERemove this unused import 'com.github.Hanselmito.Model.Entity.World'.(ÕéÕÿÿÿÿÿJ$a4ed8650-b493-4026-9314-efa0c9ffeaa5
+‡
+java:S1128	"FRemove this unused import 'com.github.Hanselmito.Model.Entity.object'.(’åÑñÿÿÿÿÿJ$789d9fe6-ebfd-4888-80a0-f4979ec6bc43
+Œ
+java:S1128"KRemove this unused import 'com.github.Hanselmito.Model.Dao.WorldDAO.build'.(ÄÖõñıÿÿÿÿJ$fe90026a-a327-481f-91d2-a7b457513959

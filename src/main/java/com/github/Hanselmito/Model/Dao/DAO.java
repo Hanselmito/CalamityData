@@ -1,2 +1,11 @@
-package com.github.Hanselmito.Model.Dao;public interface DAO {
+package com.github.Hanselmito.Model.Dao;
+
+import java.io.Closeable;
+import java.sql.SQLException;
+
+public interface DAO <T> extends Closeable {
+    T save(T entity);
+    T update(T entity);
+    T delete(T entity) throws SQLException;
+    T findById(int key);
 }

@@ -1,0 +1,16 @@
+
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãåJ$834c848b-1d7a-468c-a918-d9ff06ca8e39
+Â
+java:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿJ$82e6df4c-5b58-4abb-9608-d49eb21d68f4
+€
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ì˜»uJ$6960d630-1252-4f28-9c70-a38865032203
+†
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ñ¯ëùÿÿÿÿJ$07c9ec93-8c83-4e24-945c-e9f1fe820288
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¸ä­§J$5b8f683d-a32b-4824-93c3-2831536f6c38
+†
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(­·¤ûÿÿÿÿJ$91076732-885e-4463-a7a6-b6910cf78cc7
+†
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÓÁºıÿÿÿÿJ$33ada449-6ada-4e5e-9c1a-e95c7ddd4bd1
+‡
+java:S1128"FRemove this unused import 'com.github.Hanselmito.Model.Entity.object'.(’åÑñÿÿÿÿÿJ$85099a88-b8b1-4e94-bdac-15fb4a07cee4

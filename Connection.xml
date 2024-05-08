@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Connection>
+    <server>localhost</server>
+    <port>3306</port>
+    <database>WikiCalamity</database>
+    <user>root</user>
+    <password>root</password>
+</Connection>

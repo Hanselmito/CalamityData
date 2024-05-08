@@ -1,0 +1,7 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Òëòüÿÿÿÿ
+a
+java:S2095"FUse try-with-resources or close this "WorldDAO" in a "finally" clause.(•‹´³ıÿÿÿÿ
+@	java:S106
+"+Replace this use of System.out by a logger.(Œ­ÿ…
+V	java:S125"<This block of commented-out lines of code should be removed.(ëì´éüÿÿÿÿ

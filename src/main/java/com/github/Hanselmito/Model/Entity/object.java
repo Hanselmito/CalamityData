@@ -5,18 +5,20 @@ import com.github.Hanselmito.Model.Entity.Enums.TipeClass;
 
 import java.util.Objects;
 
-public class Obgect {
+public class object {
     private int IDObject=20;
+    private World world;
     private String NameObject;
     private TipeObject tipeObject;
     private String Effect;
     private TipeClass tipeClass;
 
-    public Obgect() {
+    public object() {
     }
 
-    public Obgect(int IDObject, String nameObject, TipeObject tipeObject, String effect, TipeClass tipeClass) {
+    public object(int IDObject, World world, String nameObject, TipeObject tipeObject, String effect, TipeClass tipeClass) {
         this.IDObject = IDObject;
+        this.world = world;
         NameObject = nameObject;
         this.tipeObject = tipeObject;
         Effect = effect;
@@ -29,6 +31,14 @@ public class Obgect {
 
     public void setIDObject(int IDObject) {
         this.IDObject = IDObject;
+    }
+
+    public World getWorld() {
+        return world;
+    }
+
+    public void setWorld(World world) {
+        this.world = world;
     }
 
     public String getNameObject() {
@@ -65,8 +75,9 @@ public class Obgect {
 
     @Override
     public String toString() {
-        return "Obgect{" +
+        return "object{" +
                 "IDObject=" + IDObject +
+                ", world=" + world +
                 ", NameObject='" + NameObject + '\'' +
                 ", tipeObject=" + tipeObject +
                 ", Effect='" + Effect + '\'' +
@@ -78,7 +89,12 @@ public class Obgect {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Obgect obgect = (Obgect) o;
-        return IDObject == obgect.IDObject && Objects.equals(NameObject, obgect.NameObject) && tipeObject == obgect.tipeObject && Objects.equals(Effect, obgect.Effect) && tipeClass == obgect.tipeClass;
+        object object = (object) o;
+        return IDObject == object.IDObject && Objects.equals(world, object.world) && Objects.equals(NameObject, object.NameObject) && tipeObject == object.tipeObject && Objects.equals(Effect, object.Effect) && tipeClass == object.tipeClass;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(IDObject, world, NameObject, tipeObject, Effect, tipeClass);
     }
 }
