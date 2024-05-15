@@ -4,6 +4,7 @@ import com.github.Hanselmito.Model.Conection.ConnectionMariaDB;
 import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.Enemys;
 import com.github.Hanselmito.Model.Entity.Enums.Dificulty;
+import com.github.Hanselmito.Model.Entity.Enums.SizeWorld;
 import com.github.Hanselmito.Model.Entity.Enums.TipeEnemies;
 import com.github.Hanselmito.Model.Entity.Enums.ZoneGenerate;
 import com.github.Hanselmito.Model.Entity.World;
@@ -23,6 +24,7 @@ public class BiomeDAO implements DAO<Biome>{
     private final static String INSERT="INSERT INTO Biome (IDBiome,IDWorld,NameBiome,ZoneGenerate,GenerationDificulty) VALUES (?,?,?,?,?)";
     private final static String UPDATE="UPDATE Biome SET IDWorld=?,NameBiome=?,ZoneGenerate=?,GenerationDificulty=? WHERE IDBiome=?";
     private final static String FINDBYID="SELECT b.IDBiome,b.IDWorld,b.NameBiome,b.ZoneGenerate,b.GenerationDificulty FROM Biome AS b WHERE b.IDBiome=?";
+    private final static String FINDBYDIFICULTY="SELECT b.IDBiome,b.IDWorld,b.NameBiome,b.ZoneGenerate,b.GenerationDificulty FROM Biome AS b WHERE b.GenerationDificulty=?";
     private final static String FINDALL="SELECT b.IDBiome,b.IDWorld,b.NameBiome,b.ZoneGenerate,b.GenerationDificulty FROM Biome AS b";
     private final static String DELETE="DELETE FROM Biome AS b WHERE b.IDBiome=?";
 
@@ -115,6 +117,27 @@ public class BiomeDAO implements DAO<Biome>{
                 result.add(biome);
             }
             res.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public List<Biome> findByDificulty(String key) {
+        List<Biome> result = new ArrayList<>();
+        try(PreparedStatement pst = conn.prepareStatement(FINDBYDIFICULTY)){
+            pst.setString(1,String.valueOf(key));
+            try(ResultSet res = pst.executeQuery()){
+                while(res.next()){
+                    Biome biome = new Biome();
+                    biome.setIDBiome(res.getInt("IDBiome"));
+                    biome.setWorld(WorldDAO.build().findById(res.getInt("IDWorld")));
+                    biome.setNameBiome(res.getString("NameBiome"));
+                    biome.setZoneGenerate(ZoneGenerate.valueOf(res.getString("ZoneGenerate")));
+                    biome.setGenerationDificulty(Dificulty.valueOf(res.getString("GenerationDificulty")));
+                    result.add(biome);
+                }
+            }
         }catch (SQLException e){
             e.printStackTrace();
         }

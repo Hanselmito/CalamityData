@@ -3,6 +3,8 @@ module com.github.Hanselmito {
     requires javafx.fxml;
     requires java.sql;
     requires java.xml.bind;
+    requires javafx.media;
+    requires java.desktop;
 
     opens com.github.Hanselmito to javafx.fxml;
     opens com.github.Hanselmito.Model.Conection to java.xml.bind;
