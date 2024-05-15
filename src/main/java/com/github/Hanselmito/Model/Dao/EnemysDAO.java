@@ -1,10 +1,8 @@
 package com.github.Hanselmito.Model.Dao;
 
 import com.github.Hanselmito.Model.Conection.ConnectionMariaDB;
-import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.Enemys;
-import com.github.Hanselmito.Model.Entity.Enums.Dificulty;
-import com.github.Hanselmito.Model.Entity.Enums.TipeEnemies;
+import com.github.Hanselmito.Model.Entity.Enums.*;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -16,10 +14,10 @@ import java.util.List;
 
 public class EnemysDAO implements DAO<Enemys>{
     private final static String INSERT="INSERT INTO Enemys (IDEnemies,IDBiome,TipeEnemies,NameEnemies,DificultySpawn) VALUES (?,?,?,?,?)";
-    private final static String UPDATE="UPDATE enemys SET IDBiome=?,TipeEnemies=?,NameEnemies=?,DificultySpawn=? WHERE IDEnemies=?";
-    private final static String FINDBYID="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn FROM enemys AS e WHERE e.IDEnemies=?";
-    private final static String FINDALL="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn FROM Enemys AS e";
-    private final static String FINDBYBIOME="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn FROM enemys AS e WHERE e.IDBiome=?";
+    private final static String UPDATE="UPDATE enemys SET IDBiome=?,TipeEnemies=?,NameEnemies=?,DificultySpawn=?,Imagen=? WHERE IDEnemies=?";
+    private final static String FINDBYID="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn,e.Imagen FROM enemys AS e WHERE e.IDEnemies=?";
+    private final static String FINDALL="SELECT IDEnemies,e.IDBiome,TipeEnemies,NameEnemies,DificultySpawn,Imagen FROM enemys";
+    private final static String FINDBYTIPEENEMIES="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn,e.Imagen FROM enemys AS e WHERE e.TipeEnemies=?";
     private final static String DELETE="DELETE FROM enemys AS e WHERE e.IDEnemies=?";
 
     private Connection conn;
@@ -40,6 +38,7 @@ public class EnemysDAO implements DAO<Enemys>{
                 pst.setString(3,entity.getTipeEnemies().getTipe());
                 pst.setString(4,entity.getNameEnemies());
                 pst.setString(5,entity.getDificultySpawn().getPartOfDificulty());
+                pst.setBytes(6, entity.getImagen());
                 pst.executeUpdate();
 
             }catch (SQLException e){
@@ -58,7 +57,8 @@ public class EnemysDAO implements DAO<Enemys>{
             pst.setString(2,entity.getTipeEnemies().getTipe());
             pst.setString(3,entity.getNameEnemies());
             pst.setString(4,entity.getDificultySpawn().getPartOfDificulty());
-            pst.setInt(5,entity.getIDEnemies());
+            pst.setBytes(5, entity.getImagen());
+            pst.setInt(6,entity.getIDEnemies());
             pst.executeUpdate();
 
         }catch (SQLException e){
@@ -89,6 +89,7 @@ public class EnemysDAO implements DAO<Enemys>{
                     result.setTipeEnemies(TipeEnemies.valueOf(res.getString("TipeEnemies")));
                     result.setNameEnemies(res.getString("NameEnemies"));
                     result.setDificultySpawn(Dificulty.valueOf(res.getString("DificultySpawn")));
+                    result.setImagen(res.getBytes("Imagen"));
                 }
             }
         }catch (SQLException e){
@@ -109,6 +110,7 @@ public class EnemysDAO implements DAO<Enemys>{
                 enemy.setTipeEnemies(TipeEnemies.valueOf(res.getString("TipeEnemies")));
                 enemy.setNameEnemies(res.getString("NameEnemies"));
                 enemy.setDificultySpawn(Dificulty.valueOf(res.getString("DificultySpawn")));
+                enemy.setImagen(res.getBytes("Imagen"));
                 result.add(enemy);
             }
             res.close();
@@ -118,25 +120,23 @@ public class EnemysDAO implements DAO<Enemys>{
         return result;
     }
 
-    public List<Enemys> findByBiome(Biome b) {
-        List<Enemys> result = new ArrayList<>();
-        if(b==null || b.getIDBiome()==0) return result;
-        try(PreparedStatement pst = conn.prepareStatement(FINDBYBIOME)){
-            pst.setString(1, String.valueOf(b.getIDBiome()));
+    public List<Enemys> findByTipeEnemies(String key) {
+        List<Enemys> result =new ArrayList<>();
+        try(PreparedStatement pst = conn.prepareStatement(FINDBYTIPEENEMIES)){
+            pst.setString(1, String.valueOf(key));
             try(ResultSet res = pst.executeQuery()){
                 while(res.next()){
-                    Enemys en = new Enemys();
-                    en.setIDEnemies(res.getInt("IDEnemies"));
-                    en.setBiome(b);
-                    en.setTipeEnemies(TipeEnemies.valueOf(res.getString("TipeEnemies")));
-                    en.setBiome(b);
-                    en.setNameEnemies(res.getString("NameEnemies"));
-                    en.setBiome(b);
-                    en.setDificultySpawn(Dificulty.valueOf(res.getString("DificultySpawn")));
-                    result.add(en);
+                    Enemys enemy = new Enemys();
+                    enemy.setIDEnemies(res.getInt("IDEnemies"));
+                    enemy.setBiome(BiomeDAO.build().findById(res.getInt("IDBiome")));
+                    enemy.setTipeEnemies(TipeEnemies.valueOf(res.getString("TipeEnemies")));
+                    enemy.setNameEnemies(res.getString("NameEnemies"));
+                    enemy.setDificultySpawn(Dificulty.valueOf(res.getString("DificultySpawn")));
+                    enemy.setImagen(res.getBytes("Imagen"));
+                    result.add(enemy);
                 }
             }
-        } catch (SQLException e) {
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return result;

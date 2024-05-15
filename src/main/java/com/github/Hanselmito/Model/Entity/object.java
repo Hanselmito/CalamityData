@@ -75,14 +75,14 @@ public class object {
 
     @Override
     public String toString() {
-        return "object{" +
-                "IDObject=" + IDObject +
-                ", world=" + world +
-                ", NameObject='" + NameObject + '\'' +
-                ", tipeObject=" + tipeObject +
-                ", Effect='" + Effect + '\'' +
-                ", tipeClass=" + tipeClass +
-                '}';
+        return "|object|\n" +
+                "IDObject |" + IDObject +
+                "| world |" + world +
+                "| NameObject |'" + NameObject + '\'' +
+                "| tipeObject |" + tipeObject +
+                "| Effect |'" + Effect + '\'' +
+                "| tipeClass |" + tipeClass +
+                "|\n";
     }
 
     @Override

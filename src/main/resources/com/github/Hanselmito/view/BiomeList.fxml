@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FromBiomeController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../../Icons/fondo3.png" />
+         </image>
+      </ImageView>
+      <MenuBar fx:id="menuBar" layoutX="-1.0" layoutY="-2.0" prefHeight="29.0" prefWidth="600.0" AnchorPane.bottomAnchor="372.6666666666667" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.6666666666666288" AnchorPane.topAnchor="-2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#goToMenu" text="Menu" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="ListarBioma">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#ListBiomeDificultyPH" text="ListarPreHardmode" />
+                  <MenuItem mnemonicParsing="false" onAction="#ListBiomeDificultyH" text="ListarHardmode" />
+                  <MenuItem mnemonicParsing="false" onAction="#ListBiomeDificultyPM" text="ListarPostMoonlord" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="54.0" prefHeight="332.0" prefWidth="464.0">
+        <columns>
+          <TableColumn fx:id="ColumnIDBiome" prefWidth="48.666659355163574" text="IDB" />
+          <TableColumn fx:id="ColumnIDWorld" prefWidth="62.000003814697266" text="IDW" />
+            <TableColumn fx:id="ColumnName" prefWidth="91.3332748413086" text="Nombre" />
+            <TableColumn fx:id="ColumnZoneGenerate" prefWidth="126.66668701171875" text="ZonaGenerada" />
+            <TableColumn fx:id="ColumnGenerationDificulty" prefWidth="132.6666259765625" text="DificultaGenerada" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

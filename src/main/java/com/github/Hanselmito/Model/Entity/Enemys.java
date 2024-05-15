@@ -11,16 +11,18 @@ public class Enemys {
     private TipeEnemies tipeEnemies;
     private String NameEnemies;
     private Dificulty DificultySpawn;
+    private byte[] Imagen;
 
     public Enemys() {
     }
 
-    public Enemys(int IDEnemies, Biome biome, TipeEnemies tipeEnemies, String nameEnemies, Dificulty dificultySpawn) {
+    public Enemys(int IDEnemies, Biome biome, TipeEnemies tipeEnemies, String nameEnemies, Dificulty dificultySpawn, byte[] imagen) {
         this.IDEnemies = IDEnemies;
         this.biome = biome;
         this.tipeEnemies = tipeEnemies;
         NameEnemies = nameEnemies;
         DificultySpawn = dificultySpawn;
+        Imagen = imagen;
     }
 
     public int getIDEnemies() {
@@ -63,15 +65,25 @@ public class Enemys {
         DificultySpawn = dificultySpawn;
     }
 
+    public byte[] getImagen() {
+        return Imagen;
+    }
+
+    public void setImagen(byte[] imagen) {
+        Imagen = imagen;
+    }
+
+
     @Override
     public String toString() {
-        return "Enemys{" +
-                "IDEnemies=" + IDEnemies +
-                ", biome=" + biome +
-                ", tipeEnemies=" + tipeEnemies +
-                ", NameEnemies='" + NameEnemies + '\'' +
-                ", DificultySpawn=" + DificultySpawn +
-                '}';
+        return "|Enemys|\n" +
+                "IDEnemies |" + IDEnemies +
+                "| biome |" + biome +
+                "| tipeEnemies |" + tipeEnemies +
+                "| NameEnemies |'" + NameEnemies + '\'' +
+                "| DificultySpawn |" + DificultySpawn +
+                "| Imagen |" + Imagen +
+                "|\n";
     }
 
     @Override
@@ -79,11 +91,11 @@ public class Enemys {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Enemys enemys = (Enemys) o;
-        return IDEnemies == enemys.IDEnemies && Objects.equals(biome, enemys.biome) && tipeEnemies == enemys.tipeEnemies && Objects.equals(NameEnemies, enemys.NameEnemies) && DificultySpawn == enemys.DificultySpawn;
+        return IDEnemies == enemys.IDEnemies;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(IDEnemies, biome, tipeEnemies, NameEnemies, DificultySpawn);
+        return Objects.hash(NameEnemies);
     }
 }

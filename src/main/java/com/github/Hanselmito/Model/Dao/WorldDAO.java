@@ -4,6 +4,8 @@ import com.github.Hanselmito.Model.Conection.ConnectionMariaDB;
 import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.Enums.Dificulty;
 import com.github.Hanselmito.Model.Entity.Enums.SizeWorld;
+import com.github.Hanselmito.Model.Entity.Enums.TipeClass;
+import com.github.Hanselmito.Model.Entity.Enums.TipeObject;
 import com.github.Hanselmito.Model.Entity.World;
 import com.github.Hanselmito.Model.Entity.object;
 
@@ -18,7 +20,9 @@ import java.util.List;
 public class WorldDAO implements DAO<World>{
     private final static String INSERT="INSERT INTO World (IDWorld,Dificulty,SizeWorld) VALUES (?, ?, ?)";
     private final static String UPDATE="UPDATE World SET Dificulty=?,SizeWorld=? WHERE IDWorld=?";
-    private final static String FINDBYID="SELECT a.IDWorld,a.Dificulty,a.SizeWorld FROM World AS a WHERE a.IDWorld=?";
+    private final static String FINDBYID="SELECT w.IDWorld,w.Dificulty,w.SizeWorld FROM World AS w WHERE w.IDWorld=?";
+    private final static String FINDALL="SELECT IDWorld,Dificulty,SizeWorld FROM World";
+    private final static String FINDBYDIFICULTY="SELECT w.IDWorld,w.Dificulty,w.SizeWorld FROM World AS w WHERE w.Dificulty=?";
     private final static String DELETE="DELETE FROM World AS a WHERE a.IDWorld=?";
 
     private Connection conn;
@@ -86,9 +90,46 @@ public class WorldDAO implements DAO<World>{
         }catch (SQLException e){
             e.printStackTrace();
         }
-
         return result;
     }
+
+    public List<World> findAll() {
+        List<World> result = new ArrayList<>();
+        try (PreparedStatement pst = conn.prepareStatement(FINDALL)){
+            ResultSet res = pst.executeQuery();
+            while(res.next()){
+                World world = new World();
+                world.setIDWorld(res.getInt("IDWorld"));
+                world.setDificulty(Dificulty.valueOf(res.getString("Dificulty")));
+                world.setSizeWorld(SizeWorld.valueOf(res.getString("SizeWorld")));
+                result.add(world);
+            }
+            res.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public List<World> findByDificulty(String key) {
+        List<World> result =new ArrayList<>();
+        try(PreparedStatement pst = conn.prepareStatement(FINDBYDIFICULTY)){
+            pst.setString(1, String.valueOf(key));
+            try(ResultSet res = pst.executeQuery()){
+                while(res.next()){
+                    World world = new World();
+                    world.setIDWorld(res.getInt("IDWorld"));
+                    world.setDificulty(Dificulty.valueOf(res.getString("Dificulty")));
+                    world.setSizeWorld(SizeWorld.valueOf(res.getString("SizeWorld")));
+                    result.add(world);
+                }
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+
     public static WorldDAO build(){
         return new WorldDAO();
     }

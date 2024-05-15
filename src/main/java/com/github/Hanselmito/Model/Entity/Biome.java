@@ -100,13 +100,13 @@ public class Biome {
 
     @Override
     public String toString() {
-        return "Biome{" +
-                "IDBiome=" + IDBiome +
-                ", world=" + world +
-                ", NameBiome='" + NameBiome + '\'' +
-                ", zoneGenerate=" + zoneGenerate +
-                ", GenerationDificulty=" + GenerationDificulty +
-                '}';
+        return "|Biome|\n" +
+                "IDBiome |" + IDBiome +
+                "| world |" + world +
+                "| NameBiome |'" + NameBiome + '\'' +
+                "| zoneGenerate |" + zoneGenerate +
+                "| GenerationDificulty |" + GenerationDificulty +
+                "|\n";
     }
 
     @Override

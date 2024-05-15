@@ -89,13 +89,13 @@ public class World {
 
     @Override
     public String toString() {
-        return "World{" +
-                "IDWorld=" + IDWorld +
-                ", dificulty=" + dificulty +
-                ", sizeWorld=" + sizeWorld +
-                ", objects=" + objects +
-                ", biomes=" + biomes +
-                '}';
+        return "World|\n" +
+                "IDWorld |" + IDWorld +
+                "| dificulty |" + dificulty +
+                "| sizeWorld |" + sizeWorld +
+                "| objects |" + objects +
+                "| biomes |" + biomes +
+                "|\n";
     }
 
     @Override

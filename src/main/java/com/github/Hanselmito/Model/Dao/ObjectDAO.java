@@ -1,6 +1,8 @@
 package com.github.Hanselmito.Model.Dao;
 
 import com.github.Hanselmito.Model.Conection.ConnectionMariaDB;
+import com.github.Hanselmito.Model.Entity.Enums.Dificulty;
+import com.github.Hanselmito.Model.Entity.Enums.SizeWorld;
 import com.github.Hanselmito.Model.Entity.Enums.TipeClass;
 import com.github.Hanselmito.Model.Entity.Enums.TipeObject;
 import com.github.Hanselmito.Model.Entity.object;
@@ -18,7 +20,9 @@ public class ObjectDAO implements DAO<object>{
     private final static String INSERT="INSERT INTO Object (IDObject,IDWorld,NameObject,TipeObject,Effect,TipeClass) VALUES (?,?,?,?,?,?)";
     private final static String UPDATE="UPDATE Object SET IDWorld=?,NameObject=?,TipeObject=?,Effect=?,TipeClass=? WHERE IDObject=?";
     private final static String FINDBYID="SELECT o.IDObject,o.IDWorld,o.NameObject,o.TipeObject,o.Effect,o.TipeClass FROM Object AS o WHERE o.IDObject=?";
-    private final static String FINDALL="SELECT o.IDObject,o.IDWorld,o.NameObject,o.TipeObject,o.Effect,o.TipeClass FROM Object AS o";
+    private final static String FINDALL="SELECT IDObject,IDWorld,NameObject,TipeObject,Effect,TipeClass FROM Object";
+    private final static String FINDBYTIPEOBJECT="SELECT o.IDObject,o.IDWorld,o.NameObject,o.TipeObject,o.Effect,o.TipeClass FROM Object AS o WHERE o.TipeObject=?";
+    private final static String FINDBYTIPECLASS="SELECT o.IDObject,o.IDWorld,o.NameObject,o.TipeObject,o.Effect,o.TipeClass FROM Object AS o WHERE o.TipeClass=?";
     private final static String DELETE="DELETE FROM Object AS o WHERE o.IDObject=?";
 
     private Connection conn;
@@ -115,6 +119,50 @@ public class ObjectDAO implements DAO<object>{
                 result.add(objects);
             }
             res.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public List<object> findByTipeObject(String key) {
+        List<object> result = new ArrayList<>();
+        try(PreparedStatement pst = conn.prepareStatement(FINDBYTIPEOBJECT)){
+            pst.setString(1, String.valueOf(key));
+            try(ResultSet res = pst.executeQuery()){
+                while(res.next()){
+                    object objects = new object();
+                    objects.setIDObject(res.getInt("IDObject"));
+                    objects.setWorld(WorldDAO.build().findById(res.getInt("IDWorld")));
+                    objects.setNameObject(res.getString("NameObject"));
+                    objects.setTipeObject(TipeObject.valueOf(res.getString("TipeObject")));
+                    objects.setEffect(res.getString("Effect"));
+                    objects.setTipeClass(TipeClass.valueOf(res.getString("TipeClass")));
+                    result.add(objects);
+                }
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public List<object> findByTipeClass(String key) {
+        List<object> result = new ArrayList<>();
+        try(PreparedStatement pst = conn.prepareStatement(FINDBYTIPECLASS)){
+            pst.setString(1, String.valueOf(key));
+            try(ResultSet res = pst.executeQuery()){
+                while(res.next()){
+                    object objects = new object();
+                    objects.setIDObject(res.getInt("IDObject"));
+                    objects.setWorld(WorldDAO.build().findById(res.getInt("IDWorld")));
+                    objects.setNameObject(res.getString("NameObject"));
+                    objects.setTipeObject(TipeObject.valueOf(res.getString("TipeObject")));
+                    objects.setEffect(res.getString("Effect"));
+                    objects.setTipeClass(TipeClass.valueOf(res.getString("TipeClass")));
+                    result.add(objects);
+                }
+            }
         }catch (SQLException e){
             e.printStackTrace();
         }

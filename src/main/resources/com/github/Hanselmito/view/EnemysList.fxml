@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FromEnemysController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="574.0">
+         <image>
+            <Image url="@../../../../Icons/fondo4.png" />
+         </image>
+      </ImageView>
+      <MenuBar fx:id="menuBar" layoutX="-1.0" prefHeight="30.0" prefWidth="600.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.6666666666666288" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#goToMenu" text="Menu" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="ListarPorEnemigos">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#ListTipeEnemys" text="Enemies" />
+                  <MenuItem mnemonicParsing="false" onAction="#ListTipeMiniBosses" text="MiniBosses" />
+                  <MenuItem mnemonicParsing="false" onAction="#ListTipeBosses" text="Bosses" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tableView" editable="true" layoutX="14.0" layoutY="51.0" prefHeight="335.0" prefWidth="552.0">
+        <columns>
+          <TableColumn fx:id="ColumnIDEnemies" prefWidth="56.666625022888184" text="IDE" />
+          <TableColumn fx:id="ColumnIDBiome" prefWidth="54.666656494140625" text="IDB" />
+            <TableColumn fx:id="ColumnTipeEnemies" prefWidth="98.66671752929688" text="TipoEnemigo" />
+            <TableColumn fx:id="ColumnNameEnemies" prefWidth="108.6666259765625" text="NameEnemigo" />
+            <TableColumn fx:id="ColumnDificultySpawn" prefWidth="97.3333740234375" text="SpawnDifi" />
+            <TableColumn fx:id="ColumnImagen" prefWidth="131.99993896484375" text="Imagen" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
