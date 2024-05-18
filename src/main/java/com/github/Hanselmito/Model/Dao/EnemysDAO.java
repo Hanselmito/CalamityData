@@ -13,10 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EnemysDAO implements DAO<Enemys>{
-    private final static String INSERT="INSERT INTO Enemys (IDEnemies,IDBiome,TipeEnemies,NameEnemies,DificultySpawn) VALUES (?,?,?,?,?)";
+    private final static String INSERT="INSERT INTO Enemys (IDEnemies,IDBiome,TipeEnemies,NameEnemies,DificultySpawn,Imagen) VALUES (?,?,?,?,?,?)";
     private final static String UPDATE="UPDATE enemys SET IDBiome=?,TipeEnemies=?,NameEnemies=?,DificultySpawn=?,Imagen=? WHERE IDEnemies=?";
     private final static String FINDBYID="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn,e.Imagen FROM enemys AS e WHERE e.IDEnemies=?";
-    private final static String FINDALL="SELECT IDEnemies,e.IDBiome,TipeEnemies,NameEnemies,DificultySpawn,Imagen FROM enemys";
+    private final static String FINDALL="SELECT IDEnemies,IDBiome,TipeEnemies,NameEnemies,DificultySpawn,Imagen FROM enemys";
     private final static String FINDBYTIPEENEMIES="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn,e.Imagen FROM enemys AS e WHERE e.TipeEnemies=?";
     private final static String DELETE="DELETE FROM enemys AS e WHERE e.IDEnemies=?";
 
@@ -73,6 +73,8 @@ public class EnemysDAO implements DAO<Enemys>{
         try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETE)){
             pst.setInt(1,entity.getIDEnemies());
             pst.executeUpdate();
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
         return entity;
     }

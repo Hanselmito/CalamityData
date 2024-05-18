@@ -114,11 +114,11 @@ public class Biome {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Biome biome = (Biome) o;
-        return IDBiome == biome.IDBiome && Objects.equals(world, biome.world) && Objects.equals(NameBiome, biome.NameBiome) && zoneGenerate == biome.zoneGenerate && GenerationDificulty == biome.GenerationDificulty && Objects.equals(enemys, biome.enemys);
+        return IDBiome == biome.IDBiome;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(IDBiome, world, NameBiome, zoneGenerate, GenerationDificulty, enemys);
+        return Objects.hash(NameBiome);
     }
 }

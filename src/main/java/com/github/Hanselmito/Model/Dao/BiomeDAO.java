@@ -79,6 +79,8 @@ public class BiomeDAO implements DAO<Biome>{
         try (PreparedStatement pst = conn.prepareStatement(DELETE)){
             pst.setInt(1,entity.getIDBiome());
             pst.executeUpdate();
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
         return entity;
     }

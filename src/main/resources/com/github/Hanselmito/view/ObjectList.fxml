@@ -9,14 +9,19 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FromObjectController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="652.0" styleClass="Object" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FromObjectController">
    <children>
-      <ImageView fitHeight="403.0" fitWidth="652.0">
-         <image>
-            <Image url="@../../../../Icons/descarga.gif" />
-         </image>
-      </ImageView>
-      <MenuBar fx:id="menuBar" blendMode="LIGHTEN" layoutX="-1.0" opacity="0.87" prefHeight="28.0" prefWidth="652.0" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+      <TableView fx:id="tableView" layoutX="13.0" layoutY="38.0" opacity="0.78" prefHeight="355.0" prefWidth="628.0">
+        <columns>
+          <TableColumn fx:id="ColumnIDObject" prefWidth="55.99996852874756" text="ID" />
+          <TableColumn fx:id="ColumnIDWorld" prefWidth="58.666656494140625" text="IDWorld" />
+            <TableColumn fx:id="ColumnName" prefWidth="116.6666259765625" text="NameObject" />
+            <TableColumn fx:id="ColumnTObject" prefWidth="102.00006103515625" text="TipeObject" />
+            <TableColumn fx:id="ColumnEfect" prefWidth="200.66668701171875" text="Effect" />
+            <TableColumn fx:id="ColumnTClass" prefWidth="95.3333740234375" text="TipeClass" />
+        </columns>
+      </TableView>
+      <MenuBar fx:id="menuBar" layoutX="-1.0" opacity="0.87" prefHeight="28.0" prefWidth="652.0" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -45,15 +50,10 @@
             </Menu>
         </menus>
       </MenuBar>
-      <TableView fx:id="tableView" layoutX="13.0" layoutY="38.0" prefHeight="355.0" prefWidth="628.0">
-        <columns>
-          <TableColumn fx:id="ColumnIDObject" prefWidth="55.99996852874756" text="ID" />
-          <TableColumn fx:id="ColumnIDWorld" prefWidth="58.666656494140625" text="IDWorld" />
-            <TableColumn fx:id="ColumnName" prefWidth="116.6666259765625" text="NameObject" />
-            <TableColumn fx:id="ColumnTObject" prefWidth="102.00006103515625" text="TipeObject" />
-            <TableColumn fx:id="ColumnEfect" prefWidth="200.66668701171875" text="Effect" />
-            <TableColumn fx:id="ColumnTClass" prefWidth="95.3333740234375" text="TipeClass" />
-        </columns>
-      </TableView>
+      <ImageView fx:id="MaxWindow" fitHeight="39.0" fitWidth="25.0" layoutX="626.0" layoutY="1.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Icons/MaterialSymbolsTab.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

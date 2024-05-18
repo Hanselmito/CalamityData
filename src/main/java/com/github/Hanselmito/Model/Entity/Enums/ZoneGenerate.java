@@ -1,8 +1,8 @@
 package com.github.Hanselmito.Model.Entity.Enums;
 
 public enum ZoneGenerate {
-    Left("Left"),
-    right("Right"),
+    left("left"),
+    right("right"),
     Under("Under");
 
     private String Locate;

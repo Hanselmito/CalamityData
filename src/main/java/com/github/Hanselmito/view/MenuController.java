@@ -2,22 +2,16 @@ package com.github.Hanselmito.view;
 
 import com.github.Hanselmito.App;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -34,6 +28,14 @@ public class MenuController extends Controller implements Initializable {
     private Button buttonB;
     @FXML
     private Button buttonE;
+    @FXML
+    private Slider sliderMV;
+    @FXML
+    private ImageView buttonStop;
+    @FXML
+    private ImageView buttonPlay;
+    @FXML
+    private ImageView MaxWindow;
 
     private MediaPlayer mediaPlayer;
 
@@ -49,16 +51,49 @@ public class MenuController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Especifica la ruta del archivo de audio
+        /**Especifica la ruta del archivo de audio**/
         String musicFile = "src/main/resources/sound/roar-of-the-jungle-dragon.mp3";
 
-        // Crea un objeto Media
+        /** Crea el Media del sonido **/
         Media sound = new Media(new File(musicFile).toURI().toString());
 
-        // Crea el reproductor de medios y reproduce la música
-        mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
+        /**Crea el reproductor de medios si no existe**/
+        if (mediaPlayer == null) {
+            mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.setVolume(0.04);
+        }
 
+        /** Reproduce la música solo si no se está reproduciendo **/
+        if (mediaPlayer.getStatus() != MediaPlayer.Status.PLAYING) {
+            mediaPlayer.play();
+        }
+    }
+
+    @FXML
+    public void Volumen(){
+        mediaPlayer.setVolume(sliderMV.getValue());
+    }
+    @FXML
+    private void NoVolum(){
+        mediaPlayer.stop();
+    }
+    @FXML
+    public void StopMedia(){
+        mediaPlayer.stop();
+    }
+    @FXML
+    public void PlayMedia(){
+        mediaPlayer.play();
+    }
+
+    @FXML
+    private void MaximizedWindow(){
+        Stage stage = (Stage) MaxWindow.getScene().getWindow();
+        if (stage.isMaximized()){
+            stage.setMaximized(false);
+        }else{
+            stage.setMaximized(true);
+        }
     }
 
     @FXML

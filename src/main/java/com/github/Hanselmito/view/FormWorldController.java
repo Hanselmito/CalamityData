@@ -10,7 +10,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.List;
@@ -29,11 +31,22 @@ public class FormWorldController extends Controller implements Initializable {
     private TableColumn<World,String> ColumnDificulty;
     @FXML
     private TableColumn<World,String> ColumnsizeWorld;
+    @FXML
+    private ImageView MaxWindow;
 
     private ObservableList<World> world;
 
     @Override
     public void onOpen(Object input){
+    }
+    @FXML
+    private void MaximizedWindow(){
+        Stage stage = (Stage) MaxWindow.getScene().getWindow();
+        if (stage.isMaximized()){
+            stage.setMaximized(false);
+        }else{
+            stage.setMaximized(true);
+        }
     }
 
     @FXML

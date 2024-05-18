@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.WorldController">
+   <children>
+      <Label layoutX="253.0" layoutY="30.0" text="WORLD">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane" layoutX="35.0" layoutY="62.0" prefHeight="307.0" prefWidth="526.0">
+         <children>
+            <Label layoutX="73.0" layoutY="39.0" text="IDWorld" />
+            <Label layoutX="73.0" layoutY="100.0" prefHeight="25.0" prefWidth="53.0" text="Dificulty" />
+            <Label layoutX="269.0" layoutY="99.0" prefHeight="25.0" prefWidth="56.0" text="SizeWorld" />
+            <TextField fx:id="textFieldIDWorld" layoutX="73.0" layoutY="67.0" prefHeight="25.0" prefWidth="393.0" />
+            <Button layoutX="403.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#handleInsertButtonAction" text="Insertar" />
+            <Button layoutX="397.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#handleUpdateButtonAction" text="Actualizar" />
+            <CheckBox fx:id="Pre_Hardmode" layoutX="73.0" layoutY="135.0" mnemonicParsing="false" text="Pre_Hardmode" />
+            <CheckBox fx:id="hardmode" layoutX="73.0" layoutY="161.0" mnemonicParsing="false" text="hardmode" />
+            <CheckBox fx:id="Post_MoonLord" layoutX="73.0" layoutY="190.0" mnemonicParsing="false" text="Post_MoonLord" />
+            <CheckBox fx:id="Big" layoutX="269.0" layoutY="135.0" mnemonicParsing="false" text="Big" />
+            <CheckBox fx:id="Medium" layoutX="269.0" layoutY="162.0" mnemonicParsing="false" text="Medium" />
+            <CheckBox fx:id="Small" layoutX="269.0" layoutY="191.0" mnemonicParsing="false" text="Small" />
+            <Button layoutX="405.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#handleDeleteButtonAction" text="Delete" />
+         </children>
+      </Pane>
+      <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" />
+   </children>
+</AnchorPane>

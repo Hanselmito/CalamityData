@@ -13,7 +13,9 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.List;
@@ -36,11 +38,23 @@ public class FromBiomeController extends Controller implements Initializable {
     private TableColumn<Biome,String> ColumnZoneGenerate;
     @FXML
     private TableColumn<Biome,String> ColumnGenerationDificulty;
+    @FXML
+    private ImageView MaxWindow;
 
     private ObservableList<Biome> biomes;
 
     @Override
     public void onOpen(Object input){
+    }
+
+    @FXML
+    private void MaximizedWindow(){
+        Stage stage = (Stage) MaxWindow.getScene().getWindow();
+        if (stage.isMaximized()){
+            stage.setMaximized(false);
+        }else{
+            stage.setMaximized(true);
+        }
     }
 
     @FXML

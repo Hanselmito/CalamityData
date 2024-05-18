@@ -103,11 +103,11 @@ public class World {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         World world = (World) o;
-        return IDWorld == world.IDWorld && dificulty == world.dificulty && sizeWorld == world.sizeWorld && Objects.equals(objects, world.objects) && Objects.equals(biomes, world.biomes);
+        return IDWorld == world.IDWorld;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(IDWorld, dificulty, sizeWorld, objects, biomes);
+        return Objects.hash(IDWorld);
     }
 }

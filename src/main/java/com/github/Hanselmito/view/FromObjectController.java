@@ -14,7 +14,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.List;
@@ -39,11 +41,23 @@ public class FromObjectController extends Controller implements Initializable {
     private TableColumn<object,String> ColumnEfect;
     @FXML
     private TableColumn<object,String> ColumnTClass;
+    @FXML
+    private ImageView MaxWindow;
 
     private ObservableList<object> objects;
 
     @Override
     public void onOpen(Object input){
+    }
+
+    @FXML
+    private void MaximizedWindow(){
+        Stage stage = (Stage) MaxWindow.getScene().getWindow();
+        if (stage.isMaximized()){
+            stage.setMaximized(false);
+        }else{
+            stage.setMaximized(true);
+        }
     }
 
     @FXML

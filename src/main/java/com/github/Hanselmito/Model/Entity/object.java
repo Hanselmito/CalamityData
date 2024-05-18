@@ -90,11 +90,11 @@ public class object {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         object object = (object) o;
-        return IDObject == object.IDObject && Objects.equals(world, object.world) && Objects.equals(NameObject, object.NameObject) && tipeObject == object.tipeObject && Objects.equals(Effect, object.Effect) && tipeClass == object.tipeClass;
+        return IDObject == object.IDObject ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(IDObject, world, NameObject, tipeObject, Effect, tipeClass);
+        return Objects.hash(NameObject);
     }
 }

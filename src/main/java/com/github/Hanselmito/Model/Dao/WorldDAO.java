@@ -1,13 +1,9 @@
 package com.github.Hanselmito.Model.Dao;
 
 import com.github.Hanselmito.Model.Conection.ConnectionMariaDB;
-import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.Enums.Dificulty;
 import com.github.Hanselmito.Model.Entity.Enums.SizeWorld;
-import com.github.Hanselmito.Model.Entity.Enums.TipeClass;
-import com.github.Hanselmito.Model.Entity.Enums.TipeObject;
 import com.github.Hanselmito.Model.Entity.World;
-import com.github.Hanselmito.Model.Entity.object;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -23,7 +19,7 @@ public class WorldDAO implements DAO<World>{
     private final static String FINDBYID="SELECT w.IDWorld,w.Dificulty,w.SizeWorld FROM World AS w WHERE w.IDWorld=?";
     private final static String FINDALL="SELECT IDWorld,Dificulty,SizeWorld FROM World";
     private final static String FINDBYDIFICULTY="SELECT w.IDWorld,w.Dificulty,w.SizeWorld FROM World AS w WHERE w.Dificulty=?";
-    private final static String DELETE="DELETE FROM World AS a WHERE a.IDWorld=?";
+    private final static String DELETE="DELETE FROM World WHERE IDWorld=?";
 
     private Connection conn;
     public WorldDAO() {
@@ -67,10 +63,12 @@ public class WorldDAO implements DAO<World>{
 
     @Override
     public World delete(World entity) throws SQLException {
-        if (entity == null || entity.getIDWorld()==0)return entity;
+        if (entity == null || entity.getIDWorld()==0) return entity;
         try (PreparedStatement pst = conn.prepareStatement(DELETE)){
             pst.setInt(1,entity.getIDWorld());
             pst.executeUpdate();
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
         return entity;
     }

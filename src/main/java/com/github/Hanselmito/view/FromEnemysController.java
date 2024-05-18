@@ -17,6 +17,7 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.ByteArrayInputStream;
 import java.net.URL;
@@ -42,6 +43,8 @@ public class FromEnemysController extends Controller implements Initializable {
     private TableColumn<Enemys,String> ColumnDificultySpawn;
     @FXML
     private TableColumn<Enemys,ImageView> ColumnImagen;
+    @FXML
+    private ImageView MaxWindow;
 
     private ObservableList<Enemys> enemys;
     private ImageView imageView;
@@ -49,6 +52,16 @@ public class FromEnemysController extends Controller implements Initializable {
     @Override
     public void onOpen(Object input) throws Exception {
 
+    }
+
+    @FXML
+    private void MaximizedWindow(){
+        Stage stage = (Stage) MaxWindow.getScene().getWindow();
+        if (stage.isMaximized()){
+            stage.setMaximized(false);
+        }else{
+            stage.setMaximized(true);
+        }
     }
 
     @FXML
