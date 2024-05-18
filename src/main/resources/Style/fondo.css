@@ -1,0 +1,32 @@
+.Menu{
+
+
+    -fx-background-image: url(fondo.png);
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+.World{
+    -fx-background-image: url(fondo1.png);
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+.Object{
+    -fx-background-image: url(descarga.gif);
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+.Biome{
+    -fx-background-image: url(fondo3.png);
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+.Enemys{
+    -fx-background-image: url(fondo4.png);
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}

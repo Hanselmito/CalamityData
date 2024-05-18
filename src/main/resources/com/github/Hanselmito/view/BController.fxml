@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.BiomeController">
+   <children>
+      <Label layoutX="252.0" layoutY="14.0" text="BIOME">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane" layoutX="37.0" layoutY="53.0" prefHeight="339.0" prefWidth="526.0">
+         <children>
+            <Label layoutX="73.0" layoutY="14.0" text="IDBiome" />
+            <Label layoutX="179.0" layoutY="126.0" prefHeight="25.0" prefWidth="77.0" text="ZoneGenerate" />
+            <Label layoutX="288.0" layoutY="126.0" prefHeight="25.0" prefWidth="105.0" text="GenerationDificulty" />
+            <TextField fx:id="textFieldIDBiome" layoutX="123.0" layoutY="10.0" prefHeight="25.0" prefWidth="393.0" />
+            <Button layoutX="207.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleInsertButtonAction" text="Insertar" />
+            <Button layoutX="286.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleUpdateButtonAction" text="Actualizar" />
+            <CheckBox fx:id="left" layoutX="179.0" layoutY="161.0" mnemonicParsing="false" text="left" />
+            <CheckBox fx:id="right" layoutX="179.0" layoutY="187.0" mnemonicParsing="false" text="right" />
+            <CheckBox fx:id="Under" layoutX="179.0" layoutY="216.0" mnemonicParsing="false" text="Under" />
+            <CheckBox fx:id="Pre_Hardmode" layoutX="288.0" layoutY="162.0" mnemonicParsing="false" text="Pre_Hardmode" />
+            <CheckBox fx:id="hardmode" layoutX="288.0" layoutY="189.0" mnemonicParsing="false" text="hardmode" />
+            <CheckBox fx:id="Post_MoonLord" layoutX="288.0" layoutY="218.0" mnemonicParsing="false" text="Post_MoonLord" />
+            <Label layoutX="73.0" layoutY="45.0" text="IDWorld" />
+            <TextField fx:id="textFieldIDWorld" layoutX="123.0" layoutY="41.0" prefHeight="25.0" prefWidth="393.0" />
+            <Label layoutX="53.0" layoutY="77.0" text="NameBiome" />
+            <TextField fx:id="textFieldNameBiome" layoutX="123.0" layoutY="73.0" prefHeight="25.0" prefWidth="393.0" />
+            <Button layoutX="378.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleDeleteButtonAction" text="Delete" />
+         </children>
+      </Pane>
+      <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" />
+   </children>
+</AnchorPane>

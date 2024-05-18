@@ -35,7 +35,7 @@ public class ObjectDAO implements DAO<object>{
         object result = entity;
         if (entity==null || entity.getIDObject()==0) return result;
         object o = findById(entity.getIDObject());
-        if (o==null){
+        if (o!=null){
             //insert
             try (PreparedStatement pst = conn.prepareStatement(INSERT)){
                 pst.setInt(1,entity.getIDObject());
@@ -78,6 +78,8 @@ public class ObjectDAO implements DAO<object>{
         try (PreparedStatement pst = conn.prepareStatement(DELETE)){
             pst.setInt(1,entity.getIDObject());
             pst.executeUpdate();
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
         return entity;
     }

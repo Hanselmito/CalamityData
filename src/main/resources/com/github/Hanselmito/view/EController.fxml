@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.EnemysController">
+   <children>
+      <Label layoutX="252.0" layoutY="14.0" text="ENEMYS">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane" layoutX="37.0" layoutY="53.0" prefHeight="339.0" prefWidth="526.0">
+         <children>
+            <Label layoutX="69.0" layoutY="14.0" text="IDEnemys" />
+            <Label layoutX="14.0" layoutY="150.0" prefHeight="25.0" prefWidth="72.0" text="TipeEnemies" />
+            <Label layoutX="112.0" layoutY="150.0" prefHeight="25.0" prefWidth="84.0" text="DificultySpawn" />
+            <TextField fx:id="textFieldIDEnemies" layoutX="123.0" layoutY="10.0" prefHeight="25.0" prefWidth="393.0" />
+            <Button layoutX="207.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleInsertButtonAction" text="Insertar" />
+            <Button layoutX="286.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleUpdateButtonAction" text="Actualizar" />
+            <CheckBox fx:id="Enemies" layoutX="14.0" layoutY="185.0" mnemonicParsing="false" text="Enemies" />
+            <CheckBox fx:id="MiniBosses" layoutX="14.0" layoutY="211.0" mnemonicParsing="false" text="MiniBosses" />
+            <CheckBox fx:id="Bosses" layoutX="14.0" layoutY="240.0" mnemonicParsing="false" text="Bosses" />
+            <CheckBox fx:id="Pre_Hardmode" layoutX="123.0" layoutY="186.0" mnemonicParsing="false" text="Pre_Hardmode" />
+            <CheckBox fx:id="hardmode" layoutX="123.0" layoutY="213.0" mnemonicParsing="false" text="hardmode" />
+            <CheckBox fx:id="Post_MoonLord" layoutX="123.0" layoutY="242.0" mnemonicParsing="false" text="Post_MoonLord" />
+            <Label layoutX="73.0" layoutY="45.0" text="IDBiome" />
+            <TextField fx:id="textFieldIDBiome" layoutX="123.0" layoutY="41.0" prefHeight="25.0" prefWidth="393.0" />
+            <Label layoutX="50.0" layoutY="77.0" text="NameEnemys" />
+            <TextField fx:id="textFieldName" layoutX="123.0" layoutY="73.0" prefHeight="25.0" prefWidth="393.0" />
+            <ImageView fx:id="imageView" fitHeight="175.0" fitWidth="253.0" layoutX="245.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="loadImageButton" layoutX="128.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#loadImage" text="ImageFile" />
+            <Button layoutX="372.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleDeleteButtonAction" text="Delete" />
+         </children>
+      </Pane>
+      <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" />
+   </children>
+</AnchorPane>
