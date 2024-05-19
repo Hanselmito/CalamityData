@@ -50,7 +50,7 @@ public class AdminController extends Controller implements Initializable {
         if (username.equals(hardcodedUser.getNameAdmin()) && password.equals(hardcodedUser.getPassword())) {
             // Iniciar sesión exitosamente
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setContentText("Fernado mis 10€");
+            alert.setContentText("Inicio sesión correcta");
             alert.show();
             // Aquí puedes cambiar la escena o hacer lo que necesites después de un inicio de sesión exitoso
             App.currentController.changeScene(Scenes.WIKICONTROLLER,null);

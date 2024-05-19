@@ -5,6 +5,8 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="Biome" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FromBiomeController">
@@ -34,5 +36,10 @@
             <TableColumn fx:id="ColumnGenerationDificulty" prefWidth="166.00006103515625" text="DificultaGenerada" />
         </columns>
       </TableView>
+      <ImageView fx:id="MaxWindow" fitHeight="40.0" fitWidth="25.0" layoutX="571.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Icons/MaterialSymbolsTab.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
