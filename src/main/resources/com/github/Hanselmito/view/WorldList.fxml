@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="World" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FormWorldController">
    <children>
-      <MenuBar layoutY="-1.0" prefHeight="32.0" prefWidth="600.0">
+      <MenuBar fx:id="menuBar" layoutY="-1.0" prefHeight="32.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -27,14 +27,14 @@
             </Menu>
         </menus>
       </MenuBar>
-      <TableView fx:id="tableView" blendMode="SRC_ATOP" cache="true" editable="true" fixedCellSize="20.0" layoutX="22.0" layoutY="52.0" opacity="0.8" prefHeight="317.0" prefWidth="545.0">
+      <TableView fx:id="tableView" blendMode="SRC_ATOP" cache="true" editable="true" fixedCellSize="20.0" layoutX="22.0" layoutY="52.0" opacity="0.8" prefHeight="317.0" prefWidth="545.0" AnchorPane.bottomAnchor="30.666666666666686" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="32.66666666666663" AnchorPane.topAnchor="52.0">
         <columns>
           <TableColumn fx:id="ColumnIDWorld" prefWidth="107.33334350585938" sortType="DESCENDING" text="ID" />
           <TableColumn fx:id="ColumnDificulty" prefWidth="232.6666259765625" sortType="DESCENDING" text="Dificulty" />
-            <TableColumn fx:id="ColumnsizeWorld" prefWidth="204.6666259765625" sortType="DESCENDING" text="SizeWorld" />
+            <TableColumn fx:id="ColumnsizeWorld" prefWidth="203.33333333333337" sortType="DESCENDING" text="SizeWorld" />
         </columns>
       </TableView>
-      <ImageView fx:id="MaxWindow" fitHeight="25.0" fitWidth="30.0" layoutX="571.0" layoutY="2.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="MaxWindow" fitHeight="25.0" fitWidth="30.0" layoutX="571.0" layoutY="2.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="4.0">
          <image>
             <Image url="@../../../../Icons/MaterialSymbolsTab.png" />
          </image>
