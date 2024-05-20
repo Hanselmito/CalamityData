@@ -23,7 +23,7 @@
       </TableView>
       <MenuBar fx:id="menuBar" layoutX="-1.0" opacity="0.87" prefHeight="28.0" prefWidth="652.0" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Accion">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#goToMenu" text="Menu" />
             </items>
