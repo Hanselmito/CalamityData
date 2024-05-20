@@ -53,6 +53,13 @@ public class WorldController extends Controller implements Initializable {
 
     }
 
+    /**
+     * El método handleInsertButtonAction() se encarga de recoger los datos del formulario de la interfaz de usuario.
+     * Crea un nuevo objeto World con esos datos.
+     * Intentar guardar ese objeto en la base de datos y manejar cualquier error que pueda ocurrir durante el proceso de guardado.
+     * Si el objeto se guarda correctamente, se muestra una alerta al usuario y se cambia la escena a WIKICONTROLLER.
+     * Si ocurre un error, se muestra una alerta diferente.
+     * */
     @FXML
     public void handleInsertButtonAction() {
         String idWorld = textFieldIDWorld.getText();
@@ -75,8 +82,6 @@ public class WorldController extends Controller implements Initializable {
             SizeWorld = "Small";
         }
 
-        // Aquí puedes agregar la lógica para comprobar los datos
-
         World world = new World();
         world.setIDWorld(Integer.parseInt(idWorld));
         world.setDificulty(com.github.Hanselmito.Model.Entity.Enums.Dificulty.valueOf(Dificulty));
@@ -92,6 +97,13 @@ public class WorldController extends Controller implements Initializable {
         }
     }
 
+    /**
+     * El método handleUpdateButtonAction() se encarga de recoger los datos del formulario de la interfaz de usuario.
+     * Crea un nuevo objeto World con esos datos.
+     * Intentar actualizar ese objeto en la base de datos y manejar cualquier error que pueda ocurrir durante el proceso de actualizado.
+     * Si el objeto se actualizó correctamente, se muestra una alerta al usuario y se cambia la escena a WIKICONTROLLER.
+     * Si ocurre un error, se muestra una alerta diferente.
+     * */
     @FXML
     public void handleUpdateButtonAction() {
         String idWorld = textFieldIDWorld.getText();
@@ -123,13 +135,20 @@ public class WorldController extends Controller implements Initializable {
 
         try {
             wdao.update(world);
-            showAlert("todo bien compruebalo");
+            showAlert("todo bien");
             App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * El método handleDeleteButtonAction() se encarga de recoger los datos del formulario de la interfaz de usuario.
+     * Crea un nuevo objeto World con esos datos.
+     * Intentar eliminar ese objeto en la base de datos y manejar cualquier error que pueda ocurrir durante el proceso de eliminado.
+     * Si el objeto se eliminó correctamente, se muestra una alerta al usuario y se cambia la escena a WIKICONTROLLER.
+     * Si ocurre un error, se muestra una alerta diferente.
+     * */
     @FXML
     public void handleDeleteButtonAction() {
         String idWorld = textFieldIDWorld.getText();

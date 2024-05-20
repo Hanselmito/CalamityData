@@ -46,7 +46,7 @@ public class BiomeController extends Controller implements Initializable {
 
 
     @Override
-    public void onOpen(Object input) throws IOException, Exception {
+    public void onOpen(Object input) throws Exception {
 
     }
 
