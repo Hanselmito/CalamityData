@@ -4,11 +4,6 @@ import com.github.Hanselmito.view.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
-
-import static com.github.Hanselmito.view.AppController.loadFXML;
-
 /**
  * JavaFX App
  */
