@@ -11,6 +11,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 
 <AnchorPane fx:id="anchorPane" prefHeight="348.0" prefWidth="605.0" snapToPixel="false" styleClass="Menu" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.MenuController">
    <children>
@@ -28,59 +29,6 @@
           </Menu>
         </menus>
       </MenuBar>
-      <ImageView fitHeight="174.0" fitWidth="131.0" layoutX="159.0" layoutY="69.0">
-         <image>
-            <Image url="@../../../../Icons/objetos.png" />
-         </image>
-         <effect>
-            <Lighting diffuseConstant="1.17" specularConstant="2.0" specularExponent="40.0" surfaceScale="6.31">
-               <bumpInput>
-                  <Shadow height="68.13" radius="28.2125" width="46.72">
-                     <input>
-                        <DropShadow height="98.86" radius="48.93" spread="0.59" width="98.86" />
-                     </input>
-                  </Shadow>
-               </bumpInput>
-            </Lighting>
-         </effect>
-      </ImageView>
-      <ImageView fitHeight="174.0" fitWidth="123.0" layoutX="310.0" layoutY="69.0">
-         <image>
-            <Image url="@../../../../Icons/biome.png" />
-         </image>
-         <effect>
-            <Lighting>
-               <bumpInput>
-                  <Shadow>
-                     <input>
-                        <DropShadow />
-                     </input>
-                  </Shadow>
-               </bumpInput>
-            </Lighting>
-         </effect>
-      </ImageView>
-      <ImageView fitHeight="178.0" fitWidth="127.0" layoutX="453.0" layoutY="67.0">
-         <image>
-            <Image url="@../../../../Icons/Yharon.gif" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="174.0" fitWidth="131.0" layoutX="14.0" layoutY="69.0">
-         <image>
-            <Image url="@../../../../Icons/descarga.png" />
-         </image>
-         <effect>
-            <Lighting diffuseConstant="1.37" specularConstant="2.0" specularExponent="40.0" surfaceScale="3.87">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-            </Lighting>
-         </effect>
-      </ImageView>
-      <Button fx:id="buttonW" layoutX="55.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#goToWorldList" text="World" />
-      <Button fx:id="buttonO" layoutX="199.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#goToObjectList" text="Object" />
-      <Button fx:id="buttonB" layoutX="347.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#goToBiomeList" text="Biome" />
-      <Button fx:id="buttonE" layoutX="488.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#goToEnemysList" text="Enemys" />
       <ImageView fx:id="buttonStop" fitHeight="41.0" fitWidth="41.0" layoutX="252.0" layoutY="360.0" onMouseClicked="#StopMedia" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0">
          <image>
             <Image url="@../../../../Icons/MaterialSymbolsPause.png" />
@@ -102,5 +50,90 @@
          </image>
       </ImageView>
       <Slider fx:id="sliderMV" layoutX="46.0" layoutY="373.0" onMouseDragged="#Volumen" prefHeight="14.0" prefWidth="167.0" AnchorPane.bottomAnchor="18.0" />
+      <StackPane layoutX="-21.0" layoutY="69.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="426.0">
+         <children>
+            <ImageView fitHeight="174.0" fitWidth="131.0" styleClass="imagne">
+               <image>
+                  <Image url="@../../../../Icons/descarga.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="1.37" specularConstant="2.0" specularExponent="40.0" surfaceScale="3.87">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane layoutX="134.0" layoutY="69.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="271.0">
+         <children>
+            <ImageView fitHeight="174.0" fitWidth="131.0" styleClass="imagne">
+               <image>
+                  <Image url="@../../../../Icons/objetos.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="1.17" specularConstant="2.0" specularExponent="40.0" surfaceScale="6.31">
+                     <bumpInput>
+                        <Shadow height="68.13" radius="28.2125" width="46.72">
+                           <input>
+                              <DropShadow height="98.86" radius="48.93" spread="0.59" width="98.86" />
+                           </input>
+                        </Shadow>
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane layoutX="427.0" layoutY="67.0" prefHeight="178.0" prefWidth="160.0" AnchorPane.leftAnchor="427.0" AnchorPane.rightAnchor="-22.0">
+         <children>
+            <ImageView fitHeight="178.0" fitWidth="127.0" styleClass="imagne">
+               <image>
+                  <Image url="@../../../../Icons/Yharon.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane layoutX="280.0" layoutY="69.0" prefHeight="174.0" prefWidth="167.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="125.0">
+         <children>
+            <ImageView fitHeight="174.0" fitWidth="123.0" styleClass="imagne">
+               <image>
+                  <Image url="@../../../../Icons/biome.png" />
+               </image>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow>
+                           <input>
+                              <DropShadow />
+                           </input>
+                        </Shadow>
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane layoutX="53.0" layoutY="258.0" prefHeight="41.0" prefWidth="73.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="479.0">
+         <children>
+            <Button fx:id="buttonW" mnemonicParsing="false" onMouseClicked="#goToWorldList" text="World" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="197.0" layoutY="258.0" prefHeight="41.0" prefWidth="73.0" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="335.0">
+         <children>
+            <Button fx:id="buttonO" mnemonicParsing="false" onMouseClicked="#goToObjectList" text="Object" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="343.0" layoutY="258.0" prefHeight="41.0" prefWidth="73.0" AnchorPane.leftAnchor="343.0" AnchorPane.rightAnchor="189.0">
+         <children>
+            <Button fx:id="buttonB" mnemonicParsing="false" onMouseClicked="#goToBiomeList" text="Biome" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="491.0" layoutY="258.0" prefHeight="41.0" prefWidth="73.0" AnchorPane.leftAnchor="491.0" AnchorPane.rightAnchor="41.0">
+         <children>
+            <Button fx:id="buttonE" mnemonicParsing="false" onMouseClicked="#goToEnemysList" text="Enemys" />
+         </children>
+      </StackPane>
    </children>
 </AnchorPane>
