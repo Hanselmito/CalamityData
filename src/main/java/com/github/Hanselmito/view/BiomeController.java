@@ -2,12 +2,9 @@ package com.github.Hanselmito.view;
 
 import com.github.Hanselmito.App;
 import com.github.Hanselmito.Model.Dao.BiomeDAO;
-import com.github.Hanselmito.Model.Dao.ObjectDAO;
 import com.github.Hanselmito.Model.Dao.WorldDAO;
 import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.World;
-import com.github.Hanselmito.Model.Entity.object;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;

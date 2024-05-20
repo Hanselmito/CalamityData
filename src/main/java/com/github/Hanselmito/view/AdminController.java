@@ -9,7 +9,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,8 +16,6 @@ import java.util.ResourceBundle;
 public class AdminController extends Controller implements Initializable {
     @FXML
     private AnchorPane anchorPane;
-    @FXML
-    private Pane pane;
     @FXML
     private TextField textFieldUserName;
     @FXML
