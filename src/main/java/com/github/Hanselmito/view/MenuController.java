@@ -51,7 +51,7 @@ public class MenuController extends Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         /**Especifica la ruta del archivo de audio**/
-        String musicFile = "src/main/resources/sound/roar-of-the-jungle-dragon.mp3";
+        String musicFile = "src/main/resources/sound/yharon.mp3";
 
         /** Crea el Media del sonido **/
         Media sound = new Media(new File(musicFile).toURI().toString());
