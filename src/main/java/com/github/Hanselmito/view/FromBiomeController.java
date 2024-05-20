@@ -47,6 +47,11 @@ public class FromBiomeController extends Controller implements Initializable {
     public void onOpen(Object input){
     }
 
+    /**
+     * El método MaximizedWindow() se encarga de aumentar el tamaño de la ventana al maximo.
+     * Si hace la primera vez la acción se aumenta la pantalla.
+     * Si vuelve hacer de nuevo la acción volverá al tamaño que tenía antes.
+     * */
     @FXML
     private void MaximizedWindow(){
         Stage stage = (Stage) MaxWindow.getScene().getWindow();
