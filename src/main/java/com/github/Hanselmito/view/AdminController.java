@@ -24,6 +24,7 @@ public class AdminController extends Controller implements Initializable {
     private Button buttonEntrar;
 
 
+    //usuario que se utiliza a fuego
     private User hardcodedUser = new User("Juanda", "alumno.1");
 
 
@@ -38,7 +39,11 @@ public class AdminController extends Controller implements Initializable {
     }
 
 
-
+    /**
+     * Takes the information you enter and checks it against the user that is hardcoded in the Admin controller.
+     * If the user is correct, they are directed to the Admin controller screen.
+     * If not, an exception error is thrown.
+     */
     @FXML
     public void login() throws Exception {
         String username = textFieldUserName.getText();

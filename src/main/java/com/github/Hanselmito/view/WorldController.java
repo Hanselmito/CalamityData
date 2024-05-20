@@ -54,12 +54,12 @@ public class WorldController extends Controller implements Initializable {
     }
 
     /**
-     * El método handleInsertButtonAction() se encarga de recoger los datos del formulario de la interfaz de usuario.
-     * Crea un nuevo objeto World con esos datos.
-     * Intentar guardar ese objeto en la base de datos y manejar cualquier error que pueda ocurrir durante el proceso de guardado.
-     * Si el objeto se guarda correctamente, se muestra una alerta al usuario y se cambia la escena a WIKICONTROLLER.
-     * Si ocurre un error, se muestra una alerta diferente.
-     * */
+     * The handleInsertButtonAction() method is responsible for collecting data from the user interface form.
+     * It creates a new World object with that data.
+     * It tries to save that object in the database and handle any error that may occur during the saving process.
+     * If the object is saved correctly, an alert is shown to the user and the scene is changed to WIKICONTROLLER.
+     * If an error occurs, a different alert is shown.
+     */
     @FXML
     public void handleInsertButtonAction() {
         String idWorld = textFieldIDWorld.getText();
@@ -98,12 +98,12 @@ public class WorldController extends Controller implements Initializable {
     }
 
     /**
-     * El método handleUpdateButtonAction() se encarga de recoger los datos del formulario de la interfaz de usuario.
-     * Crea un nuevo objeto World con esos datos.
-     * Intentar actualizar ese objeto en la base de datos y manejar cualquier error que pueda ocurrir durante el proceso de actualizado.
-     * Si el objeto se actualizó correctamente, se muestra una alerta al usuario y se cambia la escena a WIKICONTROLLER.
-     * Si ocurre un error, se muestra una alerta diferente.
-     * */
+     * The handleUpdateButtonAction() method is responsible for collecting data from the user interface form.
+     * It creates a new World object with that data.
+     * It tries to Update that object in the database and handle any error that may occur during the saving process.
+     * If the object is saved correctly, an alert is shown to the user and the scene is changed to WIKICONTROLLER.
+     * If an error occurs, a different alert is shown.
+     */
     @FXML
     public void handleUpdateButtonAction() {
         String idWorld = textFieldIDWorld.getText();
@@ -143,13 +143,12 @@ public class WorldController extends Controller implements Initializable {
     }
 
     /**
-     * El método handleDeleteButtonAction() se encarga de recoger los datos del formulario de la interfaz de usuario.
-     * Crea un nuevo objeto World con esos datos.
-     * Intentar eliminar ese objeto en la base de datos y manejar cualquier error que pueda ocurrir durante el proceso de eliminado.
-     * Si el objeto se eliminó correctamente, se muestra una alerta al usuario y se cambia la escena a WIKICONTROLLER.
-     * Si ocurre un error, se muestra una alerta diferente.
-     * */
-    @FXML
+     * The handleDeleteButtonAction() method is responsible for collecting data from the user interface form.
+     * It creates a new World object with that data.
+     * It tries to Delete that object in the database and handle any error that may occur during the saving process.
+     * If the object is saved correctly, an alert is shown to the user and the scene is changed to WIKICONTROLLER.
+     * If an error occurs, a different alert is shown.
+     */
     public void handleDeleteButtonAction() {
         String idWorld = textFieldIDWorld.getText();
 

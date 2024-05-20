@@ -72,6 +72,9 @@ public class EnemysController extends Controller implements Initializable {
 
     }
 
+    /**
+     * loadImage is responsible for loading the image you select from your files.
+     */
     @FXML
     private void loadImage() {
         FileChooser fileChooser = new FileChooser();
@@ -92,6 +95,14 @@ public class EnemysController extends Controller implements Initializable {
         }
     }
 
+    /**
+     * The handleInsertButtonAction() method is responsible for collecting data from the user interface form.
+     * It creates a new Enemys object with that data.
+     * It converts the image into bits so it can be inserted into the database.
+     * It tries to save that object in the database and handle any error that may occur during the saving process.
+     * If the object is saved correctly, an alert is shown to the user and the scene is changed to WIKICONTROLLER.
+     * If an error occurs, a different alert is shown.
+     */
     @FXML
     public void handleInsertButtonAction() throws IOException {
         String idEnemies = textFieldIDEnemies.getText();
@@ -150,6 +161,13 @@ public class EnemysController extends Controller implements Initializable {
         }
     }
 
+    /**
+     * The handleInsertButtonAction() method is responsible for collecting data from the user interface form.
+     * It creates a new Enemys object with that data.
+     * It tries to Delete that object in the database and handle any error that may occur during the saving process.
+     * If the object is saved correctly, an alert is shown to the user and the scene is changed to WIKICONTROLLER.
+     * If an error occurs, a different alert is shown.
+     */
     @FXML
     public void handleDeleteButtonAction() throws IOException {
         String idEnemies = textFieldIDEnemies.getText();
@@ -166,6 +184,15 @@ public class EnemysController extends Controller implements Initializable {
             showAlert("mal!!");
         }
     }
+
+    /**
+     * The handleInsertButtonAction() method is responsible for collecting data from the user interface form.
+     * It creates a new Enemys object with that data.
+     * It converts the image into bits so it can be inserted into the database.
+     * It tries to Update that object in the database and handle any error that may occur during the saving process.
+     * If the object is saved correctly, an alert is shown to the user and the scene is changed to WIKICONTROLLER.
+     * If an error occurs, a different alert is shown.
+     */
     @FXML
     public void handleUpdateButtonAction() throws IOException {
         String idEnemies = textFieldIDEnemies.getText();
@@ -223,6 +250,10 @@ public class EnemysController extends Controller implements Initializable {
             showAlert("mal!!");
         }
     }
+
+    /**
+     * Performs the alert display method.
+     * */
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(message);

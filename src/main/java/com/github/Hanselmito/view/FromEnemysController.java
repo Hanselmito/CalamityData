@@ -55,9 +55,9 @@ public class FromEnemysController extends Controller implements Initializable {
     }
 
     /**
-     * El método MaximizedWindow() se encarga de aumentar el tamaño de la ventana al maximo.
-     * Si hace la primera vez la acción se aumenta la pantalla.
-     * Si vuelve hacer de nuevo la acción volverá al tamaño que tenía antes.
+     * The MaximizedWindow() method is responsible for maximizing the window size.
+     * If the action is performed for the first time, the screen size is increased.
+     * If the action is performed again, it will return to its previous size.
      * */
     @FXML
     private void MaximizedWindow(){
@@ -69,6 +69,9 @@ public class FromEnemysController extends Controller implements Initializable {
         }
     }
 
+    /**
+     * The method lists by enums from the database
+     * */
     @FXML
     public void ListTipeEnemys() throws Exception{
         List<Enemys> en = EnemysDAO.build().findByTipeEnemies("Enemies");
@@ -93,7 +96,10 @@ public class FromEnemysController extends Controller implements Initializable {
 
     }
 
-
+    /**
+     * It starts by loading the table with the data and displays everything with the findByAll from Enemys
+     * and loads the bits into an image with the size you tell it to put.
+     * */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadEnemysData();
@@ -119,7 +125,9 @@ public class FromEnemysController extends Controller implements Initializable {
         });
     }
 
-
+    /**
+     * The method lists by All from Enemys
+     * */
     private void loadEnemysData() {
         List<Enemys> enemysList = EnemysDAO.build().findAll();
         this.enemys = FXCollections.observableArrayList(enemysList);

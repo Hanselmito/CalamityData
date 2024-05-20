@@ -41,9 +41,9 @@ public class FormWorldController extends Controller implements Initializable {
     }
 
     /**
-     * El método MaximizedWindow() se encarga de aumentar el tamaño de la ventana al maximo.
-     * Si hace la primera vez la acción se aumenta la pantalla.
-     * Si vuelve hacer de nuevo la acción volverá al tamaño que tenía antes.
+     * The MaximizedWindow() method is responsible for maximizing the window size.
+     * If the action is performed for the first time, the screen size is increased.
+     * If the action is performed again, it will return to its previous size.
      * */
     @FXML
     private void MaximizedWindow(){
@@ -55,6 +55,9 @@ public class FormWorldController extends Controller implements Initializable {
         }
     }
 
+    /**
+     * The method lists by enums from the database
+     * */
     @FXML
     public void ListWorldDificultyPH() throws Exception{
         List<World> world = WorldDAO.build().findByDificulty("Pre_Hardmode");
@@ -79,6 +82,9 @@ public class FormWorldController extends Controller implements Initializable {
 
     }
 
+    /**
+     * It starts by loading the table with the data and displays everything with the findByAll from World
+     * */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadWorldData();
@@ -87,6 +93,9 @@ public class FormWorldController extends Controller implements Initializable {
         ColumnsizeWorld.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getSizeWorld().toString()));
     }
 
+    /**
+     * The method lists by All from World
+     * */
     private void loadWorldData() {
         List<World> worldList = WorldDAO.build().findAll();
         this.world = FXCollections.observableArrayList(worldList);
