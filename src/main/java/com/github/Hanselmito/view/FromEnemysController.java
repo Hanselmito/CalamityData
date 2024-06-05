@@ -73,22 +73,28 @@ public class FromEnemysController extends Controller implements Initializable {
      * The method lists by enums from the database
      * */
     @FXML
-    public void ListTipeEnemys() throws Exception{
+    public void ListTipeEnemys(){
         List<Enemys> en = EnemysDAO.build().findByTipeEnemies("Enemies");
         this.enemys = FXCollections.observableArrayList(en);
         tableView.setItems(this.enemys);
     }
     @FXML
-    public void ListTipeMiniBosses() throws Exception{
+    public void ListTipeMiniBosses(){
         List<Enemys> en = EnemysDAO.build().findByTipeEnemies("MiniBosses");
         this.enemys = FXCollections.observableArrayList(en);
         tableView.setItems(this.enemys);
     }
     @FXML
-    public void ListTipeBosses() throws Exception{
+    public void ListTipeBosses(){
         List<Enemys> en = EnemysDAO.build().findByTipeEnemies("Bosses");
         this.enemys = FXCollections.observableArrayList(en);
         tableView.setItems(this.enemys);
+    }
+    @FXML
+    public void ListAllEnemys(){
+        List<Enemys> enemysList = EnemysDAO.build().findAll();
+        this.enemys = FXCollections.observableArrayList(enemysList);
+        tableView.setItems(enemys);
     }
 
     @Override

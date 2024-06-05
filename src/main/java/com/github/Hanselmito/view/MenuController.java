@@ -30,10 +30,6 @@ public class MenuController extends Controller implements Initializable {
     @FXML
     private Slider sliderMV;
     @FXML
-    private ImageView buttonStop;
-    @FXML
-    private ImageView buttonPlay;
-    @FXML
     private ImageView MaxWindow;
 
     private MediaPlayer mediaPlayer;
@@ -59,12 +55,8 @@ public class MenuController extends Controller implements Initializable {
         /**Crea el reproductor de medios si no existe**/
         if (mediaPlayer == null) {
             mediaPlayer = new MediaPlayer(sound);
-            mediaPlayer.setVolume(0.04);
-        }
-
-        /** Reproduce la música solo si no se está reproduciendo **/
-        if (mediaPlayer.getStatus() != MediaPlayer.Status.PLAYING) {
             mediaPlayer.play();
+            mediaPlayer.setVolume(0.04);
         }
     }
 
@@ -75,14 +67,6 @@ public class MenuController extends Controller implements Initializable {
     @FXML
     private void NoVolum(){
         mediaPlayer.stop();
-    }
-    @FXML
-    public void StopMedia(){
-        mediaPlayer.stop();
-    }
-    @FXML
-    public void PlayMedia(){
-        mediaPlayer.play();
     }
 
 

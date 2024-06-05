@@ -1,6 +1,7 @@
 package com.github.Hanselmito.Model.Dao;
 
 import com.github.Hanselmito.Model.Conection.ConnectionMariaDB;
+import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.Enemys;
 import com.github.Hanselmito.Model.Entity.Enums.*;
 
@@ -18,6 +19,7 @@ public class EnemysDAO implements DAO<Enemys>{
     private final static String FINDBYID="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn,e.Imagen FROM enemys AS e WHERE e.IDEnemies=?";
     private final static String FINDALL="SELECT IDEnemies,IDBiome,TipeEnemies,NameEnemies,DificultySpawn,Imagen FROM enemys";
     private final static String FINDBYTIPEENEMIES="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn,e.Imagen FROM enemys AS e WHERE e.TipeEnemies=?";
+    private final static String FIND_ENEMYS_FOR_BIOME = "SELECT * FROM enemys WHERE IDBiome=?";
     private final static String DELETE="DELETE FROM enemys AS e WHERE e.IDEnemies=?";
 
     private Connection conn;
@@ -139,6 +141,28 @@ public class EnemysDAO implements DAO<Enemys>{
                 }
             }
         }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public List<Enemys> FindEnemysForBiome(int IDBiome) {
+        List<Enemys> result = new ArrayList<>();
+        try (PreparedStatement pst = conn.prepareStatement(FIND_ENEMYS_FOR_BIOME)) {
+            pst.setInt(1, IDBiome);
+            try (ResultSet res = pst.executeQuery()) {
+                while (res.next()) {
+                    Enemys enemy = new Enemys();
+                    enemy.setIDEnemies(res.getInt("IDEnemies"));
+                    enemy.setBiome(BiomeDAO.build().findById(res.getInt("IDBiome")));
+                    enemy.setTipeEnemies(TipeEnemies.valueOf(res.getString("TipeEnemies")));
+                    enemy.setNameEnemies(res.getString("NameEnemies"));
+                    enemy.setDificultySpawn(Dificulty.valueOf(res.getString("DificultySpawn")));
+                    enemy.setImagen(res.getBytes("Imagen"));
+                    result.add(enemy);
+                }
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;

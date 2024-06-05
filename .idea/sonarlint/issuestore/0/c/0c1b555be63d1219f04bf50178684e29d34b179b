@@ -1,16 +1,36 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãåJ$834c848b-1d7a-468c-a918-d9ff06ca8e39
-Â
-java:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿJ$82e6df4c-5b58-4abb-9608-d49eb21d68f4
-€
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ì˜»uJ$6960d630-1252-4f28-9c70-a38865032203
+
+java:S1192["JDefine a constant instead of duplicating this literal "IDEnemies" 4 times.(æ¦øø8é©¿¾ş1J$3bac7905-f340-4d1d-bf20-9426891d1cd6
+Š
+java:S1192\"HDefine a constant instead of duplicating this literal "IDBiome" 4 times.(Ó˜Ïl8ğ©¿¾ş1J$4f9429bd-c114-47e0-92f1-13cc61e35cca
+—
+java:S1192_"ODefine a constant instead of duplicating this literal "DificultySpawn" 4 times.(ÏÀÏşÿÿÿÿ8ö©¿¾ş1J$1f5f928c-1c16-43d9-ad89-b9d3a329abdd
+
+java:S1192^"LDefine a constant instead of duplicating this literal "NameEnemies" 4 times.(æğšÂ8ş©¿¾ş1J$f9e0ff10-9c97-422b-9428-60029253d359
+
+java:S1192]"LDefine a constant instead of duplicating this literal "TipeEnemies" 4 times.(š°“8„ª¿¾ş1J$917eb3e6-1fcc-4164-affd-2bc25de286b4
+
+java:S1192`"GDefine a constant instead of duplicating this literal "Imagen" 4 times.(è¨Åøÿÿÿÿ8‰ª¿¾ş1J$aa3e3614-c8c2-4ee0-b2d2-5519b06040cb
+™	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÓÃ–ûÿÿÿÿ8éöÃ¾ş1J$c63d0d22-a4c2-44ac-8aa0-fcbd927828a4
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãåJ$a59b1c3b-3b0f-421b-8d4f-5cb23f91a370
+Ã
+java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿJ$971ea5b8-0e2e-4396-a8c1-2cbba6eb8d40
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(§ÒºÎÿÿÿÿÿ8Úª¿¾ş1J$621f7500-8cf5-4a49-8665-5a15eb251d54
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ˆ³Ş8Ûª¿¾ş1J$4572a20f-723f-4ba9-893c-b925580bffe5
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ÿ„¤‰8İª¿¾ş1J$4ad6f59d-1678-43e6-9f5f-5de3a318db6a
 †
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ñ¯ëùÿÿÿÿJ$07c9ec93-8c83-4e24-945c-e9f1fe820288
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(øşŠ¤ıÿÿÿÿJ$4ea55b7f-717b-46c8-a16d-68fd71d9356c
+†
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ø§ÚéúÿÿÿÿJ$9d66413d-f016-47d9-8a31-c99075a0c8af
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¸ä­§J$5b8f683d-a32b-4824-93c3-2831536f6c38
-†
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(­·¤ûÿÿÿÿJ$91076732-885e-4463-a7a6-b6910cf78cc7
-†
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÓÁºıÿÿÿÿJ$33ada449-6ada-4e5e-9c1a-e95c7ddd4bd1
-‡
-java:S1128"FRemove this unused import 'com.github.Hanselmito.Model.Entity.object'.(’åÑñÿÿÿÿÿJ$85099a88-b8b1-4e94-bdac-15fb4a07cee4
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Îº‚éJ$bf8d808e-0a60-408d-9928-b5f511ccab6a
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(²ÚÄõ8î®À¾ş1J$566c68b6-c2d5-45c2-976d-e05ee5cf8703
+–	java:S100•"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÓÃ–ûÿÿÿÿ8Â÷Ã¾ş1J$336bacb0-c868-450b-857f-9272ff8eb3a3
+b
+java:S6905"Don't use the query "SELECT *".(Îº‚é8Ä…ã¾ş1J$cf0baefa-23c4-4a12-b036-1c6870595014
+g
+java:S1128"ERemove this unused import 'com.github.Hanselmito.Model.Entity.Biome'.(¶û¬ëøÿÿÿÿ8ñÈä¾ş1

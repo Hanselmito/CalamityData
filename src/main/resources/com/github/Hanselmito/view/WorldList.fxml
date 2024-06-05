@@ -18,11 +18,17 @@
               <MenuItem mnemonicParsing="false" onAction="#goToMenu" text="Menu" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="ListarDificulty">
+            <Menu mnemonicParsing="false" text="Listar">
               <items>
-                <MenuItem mnemonicParsing="false" onAction="#ListWorldDificultyPH" text="PorPrehardmode" />
-                  <MenuItem mnemonicParsing="false" onAction="#ListWorldDificultyH" text="Porhardmode" />
-                  <MenuItem mnemonicParsing="false" onAction="#ListWorldDificultyPM" text="PorPostMoonlord" />
+                  <Menu mnemonicParsing="false" text="ListarDificultad">
+                     <items>
+                      <MenuItem mnemonicParsing="false" onAction="#ListWorldDificultyPH" text="PorPrehardmode" />
+                        <MenuItem mnemonicParsing="false" onAction="#ListWorldDificultyH" text="Porhardmode" />
+                        <MenuItem mnemonicParsing="false" onAction="#ListWorldDificultyPM" text="PorPostMoonlord" />
+                     </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#ListAllWorld" text="ListarMundos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ListWorldLazy" text="Listar Mundos Asociados" />
               </items>
             </Menu>
         </menus>
@@ -34,7 +40,7 @@
             <TableColumn fx:id="ColumnsizeWorld" prefWidth="203.33333333333337" sortType="DESCENDING" text="SizeWorld" />
         </columns>
       </TableView>
-      <ImageView fx:id="MaxWindow" fitHeight="25.0" fitWidth="30.0" layoutX="571.0" layoutY="2.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="4.0">
+      <ImageView fx:id="MaxWindow" fitHeight="25.0" fitWidth="30.0" layoutX="571.0" layoutY="2.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="2.0">
          <image>
             <Image url="@../../../../Icons/MaterialSymbolsTab.png" />
          </image>

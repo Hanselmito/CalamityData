@@ -3,7 +3,6 @@ package com.github.Hanselmito.Model.Entity;
 import com.github.Hanselmito.Model.Entity.Enums.Dificulty;
 import com.github.Hanselmito.Model.Entity.Enums.SizeWorld;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,18 +10,18 @@ public class World {
     private int IDWorld = 20;
     private Dificulty dificulty;
     private SizeWorld sizeWorld;
-    private List<object> objects;
-    private List<Biome> biomes;
+    private List<object> List_Objects;
+    private List<Biome> List_Biomes;
 
     public World() {
     }
 
-    public World(int IDWorld, Dificulty dificulty, SizeWorld sizeWorld, List<object> objects, List<Biome> biomes) {
+    public World(int IDWorld, Dificulty dificulty, SizeWorld sizeWorld, List<object> List_Objects, List<Biome> List_Biomes) {
         this.IDWorld = IDWorld;
         this.dificulty = dificulty;
         this.sizeWorld = sizeWorld;
-        this.objects = objects;
-        this.biomes = biomes;
+        this.List_Objects = List_Objects;
+        this.List_Biomes = List_Biomes;
     }
 
     public int getIDWorld() {
@@ -50,41 +49,19 @@ public class World {
     }
 
     public List<object> getObject() {
-        return objects;
+        return List_Objects;
     }
 
-    public void setObjects(List<object> objects) {
-        this.objects = objects;
+    public void setObject(List<object> List_object) {
+        this.List_Objects = List_object;
     }
 
-    public List<Biome> getBiomes() {
-        return biomes;
+    public List<Biome> getBiome() {
+        return List_Biomes;
     }
 
-    public void setBiomes(List<Biome> biomes) {
-        this.biomes = biomes;
-    }
-
-    public void addBiome(Biome bio){
-        if (biomes==null){
-            biomes = new ArrayList<>();
-        }
-        if (!biomes.contains(bio)){
-            biomes.add(bio);
-        }
-    }
-    public void removeBiome(Biome bio){
-        if (biomes!=null){
-            biomes.remove(bio);
-        }
-    }
-    public Biome getBiome(Biome bio){
-        Biome result=null;
-        if (bio!=null){
-            int i=biomes.indexOf(bio);
-            result = biomes.get(i);
-        }
-        return result;
+    public void setBiome(List<Biome> List_biome) {
+        this.List_Biomes = List_biome;
     }
 
     @Override
@@ -93,8 +70,8 @@ public class World {
                 "IDWorld |" + IDWorld +
                 "| dificulty |" + dificulty +
                 "| sizeWorld |" + sizeWorld +
-                "| objects |" + objects +
-                "| biomes |" + biomes +
+                "| objects |" + List_Objects +
+                "| biomes |" + List_Biomes +
                 "|\n";
     }
 

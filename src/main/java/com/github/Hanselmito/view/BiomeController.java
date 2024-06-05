@@ -11,7 +11,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -74,22 +73,44 @@ public class BiomeController extends Controller implements Initializable {
         int idWorld = Integer.parseInt(textFieldIDWorld.getText());
         String NameBiome = textFieldNameBiome.getText();
 
+        int selectedZoneCount = 0;
         String ZoneGenerate = "";
         if (left.isSelected()) {
             ZoneGenerate = "left";
-        } else if (right.isSelected()) {
+            selectedZoneCount++;
+        }
+        if (right.isSelected()) {
             ZoneGenerate = "right";
-        } else if (Under.isSelected()) {
+            selectedZoneCount++;
+        }
+        if (Under.isSelected()) {
             ZoneGenerate = "Under";
+            selectedZoneCount++;
         }
 
+        if (selectedZoneCount > 1) {
+            showAlert("Solo puede seleccionar una Zona a la vez.");
+            return;
+        }
+
+        int selectedDifficultyCount = 0;
         String GenerationDificulty = "";
         if (Pre_Hardmode.isSelected()) {
             GenerationDificulty = "Pre_Hardmode";
-        } else if (hardmode.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (hardmode.isSelected()) {
             GenerationDificulty = "hardmode";
-        } else if (Post_MoonLord.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (Post_MoonLord.isSelected()) {
             GenerationDificulty = "Post_MoonLord";
+            selectedDifficultyCount++;
+        }
+
+        if (selectedDifficultyCount > 1) {
+            showAlert("Solo puede seleccionar una dificultad a la vez.");
+            return;
         }
 
         World world = WorldDAO.build().findById(idWorld);
@@ -101,6 +122,11 @@ public class BiomeController extends Controller implements Initializable {
             return;
         }
 
+        Biome existingBiome = bDAO.findById(Integer.parseInt(idBiome));
+        if (existingBiome != null) {
+            showAlert("Esa ID ya existe");
+            return;
+        }
 
         // Aquí puedes agregar la lógica para comprobar los datos
 
@@ -135,22 +161,44 @@ public class BiomeController extends Controller implements Initializable {
         int idWorld = Integer.parseInt(textFieldIDWorld.getText());
         String NameBiome = textFieldNameBiome.getText();
 
+        int selectedZoneCount = 0;
         String ZoneGenerate = "";
         if (left.isSelected()) {
             ZoneGenerate = "left";
-        } else if (right.isSelected()) {
+            selectedZoneCount++;
+        }
+        if (right.isSelected()) {
             ZoneGenerate = "right";
-        } else if (Under.isSelected()) {
+            selectedZoneCount++;
+        }
+        if (Under.isSelected()) {
             ZoneGenerate = "Under";
+            selectedZoneCount++;
         }
 
+        if (selectedZoneCount > 1) {
+            showAlert("Solo puede seleccionar una Zona a la vez.");
+            return;
+        }
+
+        int selectedDifficultyCount = 0;
         String GenerationDificulty = "";
         if (Pre_Hardmode.isSelected()) {
             GenerationDificulty = "Pre_Hardmode";
-        } else if (hardmode.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (hardmode.isSelected()) {
             GenerationDificulty = "hardmode";
-        } else if (Post_MoonLord.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (Post_MoonLord.isSelected()) {
             GenerationDificulty = "Post_MoonLord";
+            selectedDifficultyCount++;
+        }
+
+        if (selectedDifficultyCount > 1) {
+            showAlert("Solo puede seleccionar una dificultad a la vez.");
+            return;
         }
 
         World world = WorldDAO.build().findById(idWorld);
@@ -192,7 +240,6 @@ public class BiomeController extends Controller implements Initializable {
     @FXML
     public void handleDeleteButtonAction() {
         String idBiome = textFieldIDBiome.getText();
-        // Aquí puedes agregar la lógica para comprobar los datos
 
         Biome b = new Biome();
         b.setIDBiome(Integer.parseInt(idBiome));

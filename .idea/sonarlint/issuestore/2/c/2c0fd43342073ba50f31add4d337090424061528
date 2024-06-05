@@ -1,0 +1,32 @@
+
+ƒ
+java:S1192º"FDefine a constant instead of duplicating this literal "mal!!" 3 times.(£Ÿ³J$b836dcdb-04bb-4dec-a4a5-3f7a1ace9f9f
+‹	java:S117n"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É¾bJ$f770c4ff-7901-437d-958b-ca286f1c162b
+Œ	java:S117q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸Ş»áJ$aa33faf8-92b3-4b6c-8baa-7b1ecbdcbe85
+’	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆ«®şÿÿÿÿJ$66c57ed3-760f-4f8e-b954-1cd693b0a20c
+Œ	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É¾bJ$8dc3880d-e87a-45f0-9f68-62ab8074b880
+”	java:S117å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸Ş»á8û¹¡™ü1J$11dfeae8-7614-44d5-9ab4-d2f0316304b3
+™	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆ«®şÿÿÿÿ8›Éğ˜ü1J$86142bc6-ac67-4a10-a5eb-27bc53f37421
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÚ„üÿÿÿÿJ$f232b13a-8ffc-4be2-b587-83547051723b
+‰
+java:S2095–"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ùéµJ$1eb4725d-c846-426c-85f1-7d672229e5ef
+j
+java:S2095¨"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ùéµ8ÜÚ‹šü1
+’	java:S116$"RRename this field "Enemies" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸â¯‹üÿÿÿÿJ$548829ba-c212-486c-9fbf-98f2d9cd0d4a
+•	java:S116&"URename this field "MiniBosses" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§©•ûÿÿÿÿJ$36460e4c-d1f1-4f21-b525-6f414e7e50a5
+‘	java:S116("QRename this field "Bosses" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ­¹ºüÿÿÿÿJ$57325bab-1912-4175-b7cc-4329381c7b3c
+—	java:S116,"WRename this field "Pre_Hardmode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡©ß·ÿÿÿÿÿJ$32ebb50e-7cb3-4569-b1b7-8c00e83d9de7
+“	java:S1160"XRename this field "Post_MoonLord" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ÒòØJ$8b97325f-f5f5-4a83-bd42-c4198aa8f4a0
+Š	java:S1164"ORename this field "Menu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šë·J$8d4fc2b8-df6a-4faa-93c1-ae80fef2de26
+½
+java:S1186="€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎóÔˆJ$d3ba4b86-b12b-4756-bb78-6d86fec0b994
+Â
+java:S1186B"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®ÒêúÿÿÿÿJ$5fbb9279-bcae-4f41-98b7-61c90fccecf7
+Â
+java:S1186G"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿJ$08f04238-f350-4e8c-99e6-7a4a2455fa12
+Œ
+java:S2674©"JCheck the return value of the "read" call to see how many bytes were read.(¹œ÷·øÿÿÿÿJ$87e59e0c-24d6-4402-8c02-98c1912a3b3e
+©
+java:S1130Æ"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(€õ¬ÙJ$2cfc1658-a24c-4e8a-a3e2-73fe97174168
+Œ
+java:S2674—"JCheck the return value of the "read" call to see how many bytes were read.(¹œ÷·øÿÿÿÿJ$45344f82-ed35-4eea-947e-3f9bc5841d42

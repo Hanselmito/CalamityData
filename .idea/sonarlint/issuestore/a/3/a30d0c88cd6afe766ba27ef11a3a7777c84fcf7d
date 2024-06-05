@@ -1,0 +1,29 @@
+
+Š
+java:S1192œ"FDefine a constant instead of duplicating this literal "mal!!" 3 times.(£Ÿ³8åÉü˜ü1J$ae140e19-7862-422f-9411-a47460db1d24
+Œ	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ÑŒÙJ$ab9839c8-d20e-4890-a601-5d739d83005d
+‘	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ÊúâşÿÿÿÿJ$9078e24c-5814-41e1-bc21-c824bc530315
+‘	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯Ã¹ÚûÿÿÿÿJ$ee0be672-729e-4cdc-a304-62a2123d8d85
+‘	java:S117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜’ãüÿÿÿÿJ$495acd50-589f-41dc-babe-c8a6b91ed2bb
+”	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ÑŒÙ8èÉü˜ü1J$d0a230a8-53e0-453b-8904-a985616bdb19
+™	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Êúâşÿÿÿÿ8èÉü˜ü1J$2a544b4a-c210-44b9-99dc-4b29b503de9f
+™	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯Ã¹Úûÿÿÿÿ8¡ş˜ü1J$531da456-38a5-4a9c-ba9b-5da643ecb106
+™	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜’ãüÿÿÿÿ8’Ìÿ˜ü1J$01ac5c00-7ab8-42d9-baa9-ec42058227ee
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÚ„üÿÿÿÿJ$1a788668-c990-45ad-9bee-225f34fc16e7
+‹	java:S116"PRename this field "Armor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­É£şJ$0ebf5246-8774-4d1c-8c21-64a13a23279d
+Œ	java:S116 "QRename this field "Weapon" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î¼ öJ$60f10d94-a322-46c9-ab5f-873ba0048fc8
+“	java:S116""SRename this field "Accesory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹³¬ÇùÿÿÿÿJ$b9d21041-7bc2-413e-8b9e-e423f740d4a4
+	java:S116&"PRename this field "Melee" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¯¢íúÿÿÿÿJ$dd18aaa5-ed97-4884-9d22-e0c96e2b247a
+‘	java:S116("QRename this field "Ranger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒâéòûÿÿÿÿJ$ef0d8c34-cbe7-4a95-b0b1-2e738e019f91
+Œ	java:S116*"QRename this field "Wizard" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÑì¼J$64f54a39-104f-49bd-9220-35200cb1e043
+	java:S116,"SRename this field "Summoner" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—£áAJ$bb738ee7-17dd-4889-b935-183b9155ee04
+	java:S116."RRename this field "Thrower" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å““ˆJ$04cb2a98-dad6-4459-8fc5-5c392468edf9
+Š	java:S1160"ORename this field "Menu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šë·J$9bacc152-61c1-4633-9b65-8a4c741b7ad5
+½
+java:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎóÔˆJ$8dc1ee00-f509-447b-9908-90c771f3db89
+Â
+java:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®ÒêúÿÿÿÿJ$a9ada6b5-1146-4277-ac6c-1cea831ee2c3
+Â
+java:S1186A"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿJ$fb9e63de-f96f-4977-80f0-88d283ab9062
+x
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8Á¼÷˜ü1J$5027b5af-c806-42c5-bfce-6857bf051b24

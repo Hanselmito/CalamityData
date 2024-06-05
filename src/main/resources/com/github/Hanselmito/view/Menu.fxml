@@ -29,19 +29,9 @@
           </Menu>
         </menus>
       </MenuBar>
-      <ImageView fx:id="buttonStop" fitHeight="41.0" fitWidth="41.0" layoutX="252.0" layoutY="360.0" onMouseClicked="#StopMedia" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0">
-         <image>
-            <Image url="@../../../../Icons/MaterialSymbolsPause.png" />
-         </image>
-      </ImageView>
       <ImageView fx:id="MaxWindow" fitHeight="35.0" fitWidth="24.0" layoutX="579.0" layoutY="2.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="2.0">
          <image>
             <Image url="@../../../../Icons/MaterialSymbolsTab.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="buttonPlay" fitHeight="41.0" fitWidth="48.0" layoutX="213.0" layoutY="359.0" onMouseClicked="#PlayMedia" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="4.0">
-         <image>
-            <Image url="@../../../../Icons/MaterialSymbolsPlayArrow.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="48.0" layoutX="4.0" layoutY="360.0" onMouseClicked="#NoVolum" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="4.0">

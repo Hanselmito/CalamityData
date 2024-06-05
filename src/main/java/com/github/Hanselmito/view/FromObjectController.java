@@ -69,51 +69,57 @@ public class FromObjectController extends Controller implements Initializable {
      * The method lists by enums from the database
      * */
     @FXML
-    public void ListTipeObjectAR() throws Exception{
+    public void ListTipeObjectAR(){
         List<object> obj = ObjectDAO.build().findByTipeObject("Armor");
         this.objects = FXCollections.observableArrayList(obj);
         tableView.setItems(this.objects);
     }
     @FXML
-    public void ListTipeObjectW() throws Exception {
+    public void ListTipeObjectW(){
         List<object> obj = ObjectDAO.build().findByTipeObject("Weapon");
         this.objects = FXCollections.observableArrayList(obj);
         tableView.setItems(this.objects);
     }
         @FXML
-        public void ListTipeObjectACE() throws Exception {
+        public void ListTipeObjectACE(){
             List<object> obj = ObjectDAO.build().findByTipeObject("Accesory");
             this.objects = FXCollections.observableArrayList(obj);
             tableView.setItems(this.objects);
         }
     @FXML
-    public void ListTipeClassM() throws Exception{
+    public void ListTipeClassM(){
         List<object> obj = ObjectDAO.build().findByTipeClass("Melee");
         this.objects = FXCollections.observableArrayList(obj);
         tableView.setItems(this.objects);
     }
     @FXML
-    public void ListTipeClassR() throws Exception{
+    public void ListTipeClassR(){
         List<object> obj = ObjectDAO.build().findByTipeClass("Ranger");
         this.objects = FXCollections.observableArrayList(obj);
         tableView.setItems(this.objects);
     }
     @FXML
-    public void ListTipeClassW() throws Exception{
+    public void ListTipeClassW(){
         List<object> obj = ObjectDAO.build().findByTipeClass("Wizard");
         this.objects = FXCollections.observableArrayList(obj);
         tableView.setItems(this.objects);
     }
     @FXML
-    public void ListTipeClassS() throws Exception{
+    public void ListTipeClassS(){
         List<object> obj = ObjectDAO.build().findByTipeClass("Summoner");
         this.objects = FXCollections.observableArrayList(obj);
         tableView.setItems(this.objects);
     }
     @FXML
-    public void ListTipeClassT() throws Exception{
+    public void ListTipeClassT(){
         List<object> obj = ObjectDAO.build().findByTipeClass("Thrower");
         this.objects = FXCollections.observableArrayList(obj);
+        tableView.setItems(this.objects);
+    }
+    @FXML
+    public void ListAllObject(){
+        List<object> objectList = ObjectDAO.build().findAll();
+        this.objects = FXCollections.observableArrayList(objectList);
         tableView.setItems(this.objects);
     }
 

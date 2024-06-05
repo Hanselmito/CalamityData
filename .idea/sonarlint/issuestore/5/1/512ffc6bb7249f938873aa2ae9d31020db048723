@@ -1,7 +1,12 @@
 
-‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğŒ»¥úÿÿÿÿJ$f12ef175-c967-44b4-9f61-62585e173760
-Œ	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ää©·J$540ef109-e7ad-462e-8257-cc3d7c9a52c1
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶üçŞıÿÿÿÿJ$1bd44ec7-d033-41e0-97c9-d4532f4e6b5c
-’	java:S116"RRename this field "IDWorld" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Ø˜ÂûÿÿÿÿJ$ecd1e126-318a-44d0-aeab-5c539c3d1237
-l
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒJ$6fffab78-6ad0-4009-aa1a-45ede2e64261
+Œ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÄØÛJ$ebf57b85-6437-4fa7-8911-4733944451e4
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÄØÛ8Ôı°¹ş1J$7c7397bb-a118-44fa-bd0d-ae2d5d16778d
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®ÄØÛ8Ì·±¹ş1J$c659cd59-c832-4365-b5e1-6333f8cc2597
+Œ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ää©·J$da710601-42e4-4719-bd86-e7ffee71b8e0
+“	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı Ë 8‹µ¶¹ş1J$1d60d5de-4461-4f3d-b45b-8efedb244376
+“	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÍô…8ºÇµ¹ş1J$9dd171d6-b438-4d82-9db8-530511fa9e23
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶üçŞıÿÿÿÿJ$0b084697-7aae-4eac-91ec-6f192ccda226
+’	java:S116
+"RRename this field "IDWorld" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Ø˜ÂûÿÿÿÿJ$519d33ea-d55e-4c7c-aa15-641cd92dac1f
+™	java:S116"WRename this field "List_Objects" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È¸ºÚ8»ç­¹ş1J$1bd607b4-678e-414d-86c1-fae2dab9b5a3
+	java:S116"VRename this field "List_Biomes" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂıäÚşÿÿÿÿ8»ç­¹ş1J$925721db-0056-4282-8257-508521068dff

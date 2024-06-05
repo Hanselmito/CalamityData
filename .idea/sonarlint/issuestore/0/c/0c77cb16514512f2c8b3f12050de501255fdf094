@@ -1,0 +1,22 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÚ„üÿÿÿÿ8Ú¿±’ş1J$3165275b-feae-4a48-bc31-b674a21fc632
+¡	java:S116#"ZRename this field "ColumnIDEnemies" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘œÙÿÿÿÿÿ8À±’ş1J$d045eee2-c12a-43c8-b947-af2662f8fba8
+š	java:S116%"XRename this field "ColumnIDBiome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¸Ä8À±’ş1J$bbe038a7-d298-4cf2-80de-57378eab9b28
+£	java:S116'"\Rename this field "ColumnTipeEnemies" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ®Å”ùÿÿÿÿ8À±’ş1J$3533707f-469a-4b3e-a254-e8c3a479dbda
+	java:S116)"\Rename this field "ColumnNameEnemies" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üĞ¨¡8À±’ş1J$096b8eaa-eac4-46f9-8b64-4269c1f4357b
+¦	java:S116+"_Rename this field "ColumnDificultySpawn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Ğå…ùÿÿÿÿ8À±’ş1J$32b29a25-8452-4e8b-bcf4-3daa0700dba8
+	java:S116-"WRename this field "ColumnImagen" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ËÀŸşÿÿÿÿ8À±’ş1J$9f84045c-f058-416d-bf8c-2cf49a86c183
+›	java:S116/"TRename this field "MaxWindow" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ì¤ÿÿÿÿÿ8À±’ş1J$eea4765c-1f33-4e79-a577-f984a21029ec
+Ä
+java:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎóÔˆ8’À±’ş1J$63ab347e-89b4-496f-8fc6-d89a143f6ec5
+É
+java:S1186e"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®Òêúÿÿÿÿ8“À±’ş1J$dcc0dc97-16d1-45bc-b8dd-2fb908d15289
+€
+java:S4144‰"]Update this method so that its implementation is not identical to "ListAllEnemys" on line 94.(ïññšıÿÿÿÿ8Ö†²’ş1
+	java:S100?"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦‡’N8À±’ş1J$1cd4f3ae-9345-4762-8250-b237f068b7b3
+Š
+java:S1126A"BReplace this if-then-else statement by a single method invocation.(ÿ„©©ıÿÿÿÿ8 À±’ş1J$2e049691-d432-459e-8d31-6860e49df43e
+•	java:S100L"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢Õşëşÿÿÿÿ8¢À±’ş1J$f3afb4b8-262b-4fcc-b3b7-b4d8347bdc5a
+	java:S100R"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÑ¦`8¦À±’ş1J$b6e3dbb3-3fac-49fd-af73-dcc598d0a15a
+•	java:S100X"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­äŒùÿÿÿÿ8©À±’ş1J$cc183020-0518-426b-85ea-5051dc2211ee
+	java:S100^"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­±ƒ8¬À±’ş1J$8e5694a5-18ac-4af8-b9a2-b4b45e1ac81f

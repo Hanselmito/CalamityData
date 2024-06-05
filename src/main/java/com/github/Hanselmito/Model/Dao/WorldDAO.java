@@ -1,9 +1,10 @@
 package com.github.Hanselmito.Model.Dao;
 
 import com.github.Hanselmito.Model.Conection.ConnectionMariaDB;
-import com.github.Hanselmito.Model.Entity.Enums.Dificulty;
-import com.github.Hanselmito.Model.Entity.Enums.SizeWorld;
+import com.github.Hanselmito.Model.Entity.Biome;
+import com.github.Hanselmito.Model.Entity.Enums.*;
 import com.github.Hanselmito.Model.Entity.World;
+import com.github.Hanselmito.Model.Entity.object;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -132,7 +133,44 @@ public class WorldDAO implements DAO<World>{
         return new WorldDAO();
     }
     @Override
-    public void close() throws IOException {
+    public void close(){
 
+    }
+
+    public class WorldLazyAll extends World {
+        private final static String FIND_ALL="SELECT DISTINCT w.* FROM World w LEFT JOIN Object o ON w.IDWorld = o.IDWorld LEFT JOIN Biome b ON w.IDWorld = b.IDWorld WHERE o.IDWorld IS NOT NULL OR b.IDWorld IS NOT NULL";
+
+
+        public WorldLazyAll(int IDWorld, Dificulty dificulty, SizeWorld sizeWorld, List<object> List_Objects, List<Biome> List_Biomes) {
+            super(IDWorld, dificulty, sizeWorld, List_Objects, List_Biomes);
+
+        }
+
+        public List<World> findAllWorldsWithObjectAndBiome() {
+            List<World> result = new ArrayList<>();
+            try (PreparedStatement pst = conn.prepareStatement(FIND_ALL)) {
+                try (ResultSet res = pst.executeQuery()){
+                    while (res.next()) {
+                        World world = new World();
+                        world.setIDWorld(res.getInt("IDWorld"));
+                        world.setDificulty(Dificulty.valueOf(res.getString("Dificulty")));
+                        world.setSizeWorld(SizeWorld.valueOf(res.getString("SizeWorld")));
+
+                        // Obtén y establece todos los objetos asociados a este mundo
+                        List<object> obj = new ObjectDAO().FindObjectForWorld(world.getIDWorld());
+                        world.setObject(obj);
+
+                        // Obtén y establece todos los biomas asociados a este mundo
+                        List<Biome> biome = new BiomeDAO().FindBiomeForWorld(world.getIDWorld());
+                        world.setBiome(biome);
+
+                        result.add(world);
+                    }
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+            return result;
+        }
     }
 }
