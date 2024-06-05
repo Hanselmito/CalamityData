@@ -3,13 +3,13 @@ package com.github.Hanselmito.view;
 import com.github.Hanselmito.App;
 import com.github.Hanselmito.Model.Dao.WorldDAO;
 import com.github.Hanselmito.Model.Entity.World;
+import com.github.Hanselmito.Model.Entity.object;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -35,11 +35,11 @@ public class WorldController extends Controller implements Initializable {
     @FXML
     private Button Menu;
 
-    private WorldDAO wdao = new WorldDAO();
+    private WorldDAO wDAO = new WorldDAO();
 
 
     @Override
-    public void onOpen(Object input) throws IOException, Exception {
+    public void onOpen(Object input) throws Exception {
 
     }
 
@@ -64,22 +64,50 @@ public class WorldController extends Controller implements Initializable {
     public void handleInsertButtonAction() {
         String idWorld = textFieldIDWorld.getText();
 
+        int selectedDifficultyCount = 0;
         String Dificulty = "";
         if (Pre_Hardmode.isSelected()) {
             Dificulty = "Pre_Hardmode";
-        } else if (hardmode.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (hardmode.isSelected()) {
             Dificulty = "hardmode";
-        } else if (Post_MoonLord.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (Post_MoonLord.isSelected()) {
             Dificulty = "Post_MoonLord";
+            selectedDifficultyCount++;
         }
 
+        if (selectedDifficultyCount > 1) {
+            showAlert("Solo puede seleccionar una dificultad a la vez.");
+            return;
+        }
+
+        int selectedSizeCount = 0;
         String SizeWorld = "";
         if (Big.isSelected()) {
             SizeWorld = "Big";
-        } else if (Medium.isSelected()) {
+            selectedSizeCount++;
+        }
+        if (Medium.isSelected()) {
             SizeWorld = "Medium";
-        } else if (Small.isSelected()) {
+            selectedSizeCount++;
+        }
+        if (Small.isSelected()) {
             SizeWorld = "Small";
+            selectedSizeCount++;
+        }
+
+        if (selectedSizeCount > 1) {
+            showAlert("Solo puede seleccionar un tamaño a la vez.");
+            return;
+        }
+
+        World existingWorld = wDAO.findById(Integer.parseInt(idWorld));
+        if (existingWorld != null) {
+            showAlert("Esa ID ya existe");
+            return;
         }
 
         World world = new World();
@@ -88,7 +116,7 @@ public class WorldController extends Controller implements Initializable {
         world.setSizeWorld(com.github.Hanselmito.Model.Entity.Enums.SizeWorld.valueOf(SizeWorld));
 
         try {
-            wdao.save(world);
+            wDAO.save(world);
             showAlert("todo bien compruebalo");
             App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
         } catch (Exception e) {
@@ -108,25 +136,45 @@ public class WorldController extends Controller implements Initializable {
     public void handleUpdateButtonAction() {
         String idWorld = textFieldIDWorld.getText();
 
+        int selectedDifficultyCount = 0;
         String Dificulty = "";
         if (Pre_Hardmode.isSelected()) {
             Dificulty = "Pre_Hardmode";
-        } else if (hardmode.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (hardmode.isSelected()) {
             Dificulty = "hardmode";
-        } else if (Post_MoonLord.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (Post_MoonLord.isSelected()) {
             Dificulty = "Post_MoonLord";
+            selectedDifficultyCount++;
         }
 
+        if (selectedDifficultyCount > 1) {
+            showAlert("Solo puede seleccionar una dificultad a la vez.");
+            return;
+        }
+
+        int selectedSizeCount = 0;
         String SizeWorld = "";
         if (Big.isSelected()) {
             SizeWorld = "Big";
-        } else if (Medium.isSelected()) {
+            selectedSizeCount++;
+        }
+        if (Medium.isSelected()) {
             SizeWorld = "Medium";
-        } else if (Small.isSelected()) {
+            selectedSizeCount++;
+        }
+        if (Small.isSelected()) {
             SizeWorld = "Small";
+            selectedSizeCount++;
         }
 
-        // Aquí puedes agregar la lógica para comprobar los datos
+        if (selectedSizeCount > 1) {
+            showAlert("Solo puede seleccionar un tamaño a la vez.");
+            return;
+        }
 
         World world = new World();
         world.setIDWorld(Integer.parseInt(idWorld));
@@ -134,7 +182,7 @@ public class WorldController extends Controller implements Initializable {
         world.setSizeWorld(com.github.Hanselmito.Model.Entity.Enums.SizeWorld.valueOf(SizeWorld));
 
         try {
-            wdao.update(world);
+            wDAO.update(world);
             showAlert("todo bien");
             App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
         } catch (Exception e) {
@@ -152,13 +200,11 @@ public class WorldController extends Controller implements Initializable {
     public void handleDeleteButtonAction() {
         String idWorld = textFieldIDWorld.getText();
 
-        // Aquí puedes agregar la lógica para comprobar los datos
-
         World world = new World();
         world.setIDWorld(Integer.parseInt(idWorld));
 
         try {
-            wdao.delete(world);
+            wDAO.delete(world);
             showAlert("Mundo eliminado");
             App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
         } catch (Exception e) {

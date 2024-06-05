@@ -1,8 +1,8 @@
 
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ È÷
-k	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÎÊ€ıÿÿÿÿ
-b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÌÃôÓ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶üçŞıÿÿÿÿ
-h	java:S116	"SRename this field "IDObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬±±å
-j	java:S116"URename this field "NameObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ç
-k	java:S116"QRename this field "Effect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à™æîûÿÿÿÿ
+Œ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ È÷J$51f34fa2-28b9-46d0-8bc4-b029e5c81f3b
+‘	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÎÊ€ıÿÿÿÿJ$e03fd4b6-db9a-4859-a366-10985deda029
+ˆ	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÌÃôÓJ$50939638-f76b-4a94-a5a3-670a9d816e4c
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶üçŞıÿÿÿÿJ$75a88d4c-3ee5-4005-91da-4a4c97a99ee1
+	java:S116	"SRename this field "IDObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬±±åJ$db9ade97-9018-4e5c-8cc9-a7bcab7861d0
+	java:S116"URename this field "NameObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€çJ$69905176-ff19-493d-8106-917ffc135923
+‘	java:S116"QRename this field "Effect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à™æîûÿÿÿÿJ$57a2385b-06f3-435b-b3d1-192ae84b344c

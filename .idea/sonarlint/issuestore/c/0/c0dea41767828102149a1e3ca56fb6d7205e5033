@@ -1,0 +1,29 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÚ„üÿÿÿÿ8¨‚—’ş1J$11eed8ce-d731-4324-b13c-a22bd4c4ad9a
+ 	java:S116!"YRename this field "ColumnIDObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å×Áùÿÿÿÿ8î‚—’ş1J$9a3582b6-7fd3-400d-a0f0-eab32a81f4b6
+š	java:S116#"XRename this field "ColumnIDWorld" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÎ€ñ8ğ‚—’ş1J$5a5cc6fb-7c24-4474-a6db-ef25e5c1591d
+—	java:S116%"URename this field "ColumnName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıĞ¹é8ñ‚—’ş1J$3ec22e8f-6514-461b-9a48-4d369977bf92
+Ÿ	java:S116'"XRename this field "ColumnTObject" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÏö†ùÿÿÿÿ8ò‚—’ş1J$d163adec-cce8-42bb-a34e-bdd6790803df
+	java:S116)"VRename this field "ColumnEfect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µŞò¦üÿÿÿÿ8ô‚—’ş1J$0e205e8d-0741-4379-8f2f-f69137b8882f
+˜	java:S116+"WRename this field "ColumnTClass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø§®N8õ‚—’ş1J$e1723fdc-3612-43a2-9ae9-d031d3273cda
+›	java:S116-"TRename this field "MaxWindow" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ì¤ÿÿÿÿÿ8÷‚—’ş1J$84ca3dbd-f941-42b2-95b6-e041f74d2869
+Ä
+java:S11862"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÒüÇ8ù‚—’ş1J$96c4eafd-1942-46a6-a79f-060d1e5a5444
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®Òêúÿÿÿÿ8ù‚—’ş1J$1e4ebc83-7c35-4842-8186-94ec9c9e4d01
+¢
+java:S4144–"^Update this method so that its implementation is not identical to "ListAllObject" on line 120.(¦õÕÖ8›‚™’ş1J$d77c155c-b896-46c3-b5f3-8398919c63dc
+	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦‡’N8‹ƒ—’ş1J$73d21b42-c368-48af-b6c3-fa7a9007af49
+Š
+java:S1126="BReplace this if-then-else statement by a single method invocation.(ÿ„©©ıÿÿÿÿ8’ƒ—’ş1J$257432ee-cdda-40e6-bf36-eab8e6285c3f
+	java:S100H"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼‰ûÄ8™ƒ—’ş1J$98e54848-6782-4b9e-9282-552bdc59309b
+•	java:S100N"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ÅÑ×øÿÿÿÿ8¡ƒ—’ş1J$6f516956-8417-4627-8d29-01ff8d124c06
+•	java:S100T"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿòæ‡ûÿÿÿÿ8¨ƒ—’ş1J$adf2e24f-05d3-459c-88b2-1aaa01062231
+	java:S100Z"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â†§8®ƒ—’ş1J$8772b730-01f9-4bc7-9076-04b74120a86e
+	java:S100`"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù­ö²8²ƒ—’ş1J$627fcc33-46ab-48f0-8837-1bade4d9bf9d
+	java:S100f"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÜ‘Å8µƒ—’ş1J$d3d6d21f-fe71-42fe-b4ff-91406f503ea1
+•	java:S100l"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úûóñıÿÿÿÿ8¸ƒ—’ş1J$58c74b92-7b74-4de8-b973-c9f66e09d2ae
+•	java:S100r"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îœª€ûÿÿÿÿ8»ƒ—’ş1J$9c999965-0445-4641-b23d-8096b8ee3ef3
+	java:S100x"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞÌî«8¾ƒ—’ş1J$cca6a050-24ad-4509-9ed0-5b581659c21e
+
+java:S1128"KRemove this unused import 'javafx.scene.control.cell.PropertyValueFactory'.(àÎ¬õ8Úƒ—’ş1J$34451e03-6706-4b04-842b-1bd7097958e9

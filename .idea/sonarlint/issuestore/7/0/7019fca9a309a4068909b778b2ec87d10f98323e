@@ -1,22 +1,35 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãåJ$3fcea726-27a5-4109-87e7-35371c588d23
-Â
-java:S1186s"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿJ$05b8b185-12ac-46b4-b141-ac97f2721f53
-†
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ïÁäåüÿÿÿÿJ$6bdfa2b1-e00a-4809-a590-aaeb54bc830a
-
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Â¡½§J$191c7405-cf39-4ac1-b273-98f8605e8fdf
-†
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µ»ÆæøÿÿÿÿJ$293c5a7a-c75c-4b0d-9d6d-d674385cc834
-
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ù›”¦J$8c2240a9-b315-468f-8bf8-c48d1bbf9ce4
-†
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(õó¢¥ÿÿÿÿÿJ$756e4ca9-d24c-49b3-942f-abceb59453b9
+
+java:S1192`"HDefine a constant instead of duplicating this literal "IDBiome" 5 times.(‡ûÓõüÿÿÿÿ8¢‡Ó¾ş1J$631efd9d-91b5-48d6-ba9c-ab4dffd8cdcc
+–
+java:S1192d"TDefine a constant instead of duplicating this literal "GenerationDificulty" 5 times.(áĞ·|8£‡Ó¾ş1J$79160727-3554-462c-b87f-0ffc85a1e543
+Š
+java:S1192a"HDefine a constant instead of duplicating this literal "IDWorld" 5 times.(ß‹³8¤‡Ó¾ş1J$8eff0773-219e-4d49-aceb-0245496ee33a
 ’
-java:S1128"QRemove this unused import 'com.github.Hanselmito.Model.Entity.Enums.TipeEnemies'.(¥¥àøÿÿÿÿJ$13588057-f36d-4083-82bf-21e4b1d99e9a
-†
-java:S1128"ERemove this unused import 'com.github.Hanselmito.Model.Entity.World'.(ÕéÕÿÿÿÿÿJ$a4ed8650-b493-4026-9314-efa0c9ffeaa5
-‡
-java:S1128	"FRemove this unused import 'com.github.Hanselmito.Model.Entity.object'.(’åÑñÿÿÿÿÿJ$789d9fe6-ebfd-4888-80a0-f4979ec6bc43
-Œ
-java:S1128"KRemove this unused import 'com.github.Hanselmito.Model.Dao.WorldDAO.build'.(ÄÖõñıÿÿÿÿJ$fe90026a-a327-481f-91d2-a7b457513959
+java:S1192b"JDefine a constant instead of duplicating this literal "NameBiome" 5 times.(‡­……ıÿÿÿÿ8¤‡Ó¾ş1J$4fd604e3-ca52-40ff-bfa9-58ef9344d83e
+•
+java:S1192c"MDefine a constant instead of duplicating this literal "ZoneGenerate" 5 times.(çğ÷Ôıÿÿÿÿ8¤‡Ó¾ş1J$76473c19-92a4-4b86-a200-13620dffa71a
+™	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ§™Şüÿÿÿÿ8¦‡Ó¾ş1J$5a307292-77b3-4a51-9687-f4c486379a59
+™	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×êµ±øÿÿÿÿ8ù²Ó¾ş1J$e4e2ba4c-65ca-418c-a788-046c5112ba18
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãå8«‡Ó¾ş1J$380ebc03-52c1-4329-a59a-f54a9568d7d0
+Ê
+java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8ÖˆÓ¾ş1J$41e94219-2183-4b2f-9a68-f659acd53f9a
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ïÁäåüÿÿÿÿ8ßˆÓ¾ş1J$93bd3a14-45ed-4130-bd9d-80c5fc1fbc15
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Â¡½§8ßˆÓ¾ş1J$5bdf8d42-79ed-4de6-82c6-746665e7b8dc
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µ»Ææøÿÿÿÿ8ßˆÓ¾ş1J$e8e7a253-dd14-4f9c-91d1-68a30b5a7a81
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ËÈıÿÿÿÿ8ßˆÓ¾ş1J$fefba5fc-092b-4bf5-b4d8-cfb522f96c3a
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ù›”¦8ßˆÓ¾ş1J$2f021f7d-b312-4a36-8ae1-f7da9965ec84
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(âçÒ8àˆÓ¾ş1J$0df18576-df7e-4957-996a-27d38ab41423
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(õó¢¥ÿÿÿÿÿ8àˆÓ¾ş1J$901a5cf4-2d32-4449-8303-66caaf18e6bb
+–	java:S100–"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ§™Şüÿÿÿÿ8“‰Ó¾ş1J$9a79a874-eaf7-4f2f-8405-5a2b18641949
+b
+java:S6905"Don't use the query "SELECT *".(âçÒ8•‰Ó¾ş1J$de88b944-82af-47dc-905d-177296811abd
+‰
+java:S1124µ"EReorder the modifiers to comply with the Java Language Specification.(òˆ¾8‰Ó¾ş1J$286e68ec-34ab-44dd-9d42-0b2b4d02505f

@@ -1,0 +1,20 @@
+
+‘	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆ«®şÿÿÿÿJ$f81b3d29-4dc0-4311-8e4d-59a6fc0e3735
+Œ	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–±š—J$4ed27d02-e04c-4e5e-a17b-9b1f487c20b1
+™	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆ«®şÿÿÿÿ8‡¾ò˜ü1J$ffac52ab-d3ea-457f-804d-257880ee4038
+”	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–±š—8‹¸ó˜ü1J$94e0f10a-16a2-4f2a-9d09-f1dcc34aa8f7
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÚ„üÿÿÿÿJ$528ba3cf-a595-4277-80da-e9659e2500f0
+—	java:S116"WRename this field "Pre_Hardmode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡©ß·ÿÿÿÿÿJ$5b6643a5-5829-432c-a746-cc7fe38d21a9
+“	java:S116"XRename this field "Post_MoonLord" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ÒòØJ$973cd6fe-0b31-40f3-8ac1-94751cd2233a
+	java:S116"NRename this field "Big" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸëˆøşÿÿÿÿJ$bea8a214-f747-4fc2-9611-44fa4e05652e
+‘	java:S116 "QRename this field "Medium" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»áèıÿÿÿÿJ$818a08e5-5f9b-41b9-84e6-82f0c0a5ca64
+	java:S116""PRename this field "Small" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›çÓ€úÿÿÿÿJ$d5016fbc-7e12-4bdb-8188-eed300c33eae
+Š	java:S116$"ORename this field "Menu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šë·J$51393282-aac7-46f9-ab42-c6b737318f79
+½
+java:S1186*"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎóÔˆJ$e1e0c926-7b8f-4d2e-8455-e896e720957a
+Â
+java:S1186/"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®ÒêúÿÿÿÿJ$c8b0fc77-d0c4-499d-a7d4-be1473816bd1
+Â
+java:S11864"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿJ$62307b0b-dcbd-4f80-b770-7cab67318830
+
+java:S1128"FRemove this unused import 'com.github.Hanselmito.Model.Entity.object'.(’åÑñÿÿÿÿÿ8ÚÀƒšü1J$538be368-2dde-457f-b77d-7c859339ed8c

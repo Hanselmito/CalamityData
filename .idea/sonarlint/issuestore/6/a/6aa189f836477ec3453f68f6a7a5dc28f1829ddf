@@ -1,0 +1,26 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÚ„üÿÿÿÿ8ÆÃø‘þ1J$f5a5bbf0-1479-4329-a652-c7aa2786bf6a
+š	java:S116"XRename this field "ColumnIDWorld" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öç×‡8‚Äø‘þ1J$ca4c1f2a-f17b-4e9a-96de-840e56bb4c0f
+œ	java:S116"ZRename this field "ColumnDificulty" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ó‹ç8ƒÄø‘þ1J$ff35c2f2-9bdf-470f-af3b-c6f034b3fc78
+œ	java:S116!"ZRename this field "ColumnsizeWorld" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ÊÀ¿8ƒÄø‘þ1J$638f9319-fa7d-45ee-ad77-cd41d8c47fb6
+›	java:S116#"TRename this field "MaxWindow" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ì¤ÿÿÿÿÿ8ƒÄø‘þ1J$4f449af7-c081-4e3e-96ed-a16d5c1fec73
+Ä
+java:S1186("€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÒüÇ8…Äø‘þ1J$82721934-6241-4b3b-9e3d-f5840a30f55e
+É
+java:S1186_"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®Òêúÿÿÿÿ8…Äø‘þ1J$b47cfa9d-def4-4b82-9f64-09ecf16ded89
+Ÿ
+java:S4144q"\Update this method so that its implementation is not identical to "ListAllWorld" on line 80.(Éý·8‘Äø‘þ1J$a763bbf4-9a32-4017-92e9-a93a37c19ce7
+	java:S1001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦‡’N8šÄø‘þ1J$53627a66-ad5d-4c81-a36d-f2e62a33c5e7
+Š
+java:S11263"BReplace this if-then-else statement by a single method invocation.(ÿ„©©ýÿÿÿÿ8žÄø‘þ1J$46c93f07-0977-42d7-88bd-a69627698fed
+•	java:S100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½‘ Ýýÿÿÿÿ8 Äø‘þ1J$e86011e4-47ef-4d52-9ee0-db13963507b3
+|
+java:S1117?"9Rename "world" which hides the field declared at line 37.(˜½£´8¢Äø‘þ1J$65b12549-2d6d-4299-b08e-d1bb00378282
+•	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÔÏÕýÿÿÿÿ8¥Äø‘þ1J$58befaeb-fd40-4464-8174-f5115b92d8e5
+{
+java:S1117E"9Rename "world" which hides the field declared at line 37.(…ª‡[8¦Äø‘þ1J$cb23f120-fe78-47ac-b056-71ec7436b68f
+•	java:S100J"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àø¸“ýÿÿÿÿ8¨Äø‘þ1J$ecdd50d9-c54e-4c50-b405-9c6c89449109
+{
+java:S1117K"9Rename "world" which hides the field declared at line 37.(™‘Ù8©Äø‘þ1J$e1a0e16a-e8b7-49ce-ba61-84cf9ada8be7
+•	java:S100P"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼—ÉÍþÿÿÿÿ8¬Äø‘þ1J$f9fd4992-4dec-4ba3-9b72-e8423a080aba
+o	java:S100V"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åšéùýÿÿÿÿ8¡Æç¾þ1

@@ -18,11 +18,17 @@
               <MenuItem mnemonicParsing="false" onAction="#goToMenu" text="Menu" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="ListarBioma">
+            <Menu mnemonicParsing="false" text="Listar">
               <items>
-                <MenuItem mnemonicParsing="false" onAction="#ListBiomeDificultyPH" text="ListarPreHardmode" />
-                  <MenuItem mnemonicParsing="false" onAction="#ListBiomeDificultyH" text="ListarHardmode" />
-                  <MenuItem mnemonicParsing="false" onAction="#ListBiomeDificultyPM" text="ListarPostMoonlord" />
+                  <Menu mnemonicParsing="false" text="Listar Por Dificultad">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#ListBiomeDificultyPH" text="ListarPreHardmode" />
+                        <MenuItem mnemonicParsing="false" onAction="#ListBiomeDificultyH" text="ListarHardmode" />
+                        <MenuItem mnemonicParsing="false" onAction="#ListBiomeDificultyPM" text="ListarPostMoonlord" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#ListAllBiome" text="Listar Todo" />
+                  <MenuItem mnemonicParsing="false" onAction="#ListBiomeLazy" text="Listar Biomas Asociados" />
               </items>
             </Menu>
         </menus>

@@ -59,22 +59,36 @@ public class FormWorldController extends Controller implements Initializable {
      * The method lists by enums from the database
      * */
     @FXML
-    public void ListWorldDificultyPH() throws Exception{
+    public void ListWorldDificultyPH(){
         List<World> world = WorldDAO.build().findByDificulty("Pre_Hardmode");
         this.world = FXCollections.observableArrayList(world);
         tableView.setItems(this.world);
     }
     @FXML
-    public void ListWorldDificultyH() throws Exception{
+    public void ListWorldDificultyH(){
         List<World> world = WorldDAO.build().findByDificulty("hardmode");
         this.world = FXCollections.observableArrayList(world);
         tableView.setItems(this.world);
     }
     @FXML
-    public void ListWorldDificultyPM() throws Exception{
+    public void ListWorldDificultyPM(){
         List<World> world = WorldDAO.build().findByDificulty("Post_MoonLord");
         this.world = FXCollections.observableArrayList(world);
         tableView.setItems(this.world);
+    }
+    @FXML
+    public void ListAllWorld(){
+        List<World> worldList = WorldDAO.build().findAll();
+        this.world = FXCollections.observableArrayList(worldList);
+        tableView.setItems(world);
+    }
+    @FXML
+    private void ListWorldLazy() {
+        WorldDAO worldDAO = WorldDAO.build();
+        WorldDAO.WorldLazyAll worldLazyAll = worldDAO.new WorldLazyAll(0, null, null, null, null);
+        List<World> worldList = worldLazyAll.findAllWorldsWithObjectAndBiome();
+        this.world = FXCollections.observableArrayList(worldList);
+        tableView.setItems(world);
     }
 
     @Override

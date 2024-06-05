@@ -18,11 +18,16 @@
               <MenuItem mnemonicParsing="false" onAction="#goToMenu" text="Menu" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="ListarPorEnemigos">
+            <Menu mnemonicParsing="false" text="Listar">
               <items>
-                <MenuItem mnemonicParsing="false" onAction="#ListTipeEnemys" text="Enemies" />
-                  <MenuItem mnemonicParsing="false" onAction="#ListTipeMiniBosses" text="MiniBosses" />
-                  <MenuItem mnemonicParsing="false" onAction="#ListTipeBosses" text="Bosses" />
+                  <Menu mnemonicParsing="false" text="Listar tipo de enetidad">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#ListTipeEnemys" text="Enemies" />
+                        <MenuItem mnemonicParsing="false" onAction="#ListTipeMiniBosses" text="MiniBosses" />
+                        <MenuItem mnemonicParsing="false" onAction="#ListTipeBosses" text="Bosses" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#ListAllEnemys" text="Listar Todos" />
               </items>
             </Menu>
         </menus>

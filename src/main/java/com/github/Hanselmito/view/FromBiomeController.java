@@ -2,7 +2,9 @@ package com.github.Hanselmito.view;
 
 import com.github.Hanselmito.App;
 import com.github.Hanselmito.Model.Dao.BiomeDAO;
+import com.github.Hanselmito.Model.Dao.WorldDAO;
 import com.github.Hanselmito.Model.Entity.Biome;
+import com.github.Hanselmito.Model.Entity.World;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -66,20 +68,36 @@ public class FromBiomeController extends Controller implements Initializable {
      * The method lists by enums from the database
      * */
     @FXML
-    public void ListBiomeDificultyPH() throws Exception{
+    public void ListBiomeDificultyPH(){
         List<Biome> biome = BiomeDAO.build().findByDificulty("Pre_Hardmode");
         this.biomes = FXCollections.observableArrayList(biome);
         tableView.setItems(this.biomes);
     }
-    public void ListBiomeDificultyH() throws Exception{
+    @FXML
+    public void ListBiomeDificultyH(){
         List<Biome> biome = BiomeDAO.build().findByDificulty("hardmode");
         this.biomes = FXCollections.observableArrayList(biome);
         tableView.setItems(this.biomes);
     }
-    public void ListBiomeDificultyPM() throws Exception{
+    @FXML
+    public void ListBiomeDificultyPM(){
         List<Biome> biome = BiomeDAO.build().findByDificulty("Post_MoonLord");
         this.biomes = FXCollections.observableArrayList(biome);
         tableView.setItems(this.biomes);
+    }
+    @FXML
+    public void ListAllBiome(){
+        List<Biome> biomeList = BiomeDAO.build().findAll();
+        this.biomes = FXCollections.observableArrayList(biomeList);
+        tableView.setItems(this.biomes);
+    }
+    @FXML
+    private void ListBiomeLazy() {
+        BiomeDAO bioDAO = BiomeDAO.build();
+        BiomeDAO.BiomeLazyAll biomeLazyAll = bioDAO.new BiomeLazyAll(0, null, null, null, null, null);
+        List<Biome> biomeList = biomeLazyAll.findAllBiomesWithEnemys();
+        this.biomes = FXCollections.observableArrayList(biomeList);
+        tableView.setItems(biomes);
     }
 
     @Override

@@ -26,6 +26,7 @@ public class BiomeDAO implements DAO<Biome>{
     private final static String FINDBYID="SELECT b.IDBiome,b.IDWorld,b.NameBiome,b.ZoneGenerate,b.GenerationDificulty FROM Biome AS b WHERE b.IDBiome=?";
     private final static String FINDBYDIFICULTY="SELECT b.IDBiome,b.IDWorld,b.NameBiome,b.ZoneGenerate,b.GenerationDificulty FROM Biome AS b WHERE b.GenerationDificulty=?";
     private final static String FINDALL="SELECT b.IDBiome,b.IDWorld,b.NameBiome,b.ZoneGenerate,b.GenerationDificulty FROM Biome AS b";
+    private final static String FIND_BIOMES_FOR_WORLD = "SELECT * FROM Biome WHERE IDWorld=?";
     private final static String DELETE="DELETE FROM Biome AS b WHERE b.IDBiome=?";
 
     private Connection conn;
@@ -146,6 +147,27 @@ public class BiomeDAO implements DAO<Biome>{
         return result;
     }
 
+    public List<Biome> FindBiomeForWorld(int IDWorld) {
+        List<Biome> result = new ArrayList<>();
+        try (PreparedStatement pst = conn.prepareStatement(FIND_BIOMES_FOR_WORLD)) {
+            pst.setInt(1, IDWorld);
+            try (ResultSet res = pst.executeQuery()) {
+                while (res.next()) {
+                    Biome biome = new Biome();
+                    biome.setIDBiome(res.getInt("IDBiome"));
+                    biome.setWorld(WorldDAO.build().findById(res.getInt("IDWorld")));
+                    biome.setNameBiome(res.getString("NameBiome"));
+                    biome.setZoneGenerate(ZoneGenerate.valueOf(res.getString("ZoneGenerate")));
+                    biome.setGenerationDificulty(Dificulty.valueOf(res.getString("GenerationDificulty")));
+                    result.add(biome);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
     @Override
     public void close() throws IOException {
 
@@ -153,5 +175,39 @@ public class BiomeDAO implements DAO<Biome>{
 
     public static BiomeDAO build(){
         return new BiomeDAO();
+    }
+
+    public class BiomeLazyAll extends Biome {
+        private final static String FIND_ALL="SELECT DISTINCT b.* FROM Biome b LEFT JOIN Enemys e ON b.IDBiome = e.IDBiome WHERE e.IDBiome IS NOT NULL";
+
+
+        public BiomeLazyAll(int IDBiome, World world, String nameBiome, ZoneGenerate zoneGenerate, Dificulty generationDificulty, List<Enemys> enemys) {
+            super(IDBiome, world, nameBiome, zoneGenerate, generationDificulty, enemys);
+        }
+
+        public List<Biome> findAllBiomesWithEnemys() {
+            List<Biome> result = new ArrayList<>();
+            try (PreparedStatement pst = conn.prepareStatement(FIND_ALL)) {
+                try (ResultSet res = pst.executeQuery()){
+                    while (res.next()) {
+                        Biome biome = new Biome();
+                        biome.setIDBiome(res.getInt("IDBiome"));
+                        biome.setWorld(WorldDAO.build().findById(res.getInt("IDWorld")));
+                        biome.setNameBiome(res.getString("NameBiome"));
+                        biome.setZoneGenerate(ZoneGenerate.valueOf(res.getString("ZoneGenerate")));
+                        biome.setGenerationDificulty(Dificulty.valueOf(res.getString("GenerationDificulty")));
+
+                        // Obtén y establece todos los enemigos asociados a este bioma
+                        List<Enemys> enemys = new EnemysDAO().FindEnemysForBiome(biome.getIDBiome());
+                        biome.setEnemys(enemys);
+
+                        result.add(biome);
+                    }
+                }
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+            return result;
+        }
     }
 }

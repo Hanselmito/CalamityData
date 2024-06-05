@@ -1,0 +1,12 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÚ„üÿÿÿÿ8íÀİ™ü1J$cc72b9fc-376f-4c7b-b1e2-777f96d07dff
+›	java:S116!"TRename this field "MaxWindow" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ì¤ÿÿÿÿÿ8Áİ™ü1J$5d937a3c-360c-4703-bec0-9994753fdc53
+Ä
+java:S1186&"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎóÔˆ8Áİ™ü1J$0700a7fe-12d7-4665-8d3b-d787bc9313a5
+É
+java:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®Òêúÿÿÿÿ8Áİ™ü1J$890644cc-1147-4da5-b07c-0d401e0a2c65
+	java:S100@"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Ëùš8¡Áİ™ü1J$9febcaba-a016-452d-9d3b-17e183dc1f87
+•	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÎ—ùÿÿÿÿ8£Áİ™ü1J$f4acd56a-6617-43bc-8292-b8f3d4f260d1
+	java:S100O"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦‡’N8¥Áİ™ü1J$fd1387c5-bead-4014-94af-4ebbf8b4dcbd
+Š
+java:S1126Q"BReplace this if-then-else statement by a single method invocation.(ÿ„©©ıÿÿÿÿ8¨Áİ™ü1J$2fd3dfef-dc92-48db-aaea-c34b2374ee60

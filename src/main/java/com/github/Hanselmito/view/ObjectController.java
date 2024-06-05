@@ -52,7 +52,7 @@ public class ObjectController extends Controller implements Initializable {
 
 
     @Override
-    public void onOpen(Object input) throws IOException, Exception {
+    public void onOpen(Object input) throws Exception {
 
     }
 
@@ -80,39 +80,64 @@ public class ObjectController extends Controller implements Initializable {
         String NameObject = textFieldName.getText();
         String Effect = textEffect.getText();
 
+        int selectedTypeCount = 0;
         String TipeObject = "";
         if (Armor.isSelected()) {
             TipeObject = "Armor";
-        } else if (Weapon.isSelected()) {
+            selectedTypeCount++;
+        }
+        if (Weapon.isSelected()) {
             TipeObject = "Weapon";
-        } else if (Accesory.isSelected()) {
+            selectedTypeCount++;
+        }
+        if (Accesory.isSelected()) {
             TipeObject = "Accesory";
+            selectedTypeCount++;
         }
 
+        if (selectedTypeCount > 1) {
+            showAlert("Solo puede seleccionar un tipo de objeto a la vez.");
+            return;
+        }
+
+        int selectedClassCount = 0;
         String TipeClass = "";
         if (Melee.isSelected()) {
             TipeClass = "Melee";
-        } else if (Ranger.isSelected()) {
+            selectedClassCount++;
+        }
+        if (Ranger.isSelected()) {
             TipeClass = "Ranger";
-        } else if (Wizard.isSelected()) {
+            selectedClassCount++;
+        }
+        if (Wizard.isSelected()) {
             TipeClass = "Wizard";
-        }else if (Summoner.isSelected()) {
+            selectedClassCount++;
+        }
+        if (Summoner.isSelected()) {
             TipeClass = "Summoner";
-        }else if (Thrower.isSelected()) {
+            selectedClassCount++;
+        }
+        if (Thrower.isSelected()) {
             TipeClass = "Thrower";
+            selectedClassCount++;
+        }
+
+        if (selectedClassCount > 1) {
+            showAlert("Solo puede seleccionar una clase a la vez.");
+            return;
         }
 
         World world = WorldDAO.build().findById(idWorld);
         if (world == null) {
-            // Mostrar un mensaje de error o lanzar una excepción
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("El idWorld no existe");
-            alert.show();
+            showAlert("El idWorld no existe");
             return;
         }
-
-
-        // Aquí puedes agregar la lógica para comprobar los datos
+        object existingObject = oDAO.findById(Integer.parseInt(idObject));
+        if (existingObject != null) {
+            showAlert("Esa ID ya existe");
+            return;
+        }
 
         object o = new object();
         o.setIDObject(Integer.parseInt(idObject));
@@ -124,8 +149,8 @@ public class ObjectController extends Controller implements Initializable {
 
         try {
             oDAO.save(o);
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
             showAlert("todo bien compruebalo");
+            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
@@ -146,27 +171,54 @@ public class ObjectController extends Controller implements Initializable {
         String NameObject = textFieldName.getText();
         String Effect = textEffect.getText();
 
+        int selectedTypeCount = 0;
         String TipeObject = "";
         if (Armor.isSelected()) {
             TipeObject = "Armor";
-        } else if (Weapon.isSelected()) {
+            selectedTypeCount++;
+        }
+        if (Weapon.isSelected()) {
             TipeObject = "Weapon";
-        } else if (Accesory.isSelected()) {
+            selectedTypeCount++;
+        }
+        if (Accesory.isSelected()) {
             TipeObject = "Accesory";
+            selectedTypeCount++;
         }
 
+        if (selectedTypeCount > 1) {
+            showAlert("Solo puede seleccionar un tipo de objeto a la vez.");
+            return;
+        }
+
+        int selectedClassCount = 0;
         String TipeClass = "";
         if (Melee.isSelected()) {
             TipeClass = "Melee";
-        } else if (Ranger.isSelected()) {
-            TipeClass = "Ranger";
-        } else if (Wizard.isSelected()) {
-            TipeClass = "Wizard";
-        }else if (Summoner.isSelected()) {
-            TipeClass = "Summoner";
-        }else if (Thrower.isSelected()) {
-            TipeClass = "Thrower";
+            selectedClassCount++;
         }
+        if (Ranger.isSelected()) {
+            TipeClass = "Ranger";
+            selectedClassCount++;
+        }
+        if (Wizard.isSelected()) {
+            TipeClass = "Wizard";
+            selectedClassCount++;
+        }
+        if (Summoner.isSelected()) {
+            TipeClass = "Summoner";
+            selectedClassCount++;
+        }
+        if (Thrower.isSelected()) {
+            TipeClass = "Thrower";
+            selectedClassCount++;
+        }
+
+        if (selectedClassCount > 1) {
+            showAlert("Solo puede seleccionar una clase a la vez.");
+            return;
+        }
+
         World world = WorldDAO.build().findById(idWorld);
         if (world == null) {
             // Mostrar un mensaje de error o lanzar una excepción
@@ -205,9 +257,6 @@ public class ObjectController extends Controller implements Initializable {
     @FXML
     public void handleDeleteButtonAction() {
         String idObject = textFieldIDObject.getText();
-
-
-        // Aquí puedes agregar la lógica para comprobar los datos
 
         object o = new object();
         o.setIDObject(Integer.parseInt(idObject));

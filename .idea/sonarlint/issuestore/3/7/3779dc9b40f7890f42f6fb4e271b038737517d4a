@@ -1,8 +1,9 @@
 
-‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßñôøÿÿÿÿJ$8a9878e3-99e0-46df-b8e3-ea8c487e172a
-‘	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï£”ãùÿÿÿÿJ$e7a70253-8284-402b-84ea-71716c205bff
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶üçŞıÿÿÿÿJ$80b4d127-16c6-4437-b930-ac5f2aa2f13a
-	java:S116
-"RRename this field "IDBiome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í˜ÅšJ$49a63aea-2e85-4b3e-950c-52ea60918f66
-”	java:S116"TRename this field "NameBiome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©‡ÑìøÿÿÿÿJ$406a4204-29fb-42ca-84e5-36c0c5e80dcc
-	java:S116"^Rename this field "GenerationDificulty" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ˆ÷’ûÿÿÿÿJ$7d335abb-8d61-4495-9707-fba0b81dbc98
+‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßñôøÿÿÿÿJ$1993740e-ae94-4fec-bdb2-bd5d568ec713
+‘	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï£”ãùÿÿÿÿJ$751391fe-fc32-4278-8bc8-4c874ae323d4
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶üçŞıÿÿÿÿJ$3908bba2-61db-4042-bfe4-d8769fd4ff7f
+	java:S116"RRename this field "IDBiome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í˜ÅšJ$abc2f32a-86c1-4834-a53b-4c157dfb4cc2
+”	java:S116"TRename this field "NameBiome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©‡ÑìøÿÿÿÿJ$679d0fe2-b578-4fa1-82e8-278e84767a3c
+	java:S116"^Rename this field "GenerationDificulty" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ˆ÷’ûÿÿÿÿJ$0d4a9abc-65a5-419f-a0cd-72f421a6633e
+s
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÌÈ¾ş1J$067a8a2e-0221-4095-a418-fd1e35bf53b1

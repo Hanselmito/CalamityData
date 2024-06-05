@@ -1,16 +1,42 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãå8µÑí¸õ1
-£
-java:S1186s"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8áÑí¸õ1
-g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(­Üô’şÿÿÿÿ8ëÑí¸õ1
-a
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ü“8ëÑí¸õ1
+
+java:S1192b"KDefine a constant instead of duplicating this literal "TipeObject" 5 times.(ªä®ˆ8ÊŒƒ¹ş1J$a33eb3b7-5c59-44d2-84af-c6d778ad90c2
+“
+java:S1192a"KDefine a constant instead of duplicating this literal "NameObject" 5 times.(Å©¿ßıÿÿÿÿ8ÓŒƒ¹ş1J$cab0787e-3982-45cb-9269-f9fe64237bc5
+Š
+java:S1192`"HDefine a constant instead of duplicating this literal "IDWorld" 5 times.(ß‹³8ÚŒƒ¹ş1J$89b1efd4-40a4-4a21-b4c0-3caef7e9a325
+Œ
+java:S1192_"IDefine a constant instead of duplicating this literal "IDObject" 5 times.(ªûÌì8âŒƒ¹ş1J$6991c09d-5065-4f49-a33f-f90a3ed58210
+
+java:S1192c"GDefine a constant instead of duplicating this literal "Effect" 5 times.(¬¥†Ãùÿÿÿÿ8êŒƒ¹ş1J$98fe8c77-f817-435c-9dd8-8a095964f0c9
+’
+java:S1192d"JDefine a constant instead of duplicating this literal "TipeClass" 5 times.(ø©Ê˜üÿÿÿÿ8òŒƒ¹ş1J$db34e72c-bb8c-45be-8087-46e6a6da35dc
+”	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÖŸÚ8ßÌ¢¾ş1J$38e0ce56-94fc-4615-9af7-637afcaa106e
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãå8µÑí¸õ1J$9414b3a1-a618-4289-bf04-a9246b747a45
+Ê
+java:S1186Æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8áÑí¸õ1J$9a90f672-dfb4-454e-80ed-e681eb4be5e3
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(­Üô’şÿÿÿÿ8ìÑí¸õ1J$ef827ec7-fc8d-4d9b-becc-0af811978df1
+‡
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ü“8ìÑí¸õ1J$f52c4477-4255-41e3-8f3b-51b27a556b05
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¢¾åĞ8íÑí¸õ1J$8206d125-54c3-4750-a3ea-c37a9e6dbb06
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ğë²Ìúÿÿÿÿ8ßƒ¹ş1J$1aa3c89e-cc7f-4836-9ed7-b08992e35bc3
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(®€Ê¶8ßƒ¹ş1J$5183dbbe-c73a-4f6f-97d5-00e6f18e7cb9
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(œÇâ¶øÿÿÿÿ8àƒ¹ş1J$f4ce358b-ccac-4585-89b9-509ab38cce7f
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(³œŸ8áƒ¹ş1J$34d634db-5edc-45d3-bfc8-b7d98a3db0cf
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÊÊˆœ8ÜøŸ¾ş1J$b51a172f-1d17-4590-a0c9-ed49048272c7
+‘	java:S100¯"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÖŸÚ8›¥£¾ş1J$64c898a1-b81b-4aad-ae8a-d1ed4e4fb394
 b
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¢¾åĞ8ìÑí¸õ1
-a
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¡±Ù]8ìÑí¸õ1
-b
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÊÊˆœ8íÑí¸õ1
+java:S6905"Don't use the query "SELECT *".(³œŸ8”Î¢¾ş1J$40b1f0fa-1489-4aab-8522-5736e4138523
+l
+java:S1128"ORemove this unused import 'com.github.Hanselmito.Model.Entity.Enums.Dificulty'.(°íÍí8¼¦¾ş1
+l
+java:S1128"ORemove this unused import 'com.github.Hanselmito.Model.Entity.Enums.SizeWorld'.(½ÏÕ¥8¼¦¾ş1
 g
-java:S1128"ERemove this unused import 'com.github.Hanselmito.Model.Entity.World'.(ÕéÕÿÿÿÿÿ8Òí¸õ1
+java:S1128	"ERemove this unused import 'com.github.Hanselmito.Model.Entity.World'.(ÕéÕÿÿÿÿÿ8¼¦¾ş1

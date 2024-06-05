@@ -58,7 +58,7 @@ public class EnemysController extends Controller implements Initializable {
 
 
     @Override
-    public void onOpen(Object input) throws IOException, Exception {
+    public void onOpen(Object input) throws Exception {
 
     }
 
@@ -109,22 +109,44 @@ public class EnemysController extends Controller implements Initializable {
         int idBiome = Integer.parseInt(textFieldIDBiome.getText());
         String NameEnemys = textFieldName.getText();
 
+        int selectedEnemyCount = 0;
         String TipeEnemies = "";
         if (Enemies.isSelected()) {
             TipeEnemies = "Enemies";
-        } else if (MiniBosses.isSelected()) {
+            selectedEnemyCount++;
+        }
+        if (MiniBosses.isSelected()) {
             TipeEnemies = "MiniBosses";
-        } else if (Bosses.isSelected()) {
+            selectedEnemyCount++;
+        }
+        if (Bosses.isSelected()) {
             TipeEnemies = "Bosses";
+            selectedEnemyCount++;
         }
 
+        if (selectedEnemyCount > 1) {
+            showAlert("Solo puede seleccionar un TipeEnemies a la vez.");
+            return;
+        }
+
+        int selectedDifficultyCount = 0;
         String Dificulty = "";
         if (Pre_Hardmode.isSelected()) {
             Dificulty = "Pre_Hardmode";
-        } else if (hardmode.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (hardmode.isSelected()) {
             Dificulty = "hardmode";
-        } else if (Post_MoonLord.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (Post_MoonLord.isSelected()) {
             Dificulty = "Post_MoonLord";
+            selectedDifficultyCount++;
+        }
+
+        if (selectedDifficultyCount > 1) {
+            showAlert("Solo puede seleccionar una dificultad a la vez.");
+            return;
         }
 
         Biome biome = BiomeDAO.build().findById(idBiome);
@@ -136,12 +158,16 @@ public class EnemysController extends Controller implements Initializable {
             return;
         }
 
+        Enemys existingEnemys = enDAO.findById(Integer.parseInt(idEnemies));
+        if (existingEnemys != null) {
+            showAlert("Esa ID ya existe");
+            return;
+        }
+
         byte[] imageData = new byte[(int) imageFile.length()];
         FileInputStream fis = new FileInputStream(imageFile);
         fis.read(imageData);
         fis.close();
-
-        // Aquí puedes agregar la lógica para comprobar los datos
 
         Enemys en = new Enemys();
         en.setIDEnemies(Integer.parseInt(idEnemies));
@@ -199,22 +225,44 @@ public class EnemysController extends Controller implements Initializable {
         int idBiome = Integer.parseInt(textFieldIDBiome.getText());
         String NameEnemys = textFieldName.getText();
 
+        int selectedEnemyCount = 0;
         String TipeEnemies = "";
         if (Enemies.isSelected()) {
             TipeEnemies = "Enemies";
-        } else if (MiniBosses.isSelected()) {
+            selectedEnemyCount++;
+        }
+        if (MiniBosses.isSelected()) {
             TipeEnemies = "MiniBosses";
-        } else if (Bosses.isSelected()) {
+            selectedEnemyCount++;
+        }
+        if (Bosses.isSelected()) {
             TipeEnemies = "Bosses";
+            selectedEnemyCount++;
         }
 
+        if (selectedEnemyCount > 1) {
+            showAlert("Solo puede seleccionar un TipeEnemies a la vez.");
+            return;
+        }
+
+        int selectedDifficultyCount = 0;
         String Dificulty = "";
         if (Pre_Hardmode.isSelected()) {
             Dificulty = "Pre_Hardmode";
-        } else if (hardmode.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (hardmode.isSelected()) {
             Dificulty = "hardmode";
-        } else if (Post_MoonLord.isSelected()) {
+            selectedDifficultyCount++;
+        }
+        if (Post_MoonLord.isSelected()) {
             Dificulty = "Post_MoonLord";
+            selectedDifficultyCount++;
+        }
+
+        if (selectedDifficultyCount > 1) {
+            showAlert("Solo puede seleccionar una dificultad a la vez.");
+            return;
         }
 
         Biome biome = BiomeDAO.build().findById(idBiome);
@@ -230,8 +278,6 @@ public class EnemysController extends Controller implements Initializable {
         FileInputStream fis = new FileInputStream(imageFile);
         fis.read(imageData);
         fis.close();
-
-        // Aquí puedes agregar la lógica para comprobar los datos
 
         Enemys en = new Enemys();
         en.setIDEnemies(Integer.parseInt(idEnemies));

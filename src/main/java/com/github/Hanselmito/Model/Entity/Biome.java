@@ -75,29 +75,6 @@ public class Biome {
         this.enemys = enemys;
     }
 
-    public void addEnemys(Enemys en){
-        if (enemys==null){
-            enemys = new ArrayList<>();
-        }
-        if (!enemys.contains(en)){
-            enemys.add(en);
-        }
-    }
-
-    public void removeEnemys(Enemys en){
-        if (enemys!=null){
-            enemys.remove(en);
-        }
-    }
-    public Enemys getEnemys(Enemys en){
-        Enemys result=null;
-        if (en!=null){
-            int i=enemys.indexOf(en);
-            result = enemys.get(i);
-        }
-        return result;
-    }
-
     @Override
     public String toString() {
         return "|Biome|\n" +
