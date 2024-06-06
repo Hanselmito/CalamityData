@@ -20,3 +20,7 @@ java:S1126<"BReplace this if-then-else statement by a single method invocation.
 ‰	java:S100S"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—›åŒJ$3842a8bc-1189-4825-a522-86b98eb6d63d
 	java:S100Y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ô‰±8¶‰¢’ş1J$52df365a-48f9-4066-91c3-86c14ee90339
 •	java:S100_"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºç™¤şÿÿÿÿ8·…è¾ş1J$38604abc-40d0-47d0-93c4-88c4c8a29115
+b
+java:S1128"ERemove this unused import 'com.github.Hanselmito.Model.Dao.WorldDAO'.(„ü¥ï8 ÷Šçş1
+g
+java:S1128"ERemove this unused import 'com.github.Hanselmito.Model.Entity.World'.(ÕéÕÿÿÿÿÿ8¡÷Šçş1

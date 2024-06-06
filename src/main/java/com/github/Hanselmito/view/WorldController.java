@@ -104,11 +104,6 @@ public class WorldController extends Controller implements Initializable {
             return;
         }
 
-        World existingWorld = wDAO.findById(Integer.parseInt(idWorld));
-        if (existingWorld != null) {
-            showAlert("Esa ID ya existe");
-            return;
-        }
 
         World world = new World();
         world.setIDWorld(Integer.parseInt(idWorld));

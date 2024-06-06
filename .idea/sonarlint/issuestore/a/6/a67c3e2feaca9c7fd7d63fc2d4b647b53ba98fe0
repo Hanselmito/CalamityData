@@ -11,6 +11,10 @@ java:S1192U"JDefine a constant instead of duplicating this literal "Dificulty" 
 œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãå8ÆÍÕ»ş1J$6c0095b5-1065-4592-b9d9-15f033cb4ec7
 Ê
 java:S26815"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(àÍ¬8ÈÍÕ»ş1J$1c58bee0-c65b-42f8-86b2-e513a587d531
+e
+java:S2095 "GUse try-with-resources or close this "ObjectDAO" in a "finally" clause.(Ü°Õö8Ã°öæş1
+c
+java:S2095¤"FUse try-with-resources or close this "BiomeDAO" in a "finally" clause.(ˆ¸¾y8Æ°öæş1
 Ê
 java:S1186ˆ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(—µ±şıÿÿÿÿ8ñÍÕ»ş1J$1e405234-6185-4d6a-8c6a-35beaef0c61e
 
@@ -27,3 +31,5 @@ java:S1124"EReorder the modifiers to comply with the Java Language Specificati
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ï›…¶8øÍÕ»ş1J$5f085687-2de7-420f-8b12-f1abd741028e
 
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(÷“¯÷şÿÿÿÿ8ˆïÕ»ş1J$e8f35ace-16fb-4d56-92be-dc6fa2b3c65b
+R
+java:S1128	"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8‰µöæş1

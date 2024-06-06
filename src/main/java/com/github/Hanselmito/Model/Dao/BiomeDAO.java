@@ -27,7 +27,7 @@ public class BiomeDAO implements DAO<Biome>{
     private final static String FINDBYDIFICULTY="SELECT b.IDBiome,b.IDWorld,b.NameBiome,b.ZoneGenerate,b.GenerationDificulty FROM Biome AS b WHERE b.GenerationDificulty=?";
     private final static String FINDALL="SELECT b.IDBiome,b.IDWorld,b.NameBiome,b.ZoneGenerate,b.GenerationDificulty FROM Biome AS b";
     private final static String FIND_BIOMES_FOR_WORLD = "SELECT * FROM Biome WHERE IDWorld=?";
-    private final static String DELETE="DELETE FROM Biome AS b WHERE b.IDBiome=?";
+    private final static String DELETE="DELETE FROM Biome WHERE IDBiome=?";
 
     private Connection conn;
     public BiomeDAO() {

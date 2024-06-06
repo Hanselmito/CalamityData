@@ -55,7 +55,5 @@ q
 Asrc/main/java/com/github/Hanselmito/view/FromBiomeController.java,f\c\fc2239d6fb52719287bce7655b8328098574ce91
 r
 Bsrc/main/java/com/github/Hanselmito/view/FromEnemysController.java,0\c\0c77cb16514512f2c8b3f12050de501255fdf094
-{
-Ksrc/main/java/com/github/Hanselmito/view/FormWorldListObjectController.java,a\e\ae2a7ad558844cd050353b06325d8059cdbb8fc2
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

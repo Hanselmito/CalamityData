@@ -15,12 +15,12 @@ import java.util.List;
 
 public class EnemysDAO implements DAO<Enemys>{
     private final static String INSERT="INSERT INTO Enemys (IDEnemies,IDBiome,TipeEnemies,NameEnemies,DificultySpawn,Imagen) VALUES (?,?,?,?,?,?)";
-    private final static String UPDATE="UPDATE enemys SET IDBiome=?,TipeEnemies=?,NameEnemies=?,DificultySpawn=?,Imagen=? WHERE IDEnemies=?";
+    private final static String UPDATE="UPDATE Enemys SET IDBiome=?,TipeEnemies=?,NameEnemies=?,DificultySpawn=?,Imagen=? WHERE IDEnemies=?";
     private final static String FINDBYID="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn,e.Imagen FROM enemys AS e WHERE e.IDEnemies=?";
     private final static String FINDALL="SELECT IDEnemies,IDBiome,TipeEnemies,NameEnemies,DificultySpawn,Imagen FROM enemys";
     private final static String FINDBYTIPEENEMIES="SELECT e.IDEnemies,e.IDBiome,e.TipeEnemies,e.NameEnemies,e.DificultySpawn,e.Imagen FROM enemys AS e WHERE e.TipeEnemies=?";
     private final static String FIND_ENEMYS_FOR_BIOME = "SELECT * FROM enemys WHERE IDBiome=?";
-    private final static String DELETE="DELETE FROM enemys AS e WHERE e.IDEnemies=?";
+    private final static String DELETE="DELETE FROM Enemys WHERE IDEnemies=?";
 
     private Connection conn;
     public EnemysDAO() {
@@ -72,7 +72,7 @@ public class EnemysDAO implements DAO<Enemys>{
     @Override
     public Enemys delete(Enemys entity) throws SQLException {
         if (entity == null || entity.getIDEnemies()==0)return entity;
-        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETE)){
+        try (PreparedStatement pst = conn.prepareStatement(DELETE)){
             pst.setInt(1,entity.getIDEnemies());
             pst.executeUpdate();
         }catch (SQLException e) {

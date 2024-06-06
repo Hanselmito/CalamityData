@@ -133,11 +133,6 @@ public class ObjectController extends Controller implements Initializable {
             showAlert("El idWorld no existe");
             return;
         }
-        object existingObject = oDAO.findById(Integer.parseInt(idObject));
-        if (existingObject != null) {
-            showAlert("Esa ID ya existe");
-            return;
-        }
 
         object o = new object();
         o.setIDObject(Integer.parseInt(idObject));

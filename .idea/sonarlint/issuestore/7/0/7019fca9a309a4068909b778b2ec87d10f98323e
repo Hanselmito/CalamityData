@@ -1,35 +1,45 @@
 
 
-java:S1192`"HDefine a constant instead of duplicating this literal "IDBiome" 5 times.(‡ûÓõüÿÿÿÿ8¢‡Ó¾ş1J$631efd9d-91b5-48d6-ba9c-ab4dffd8cdcc
+java:S1192`"HDefine a constant instead of duplicating this literal "IDBiome" 5 times.(‡ûÓõüÿÿÿÿ8¢‡Ó¾ş1J$62ff5ad7-ce39-4889-a4b9-e545894996b0
 –
-java:S1192d"TDefine a constant instead of duplicating this literal "GenerationDificulty" 5 times.(áĞ·|8£‡Ó¾ş1J$79160727-3554-462c-b87f-0ffc85a1e543
+java:S1192d"TDefine a constant instead of duplicating this literal "GenerationDificulty" 5 times.(áĞ·|8£‡Ó¾ş1J$d5df6be0-2fd1-4956-879b-e8d07a137c79
 Š
-java:S1192a"HDefine a constant instead of duplicating this literal "IDWorld" 5 times.(ß‹³8¤‡Ó¾ş1J$8eff0773-219e-4d49-aceb-0245496ee33a
+java:S1192a"HDefine a constant instead of duplicating this literal "IDWorld" 5 times.(ß‹³8¤‡Ó¾ş1J$18652127-4eb2-47c2-b615-a62d75d5520b
 ’
-java:S1192b"JDefine a constant instead of duplicating this literal "NameBiome" 5 times.(‡­……ıÿÿÿÿ8¤‡Ó¾ş1J$4fd604e3-ca52-40ff-bfa9-58ef9344d83e
+java:S1192b"JDefine a constant instead of duplicating this literal "NameBiome" 5 times.(‡­……ıÿÿÿÿ8¤‡Ó¾ş1J$5576dc1f-6175-467d-8a40-f99a2d41480d
 •
-java:S1192c"MDefine a constant instead of duplicating this literal "ZoneGenerate" 5 times.(çğ÷Ôıÿÿÿÿ8¤‡Ó¾ş1J$76473c19-92a4-4b86-a200-13620dffa71a
-™	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ§™Şüÿÿÿÿ8¦‡Ó¾ş1J$5a307292-77b3-4a51-9687-f4c486379a59
-™	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×êµ±øÿÿÿÿ8ù²Ó¾ş1J$e4e2ba4c-65ca-418c-a788-046c5112ba18
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãå8«‡Ó¾ş1J$380ebc03-52c1-4329-a59a-f54a9568d7d0
+java:S1192c"MDefine a constant instead of duplicating this literal "ZoneGenerate" 5 times.(çğ÷Ôıÿÿÿÿ8¤‡Ó¾ş1J$730ef3f4-abdc-4963-8de4-469f1d21e4ab
+™	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ§™Şüÿÿÿÿ8¦‡Ó¾ş1J$245b2598-a4c6-4cb4-9077-63ce81a67984
+™	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×êµ±øÿÿÿÿ8ù²Ó¾ş1J$d9fbb6b7-227a-40b3-b68c-d312127291ae
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¶ãå8«‡Ó¾ş1J$a1234ebe-c1e2-4305-abf6-ec11426fd6c2
+‹
+java:S2095É"GUse try-with-resources or close this "EnemysDAO" in a "finally" clause.(ÜÅŠ²8Û§èş1J$e7419782-8e95-44ae-9bab-ec585ffb253c
 Ê
-java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8ÖˆÓ¾ş1J$41e94219-2183-4b2f-9a68-f659acd53f9a
+java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8ÖˆÓ¾ş1J$62a690c4-26d5-4ea5-a2d3-02050b6a5b7d
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ïÁäåüÿÿÿÿ8ßˆÓ¾ş1J$93bd3a14-45ed-4130-bd9d-80c5fc1fbc15
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ïÁäåüÿÿÿÿ8ßˆÓ¾ş1J$900ab936-24e3-46e4-b1c9-5a5be1197c0b
 ˆ
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Â¡½§8ßˆÓ¾ş1J$5bdf8d42-79ed-4de6-82c6-746665e7b8dc
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Â¡½§8ßˆÓ¾ş1J$39535971-7af7-43a9-800c-a37cba0f7868
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µ»Ææøÿÿÿÿ8ßˆÓ¾ş1J$e8e7a253-dd14-4f9c-91d1-68a30b5a7a81
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µ»Ææøÿÿÿÿ8ßˆÓ¾ş1J$98c4cb5b-b592-4dc4-9606-d57b6bfed19c
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ËÈıÿÿÿÿ8ßˆÓ¾ş1J$fefba5fc-092b-4bf5-b4d8-cfb522f96c3a
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ËÈıÿÿÿÿ8ßˆÓ¾ş1J$a85341dc-62cf-4103-8ed5-6377c99b24de
 ˆ
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ù›”¦8ßˆÓ¾ş1J$2f021f7d-b312-4a36-8ae1-f7da9965ec84
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ù›”¦8ßˆÓ¾ş1J$6ddcaa53-124a-4ab0-90ae-0d8bfdf55a28
 ˆ
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(âçÒ8àˆÓ¾ş1J$0df18576-df7e-4957-996a-27d38ab41423
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(âçÒ8àˆÓ¾ş1J$6928931a-5fdf-4127-9ae1-e2a17d7cc9c1
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(õó¢¥ÿÿÿÿÿ8àˆÓ¾ş1J$901a5cf4-2d32-4449-8303-66caaf18e6bb
-–	java:S100–"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ§™Şüÿÿÿÿ8“‰Ó¾ş1J$9a79a874-eaf7-4f2f-8405-5a2b18641949
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¹¹¨²üÿÿÿÿ8àˆÓ¾ş1J$7a88a3b8-2a3a-4afd-b715-894a18bbfe2e
+–	java:S100–"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ§™Şüÿÿÿÿ8“‰Ó¾ş1J$f4633008-2b93-4786-8eec-fe0d02ae97aa
 b
-java:S6905"Don't use the query "SELECT *".(âçÒ8•‰Ó¾ş1J$de88b944-82af-47dc-905d-177296811abd
+java:S6905"Don't use the query "SELECT *".(âçÒ8•‰Ó¾ş1J$f37d5c38-3c35-4230-b445-a31524b03715
 ‰
-java:S1124µ"EReorder the modifiers to comply with the Java Language Specification.(òˆ¾8‰Ó¾ş1J$286e68ec-34ab-44dd-9d42-0b2b4d02505f
+java:S1124µ"EReorder the modifiers to comply with the Java Language Specification.(òˆ¾8‰Ó¾ş1J$301c0342-5ed5-4c83-a428-40c0ce9296b9
+’
+java:S1128"ORemove this unused import 'com.github.Hanselmito.Model.Entity.Enums.SizeWorld'.(½ÏÕ¥8ô§èş1J$866b8592-86b9-4969-a738-db68f78a96da
+™
+java:S1128"QRemove this unused import 'com.github.Hanselmito.Model.Entity.Enums.TipeEnemies'.(¥¥àøÿÿÿÿ8õ§èş1J$20163616-d5dd-49a9-aeaf-149524d97d0f
+
+java:S1128"FRemove this unused import 'com.github.Hanselmito.Model.Entity.object'.(’åÑñÿÿÿÿÿ8÷§èş1J$0e1a4f92-b642-44d7-9adc-1e874fd835b8
+“
+java:S1128"KRemove this unused import 'com.github.Hanselmito.Model.Dao.WorldDAO.build'.(ÄÖõñıÿÿÿÿ8ø§èş1J$8975fcd4-2d2a-46ec-a409-9c85bd32ed3c
