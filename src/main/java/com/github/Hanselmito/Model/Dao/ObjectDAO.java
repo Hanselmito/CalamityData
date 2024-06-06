@@ -24,7 +24,7 @@ public class ObjectDAO implements DAO<object>{
     private final static String FINDBYTIPEOBJECT="SELECT o.IDObject,o.IDWorld,o.NameObject,o.TipeObject,o.Effect,o.TipeClass FROM Object AS o WHERE o.TipeObject=?";
     private final static String FINDBYTIPECLASS="SELECT o.IDObject,o.IDWorld,o.NameObject,o.TipeObject,o.Effect,o.TipeClass FROM Object AS o WHERE o.TipeClass=?";
     private final static String FIND_OBJECTS_FOR_WORLD = "SELECT * FROM Object WHERE IDWorld=?";
-    private final static String DELETE="DELETE FROM Object AS o WHERE o.IDObject=?";
+    private final static String DELETE="DELETE FROM Object WHERE IDObject=?";
 
     private Connection conn;
     public ObjectDAO() {

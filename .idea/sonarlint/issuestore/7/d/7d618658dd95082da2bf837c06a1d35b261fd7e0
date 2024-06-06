@@ -1,7 +1,8 @@
 
-Œ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Îÿ¨J$4c4046de-31b7-46dc-af4d-88c7c50cb528
-‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ù‘ËøÿÿÿÿJ$72bb3f2e-3551-4863-a8c8-3f43d22872ea
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¨›Ğùÿÿÿÿ8ÜÆèş1
+‘	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ù‘ËøÿÿÿÿJ$72bb3f2e-3551-4863-a8c8-3f43d22872ea
 š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶üçŞıÿÿÿÿJ$ffbb9888-e1d1-4925-8aec-8d1b1ab342f7
-	java:S116	"TRename this field "IDEnemies" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ ÕóJ$00224209-c139-4efa-832d-1e0c0db03624
+”	java:S116	"TRename this field "IDEnemies" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ÌÏ¦üÿÿÿÿJ$00224209-c139-4efa-832d-1e0c0db03624
 –	java:S116"VRename this field "NameEnemies" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ëöÿşÿÿÿÿJ$b33b21a1-c57d-423f-bde2-32e95fff8866
 ”	java:S116"YRename this field "DificultySpawn" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Â³¢J$238a526b-cbfe-4aa8-a885-da5368e84d2f
+m	java:S116"QRename this field "Imagen" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂËŠ„8€Çèş1

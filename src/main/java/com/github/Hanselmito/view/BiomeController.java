@@ -122,12 +122,6 @@ public class BiomeController extends Controller implements Initializable {
             return;
         }
 
-        Biome existingBiome = bDAO.findById(Integer.parseInt(idBiome));
-        if (existingBiome != null) {
-            showAlert("Esa ID ya existe");
-            return;
-        }
-
         // Aquí puedes agregar la lógica para comprobar los datos
 
         Biome b = new Biome();

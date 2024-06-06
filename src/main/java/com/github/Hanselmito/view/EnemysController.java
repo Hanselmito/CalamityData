@@ -151,16 +151,9 @@ public class EnemysController extends Controller implements Initializable {
 
         Biome biome = BiomeDAO.build().findById(idBiome);
         if (biome == null) {
-            // Mostrar un mensaje de error o lanzar una excepción
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("El idBiome no existe");
             alert.show();
-            return;
-        }
-
-        Enemys existingEnemys = enDAO.findById(Integer.parseInt(idEnemies));
-        if (existingEnemys != null) {
-            showAlert("Esa ID ya existe");
             return;
         }
 
@@ -195,7 +188,7 @@ public class EnemysController extends Controller implements Initializable {
      * If an error occurs, a different alert is shown.
      */
     @FXML
-    public void handleDeleteButtonAction() throws IOException {
+    public void handleDeleteButtonAction(){
         String idEnemies = textFieldIDEnemies.getText();
         // Aquí puedes agregar la lógica para comprobar los datos
 
