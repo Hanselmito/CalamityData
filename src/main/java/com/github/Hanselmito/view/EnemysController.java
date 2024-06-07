@@ -5,6 +5,9 @@ import com.github.Hanselmito.Model.Dao.BiomeDAO;
 import com.github.Hanselmito.Model.Dao.EnemysDAO;
 import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.Enemys;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -19,6 +22,7 @@ import javafx.scene.image.Image;
 
 import java.io.*;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class EnemysController extends Controller implements Initializable {
@@ -50,6 +54,14 @@ public class EnemysController extends Controller implements Initializable {
     private Button loadImageButton;
     @FXML
     private Button Menu;
+    @FXML
+    private TableView<Enemys> tableView;
+    @FXML
+    private TableColumn<Enemys,Integer> ColumnIDEnemies;
+    @FXML
+    private TableColumn<Enemys,Integer> ColumnIDBiome;
+
+    private ObservableList<Enemys> enemys;
 
     private File imageFile;
 
@@ -69,7 +81,15 @@ public class EnemysController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadEnemysData();
+        ColumnIDEnemies.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getIDEnemies()).asObject());
+        ColumnIDBiome.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getBiome().getIDBiome()).asObject());
+    }
 
+    private void loadEnemysData() {
+        List<Enemys> enemysList = EnemysDAO.build().findAll();
+        this.enemys = FXCollections.observableArrayList(enemysList);
+        tableView.setItems(enemys);
     }
 
     /**
@@ -172,8 +192,9 @@ public class EnemysController extends Controller implements Initializable {
 
         try {
             enDAO.save(en);
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
-            showAlert("todo bien compruebalo");
+            loadEnemysData();
+            showAlert("Entidad Insertada compruébalo");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
@@ -196,8 +217,9 @@ public class EnemysController extends Controller implements Initializable {
         en.setIDEnemies(Integer.parseInt(idEnemies));
         try {
             enDAO.delete(en);
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
-            showAlert("Enemigo eliminado");
+            loadEnemysData();
+            showAlert("Entidad eliminada");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
@@ -282,8 +304,9 @@ public class EnemysController extends Controller implements Initializable {
 
         try {
             enDAO.update(en);
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
-            showAlert("todo bien compruebalo");
+            loadEnemysData();
+            showAlert("Entidad Actualizada");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
