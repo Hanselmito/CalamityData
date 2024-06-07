@@ -5,6 +5,9 @@ import com.github.Hanselmito.Model.Dao.ObjectDAO;
 import com.github.Hanselmito.Model.Dao.WorldDAO;
 import com.github.Hanselmito.Model.Entity.World;
 import com.github.Hanselmito.Model.Entity.object;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -13,6 +16,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ObjectController extends Controller implements Initializable {
@@ -46,7 +50,14 @@ public class ObjectController extends Controller implements Initializable {
     private CheckBox Thrower;
     @FXML
     private Button Menu;
+    @FXML
+    private TableView<object> tableView;
+    @FXML
+    private TableColumn<object,Integer> ColumnIDObject;
+    @FXML
+    private TableColumn<object,Integer> ColumnIDWorld;
 
+    private ObservableList<object> objects;
 
     private ObjectDAO oDAO = new ObjectDAO();
 
@@ -63,7 +74,14 @@ public class ObjectController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        loadObjectData();
+        ColumnIDObject.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getIDObject()).asObject());
+        ColumnIDWorld.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getWorld().getIDWorld()).asObject());
+    }
+    private void loadObjectData() {
+        List<object> objectList = ObjectDAO.build().findAll();
+        this.objects = FXCollections.observableArrayList(objectList);
+        tableView.setItems(this.objects);
     }
 
     /**
@@ -144,8 +162,9 @@ public class ObjectController extends Controller implements Initializable {
 
         try {
             oDAO.save(o);
-            showAlert("todo bien compruebalo");
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
+            loadObjectData();
+            showAlert("Objeto Insertado compruébalo");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
@@ -234,8 +253,9 @@ public class ObjectController extends Controller implements Initializable {
 
         try {
             oDAO.update(o);
-            showAlert("todo bien compruebalo");
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
+            loadObjectData();
+            showAlert("Objeto Actualizado");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
@@ -258,8 +278,9 @@ public class ObjectController extends Controller implements Initializable {
 
         try {
             oDAO.delete(o);
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
+            loadObjectData();
             showAlert("Objeto eliminado");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");

@@ -3,13 +3,15 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.ObjectController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.ObjectController">
    <children>
       <Label layoutX="252.0" layoutY="14.0" text="OBJECT">
          <font>
@@ -42,5 +44,12 @@
          </children>
       </Pane>
       <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" />
+      <TableView fx:id="tableView" layoutX="563.0" layoutY="53.0" prefHeight="321.0" prefWidth="139.0">
+        <columns>
+          <TableColumn fx:id="ColumnIDObject" prefWidth="70.0" text="IDObject" />
+          <TableColumn fx:id="ColumnIDWorld" prefWidth="80.66668701171875" text="IDWorld" />
+        </columns>
+      </TableView>
+      <Label layoutX="591.0" layoutY="21.0" text="Lista de objetos" />
    </children>
 </AnchorPane>

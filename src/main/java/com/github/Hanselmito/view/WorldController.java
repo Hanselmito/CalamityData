@@ -4,6 +4,10 @@ import com.github.Hanselmito.App;
 import com.github.Hanselmito.Model.Dao.WorldDAO;
 import com.github.Hanselmito.Model.Entity.World;
 import com.github.Hanselmito.Model.Entity.object;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -11,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class WorldController extends Controller implements Initializable {
@@ -34,6 +39,12 @@ public class WorldController extends Controller implements Initializable {
     private CheckBox Small;
     @FXML
     private Button Menu;
+    @FXML
+    private TableView<World> tableView;
+    @FXML
+    private TableColumn<World,Integer> ColumnIDWorld;
+
+    private ObservableList<World> world;
 
     private WorldDAO wDAO = new WorldDAO();
 
@@ -50,7 +61,17 @@ public class WorldController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadWorldData();
+        ColumnIDWorld.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getIDWorld()).asObject());
+        }
 
+    /**
+     * The method lists by All from World
+     * */
+    private void loadWorldData() {
+        List<World> worldList = WorldDAO.build().findAll();
+        this.world = FXCollections.observableArrayList(worldList);
+        tableView.setItems(world);
     }
 
     /**
@@ -112,8 +133,9 @@ public class WorldController extends Controller implements Initializable {
 
         try {
             wDAO.save(world);
-            showAlert("todo bien compruebalo");
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
+            loadWorldData();
+            showAlert("Mundo Insertado compruébalo");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
@@ -178,8 +200,9 @@ public class WorldController extends Controller implements Initializable {
 
         try {
             wDAO.update(world);
-            showAlert("todo bien");
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
+            loadWorldData();
+            showAlert("Mundo Actualizado");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -200,8 +223,9 @@ public class WorldController extends Controller implements Initializable {
 
         try {
             wDAO.delete(world);
+            loadWorldData();
             showAlert("Mundo eliminado");
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");

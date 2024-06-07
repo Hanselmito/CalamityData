@@ -5,6 +5,9 @@ import com.github.Hanselmito.Model.Dao.BiomeDAO;
 import com.github.Hanselmito.Model.Dao.WorldDAO;
 import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.World;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -12,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class BiomeController extends Controller implements Initializable {
@@ -39,7 +43,14 @@ public class BiomeController extends Controller implements Initializable {
     private CheckBox Post_MoonLord;
     @FXML
     private Button Menu;
+    @FXML
+    private TableView<Biome> tableView;
+    @FXML
+    private TableColumn<Biome,Integer> ColumnIDBiome;
+    @FXML
+    private TableColumn<Biome,Integer> ColumnIDWorld;
 
+    private ObservableList<Biome> biomes;
 
     private BiomeDAO bDAO = new BiomeDAO();
 
@@ -56,7 +67,15 @@ public class BiomeController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadBiomeData();
+        ColumnIDBiome.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getIDBiome()).asObject());
+        ColumnIDWorld.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getWorld().getIDWorld()).asObject());
+    }
 
+    private void loadBiomeData() {
+        List<Biome> biomeList = BiomeDAO.build().findAll();
+        this.biomes = FXCollections.observableArrayList(biomeList);
+        tableView.setItems(this.biomes);
     }
 
 
@@ -133,8 +152,9 @@ public class BiomeController extends Controller implements Initializable {
 
         try {
             bDAO.save(b);
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
-            showAlert("todo bien compruebalo");
+            loadBiomeData();
+            showAlert("Bioma Insertado compruébalo");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
@@ -216,8 +236,9 @@ public class BiomeController extends Controller implements Initializable {
 
         try {
             bDAO.update(b);
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
-            showAlert("todo bien compruebalo");
+            loadBiomeData();
+            showAlert("Bioma Actualizado");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
@@ -239,8 +260,9 @@ public class BiomeController extends Controller implements Initializable {
         b.setIDBiome(Integer.parseInt(idBiome));
         try {
             bDAO.delete(b);
-            App.currentController.changeScene(Scenes.WIKICONTROLLER,null);
+            loadBiomeData();
             showAlert("Bioma eliminado");
+            tableView.refresh();
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
