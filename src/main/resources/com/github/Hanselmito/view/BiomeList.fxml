@@ -9,9 +9,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="Biome" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FromBiomeController">
+<AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="Biome" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FromBiomeController">
    <children>
-      <MenuBar fx:id="menuBar" layoutX="-1.0" layoutY="-2.0" prefHeight="29.0" prefWidth="600.0" AnchorPane.bottomAnchor="372.6666666666667" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.6666666666666288" AnchorPane.topAnchor="-2.0">
+      <MenuBar fx:id="menuBar" layoutX="-1.0" layoutY="-2.0" prefHeight="29.0" prefWidth="600.0" AnchorPane.leftAnchor="-0.6666666666666288" AnchorPane.rightAnchor="0.6666666666666288" AnchorPane.topAnchor="-2.0">
         <menus>
           <Menu mnemonicParsing="false" text="Accion">
             <items>
@@ -33,7 +33,7 @@
             </Menu>
         </menus>
       </MenuBar>
-      <TableView fx:id="tableView" layoutX="14.0" layoutY="54.0" opacity="0.8" prefHeight="332.0" prefWidth="569.0">
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="54.0" opacity="0.8" prefHeight="332.0" prefWidth="569.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.66666666666663" AnchorPane.topAnchor="54.0">
         <columns>
           <TableColumn fx:id="ColumnIDBiome" prefWidth="48.666659355163574" text="IDB" />
           <TableColumn fx:id="ColumnIDWorld" prefWidth="62.000003814697266" text="IDW" />
@@ -42,7 +42,7 @@
             <TableColumn fx:id="ColumnGenerationDificulty" prefWidth="166.00006103515625" text="DificultaGenerada" />
         </columns>
       </TableView>
-      <ImageView fx:id="MaxWindow" fitHeight="40.0" fitWidth="25.0" layoutX="571.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="MaxWindow" fitHeight="40.0" fitWidth="25.0" layoutX="571.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../../../../Icons/MaterialSymbolsTab.png" />
          </image>

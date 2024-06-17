@@ -1,12 +1,9 @@
 package com.github.Hanselmito.Model.Dao;
 
 import com.github.Hanselmito.Model.Conection.ConnectionMariaDB;
-import com.github.Hanselmito.Model.Entity.Enums.Dificulty;
-import com.github.Hanselmito.Model.Entity.Enums.SizeWorld;
 import com.github.Hanselmito.Model.Entity.Enums.TipeClass;
 import com.github.Hanselmito.Model.Entity.Enums.TipeObject;
 import com.github.Hanselmito.Model.Entity.object;
-import com.github.Hanselmito.Model.Entity.World;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -84,6 +81,7 @@ public class ObjectDAO implements DAO<object>{
         }
         return entity;
     }
+
 
     @Override
     public object findById(int key) {

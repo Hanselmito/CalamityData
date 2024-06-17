@@ -11,19 +11,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.EnemysController">
+<AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.EnemysController">
    <children>
-      <Label layoutX="252.0" layoutY="14.0" text="ENEMYS">
+      <Label layoutX="252.0" layoutY="14.0" text="ENEMYS" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="361.3333333333333" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="Book Antiqua Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Pane fx:id="pane" layoutX="37.0" layoutY="53.0" prefHeight="339.0" prefWidth="526.0">
+      <Pane fx:id="pane" layoutX="37.0" layoutY="53.0" prefHeight="339.0" prefWidth="526.0" AnchorPane.bottomAnchor="7.333333333333371" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="148.66666666666663" AnchorPane.topAnchor="53.0">
          <children>
             <Label layoutX="69.0" layoutY="14.0" text="IDEnemys" />
             <Label layoutX="14.0" layoutY="150.0" prefHeight="25.0" prefWidth="72.0" text="TipeEnemies" />
             <Label layoutX="112.0" layoutY="150.0" prefHeight="25.0" prefWidth="84.0" text="DificultySpawn" />
-            <TextField fx:id="textFieldIDEnemies" layoutX="123.0" layoutY="10.0" prefHeight="25.0" prefWidth="393.0" />
+            <TextField fx:id="textFieldIDEnemies" layoutX="123.0" layoutY="10.0" prefHeight="25.0" prefWidth="393.0" promptText="ID que quieras añadir, actualizar o borrar" />
             <Button layoutX="207.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleInsertButtonAction" text="Insertar" />
             <Button layoutX="286.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleUpdateButtonAction" text="Actualizar" />
             <CheckBox fx:id="Enemies" layoutX="14.0" layoutY="185.0" mnemonicParsing="false" text="Enemies" />
@@ -33,21 +33,21 @@
             <CheckBox fx:id="hardmode" layoutX="123.0" layoutY="213.0" mnemonicParsing="false" text="hardmode" />
             <CheckBox fx:id="Post_MoonLord" layoutX="123.0" layoutY="242.0" mnemonicParsing="false" text="Post_MoonLord" />
             <Label layoutX="73.0" layoutY="45.0" text="IDBiome" />
-            <TextField fx:id="textFieldIDBiome" layoutX="123.0" layoutY="41.0" prefHeight="25.0" prefWidth="393.0" />
+            <TextField fx:id="textFieldIDBiome" layoutX="123.0" layoutY="41.0" prefHeight="25.0" prefWidth="393.0" promptText="IDBiome que quieras añadir o actualizar" />
             <Label layoutX="50.0" layoutY="77.0" text="NameEnemys" />
-            <TextField fx:id="textFieldName" layoutX="123.0" layoutY="73.0" prefHeight="25.0" prefWidth="393.0" />
+            <TextField fx:id="textFieldName" layoutX="123.0" layoutY="73.0" prefHeight="25.0" prefWidth="393.0" promptText="Nombre de la entidad al añadir" />
             <ImageView fx:id="imageView" fitHeight="175.0" fitWidth="253.0" layoutX="245.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
             <Button fx:id="loadImageButton" layoutX="128.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#loadImage" text="ImageFile" />
             <Button layoutX="372.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleDeleteButtonAction" text="Delete" />
          </children>
       </Pane>
-      <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" />
-      <TableView fx:id="tableView" layoutX="561.0" layoutY="47.0" prefHeight="339.0" prefWidth="146.0">
+      <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <TableView fx:id="tableView" layoutX="561.0" layoutY="47.0" prefHeight="339.0" prefWidth="146.0" AnchorPane.rightAnchor="5.0">
         <columns>
           <TableColumn fx:id="ColumnIDEnemies" prefWidth="75.0" text="IDEnemys" />
           <TableColumn fx:id="ColumnIDBiome" prefWidth="75.0" text="IDBiome" />
         </columns>
       </TableView>
-      <Label layoutX="586.0" layoutY="21.0" text="Lista de Entidades" />
+      <Label layoutX="586.0" layoutY="21.0" text="Lista de Entidades" AnchorPane.rightAnchor="30.66666666666667" AnchorPane.topAnchor="21.0" />
    </children>
 </AnchorPane>

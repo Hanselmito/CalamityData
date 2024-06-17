@@ -3,9 +3,7 @@ package com.github.Hanselmito.view;
 import com.github.Hanselmito.App;
 import com.github.Hanselmito.Model.Dao.WorldDAO;
 import com.github.Hanselmito.Model.Entity.World;
-import com.github.Hanselmito.Model.Entity.object;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -229,6 +227,32 @@ public class WorldController extends Controller implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("mal!!");
+        }
+    }
+
+    /**
+     * The handleDeleteWorldButtonAction() method is responsible for collecting data from the user interface form.
+     * It creates a new World object with that data.
+     * It tries to Delete that object in the database and handle any error that may occur during the saving process.
+     * If the object is saved correctly, an alert is shown to the user and the scene is changed to WIKICONTROLLER.
+     * If an error occurs, a different alert is shown.
+     */
+    public void handleDeleteWorldButtonAction() {
+        String idWorld = textFieldIDWorld.getText();
+
+        // Buscar el mundo en la base de datos utilizando el ID proporcionado
+        World world = wDAO.findById(Integer.parseInt(idWorld));
+
+        World newWorld = new World();
+        try {
+            // Llamar al método deleteWorld con el mundo y el nuevo IDWorld
+            wDAO.deleteWorld(world, newWorld);
+            loadWorldData();
+            showAlert("Mundo eliminado y objetos y biomas reasignados al mundo por defecto.");
+            tableView.refresh();
+        } catch (Exception e) {
+            e.printStackTrace();
+            showAlert("¡Hubo un error al eliminar el mundo y reasignar los objetos y biomas!");
         }
     }
 

@@ -10,12 +10,12 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="308.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.AdminController">
    <children>
-      <Label layoutX="121.0" layoutY="142.0" prefHeight="25.0" prefWidth="66.0" text="User Name" />
-      <Label layoutX="121.0" layoutY="201.0" prefHeight="25.0" prefWidth="66.0" text="Password" />
-      <PasswordField fx:id="passwordField" layoutX="65.0" layoutY="227.0" prefHeight="25.0" prefWidth="177.0" />
-      <Button fx:id="buttonEntrar" layoutX="127.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#login" text="Entrar" />
-      <TextField fx:id="textFieldUserName" layoutX="78.0" layoutY="168.0" />
-      <ImageView fitHeight="121.0" fitWidth="151.0" layoutX="93.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="121.0" layoutY="142.0" prefHeight="25.0" prefWidth="66.0" text="User Name" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="120.66666666666669" AnchorPane.topAnchor="142.0" />
+      <Label layoutX="121.0" layoutY="201.0" prefHeight="25.0" prefWidth="66.0" text="Password" AnchorPane.leftAnchor="121.0" AnchorPane.rightAnchor="120.66666666666669" />
+      <PasswordField fx:id="passwordField" layoutX="65.0" layoutY="227.0" prefHeight="25.0" prefWidth="177.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.33333333333334" />
+      <Button fx:id="buttonEntrar" layoutX="127.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#login" text="Entrar" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="127.33333333333334" />
+      <TextField fx:id="textFieldUserName" layoutX="78.0" layoutY="168.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.66666666666666" />
+      <ImageView fitHeight="121.0" fitWidth="151.0" layoutX="93.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="93.66666666666669">
          <image>
             <Image url="@../../../../Icons/foto.png" />
          </image>

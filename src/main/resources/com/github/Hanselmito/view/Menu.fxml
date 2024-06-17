@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="348.0" prefWidth="605.0" snapToPixel="false" styleClass="Menu" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.MenuController">
+<AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="348.0" prefWidth="605.0" snapToPixel="false" styleClass="Menu" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.MenuController">
    <children>
       <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="605.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <menus>
@@ -107,22 +107,22 @@
       </StackPane>
       <StackPane layoutX="53.0" layoutY="258.0" prefHeight="41.0" prefWidth="73.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="479.0">
          <children>
-            <Button fx:id="buttonW" mnemonicParsing="false" onMouseClicked="#goToWorldList" text="World" />
+            <Button fx:id="buttonW" mnemonicParsing="false" onKeyPressed="#goToWorldListKeyBoard" onMouseClicked="#goToWorldList" text="World" />
          </children>
       </StackPane>
       <StackPane layoutX="197.0" layoutY="258.0" prefHeight="41.0" prefWidth="73.0" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="335.0">
          <children>
-            <Button fx:id="buttonO" mnemonicParsing="false" onMouseClicked="#goToObjectList" text="Object" />
+            <Button fx:id="buttonO" mnemonicParsing="false" onKeyPressed="#goToObjectListKeyBoard" onMouseClicked="#goToObjectList" text="Object" />
          </children>
       </StackPane>
       <StackPane layoutX="343.0" layoutY="258.0" prefHeight="41.0" prefWidth="73.0" AnchorPane.leftAnchor="343.0" AnchorPane.rightAnchor="189.0">
          <children>
-            <Button fx:id="buttonB" mnemonicParsing="false" onMouseClicked="#goToBiomeList" text="Biome" />
+            <Button fx:id="buttonB" mnemonicParsing="false" onKeyPressed="#goToBiomeListKeyBoard" onMouseClicked="#goToBiomeList" text="Biome" />
          </children>
       </StackPane>
       <StackPane layoutX="491.0" layoutY="258.0" prefHeight="41.0" prefWidth="73.0" AnchorPane.leftAnchor="491.0" AnchorPane.rightAnchor="41.0">
          <children>
-            <Button fx:id="buttonE" mnemonicParsing="false" onMouseClicked="#goToEnemysList" text="Enemys" />
+            <Button fx:id="buttonE" mnemonicParsing="false" onKeyPressed="#goToEnemysListKeyBoard" onMouseClicked="#goToEnemysList" text="Enemys" />
          </children>
       </StackPane>
    </children>

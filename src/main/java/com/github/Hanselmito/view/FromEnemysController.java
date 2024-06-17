@@ -90,6 +90,10 @@ public class FromEnemysController extends Controller implements Initializable {
         this.enemys = FXCollections.observableArrayList(en);
         tableView.setItems(this.enemys);
     }
+
+    /**
+     * The method lists by name from the database
+     * */
     @FXML
     public void ListAllEnemys(){
         List<Enemys> enemysList = EnemysDAO.build().findAll();
@@ -140,6 +144,9 @@ public class FromEnemysController extends Controller implements Initializable {
         tableView.setItems(enemys);
     }
 
+    /**
+     * The method is responsible for updating the name of the Enemys
+     * */
     @FXML
     private void goToMenu() throws Exception {
         App.currentController.changeScene(Scenes.MENU,null);

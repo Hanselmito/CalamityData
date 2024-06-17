@@ -8,6 +8,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
@@ -23,10 +24,8 @@ public class AdminController extends Controller implements Initializable {
     @FXML
     private Button buttonEntrar;
 
-
     //usuario que se utiliza a fuego
     private User hardcodedUser = new User("Juanda", "alumno.1");
-
 
     @Override
     public void onOpen(Object input) throws Exception {
@@ -38,11 +37,8 @@ public class AdminController extends Controller implements Initializable {
 
     }
 
-
     /**
-     * Takes the information you enter and checks it against the user that is hardcoded in the Admin controller.
-     * If the user is correct, they are directed to the Admin controller screen.
-     * If not, an exception error is thrown.
+     * Método que se ejecuta cuando se presiona el botón de "Entrar"
      */
     @FXML
     public void login() throws Exception {
@@ -63,8 +59,31 @@ public class AdminController extends Controller implements Initializable {
         }
     }
 
+    /**
+     * Método que se ejecuta cuando se presiona el botón de "Entrar"
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         anchorPane.autosize();
+        // Agregar manejador de eventos KeyPressed a los campos de texto
+        textFieldUserName.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    login();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        passwordField.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    login();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 }

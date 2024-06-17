@@ -134,14 +134,11 @@ public class BiomeController extends Controller implements Initializable {
 
         World world = WorldDAO.build().findById(idWorld);
         if (world == null) {
-            // Mostrar un mensaje de error o lanzar una excepción
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("El idWorld no existe");
             alert.show();
             return;
         }
-
-        // Aquí puedes agregar la lógica para comprobar los datos
 
         Biome b = new Biome();
         b.setIDBiome(Integer.parseInt(idBiome));
@@ -217,16 +214,11 @@ public class BiomeController extends Controller implements Initializable {
 
         World world = WorldDAO.build().findById(idWorld);
         if (world == null) {
-            // Mostrar un mensaje de error o lanzar una excepción
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("El idWorld no existe");
             alert.show();
             return;
         }
-
-
-        // Aquí puedes agregar la lógica para comprobar los datos
-
         Biome b = new Biome();
         b.setIDBiome(Integer.parseInt(idBiome));
         b.setWorld(world);

@@ -76,14 +76,27 @@ public class FormWorldController extends Controller implements Initializable {
         this.world = FXCollections.observableArrayList(world);
         tableView.setItems(this.world);
     }
+
+    /**
+     * The method lists by size from the database
+     * */
     @FXML
     public void ListAllWorld(){
         List<World> worldList = WorldDAO.build().findAll();
         this.world = FXCollections.observableArrayList(worldList);
         tableView.setItems(world);
     }
+
+    /**
+     * The method lists by size from the database
+     * Crear una instancia de WorldDAO
+     * Crear una instancia de WorldLazyAll
+     * Llamar al método findAllWorldsWithObjectAndBiome() para obtener una lista de todos los mundos con objetos y biomas
+     * Convertir la lista de mundos en una ObservableList
+     * Establecer los elementos de la TableView a la ObservableList de mundos
+     * */
     @FXML
-    private void ListWorldLazy() {
+    public void ListWorldLazy() {
         WorldDAO worldDAO = WorldDAO.build();
         WorldDAO.WorldLazyAll worldLazyAll = worldDAO.new WorldLazyAll(0, null, null, null, null);
         List<World> worldList = worldLazyAll.findAllWorldsWithObjectAndBiome();
@@ -116,6 +129,9 @@ public class FormWorldController extends Controller implements Initializable {
         tableView.setItems(world);
     }
 
+    /**
+     * The method is responsible for changing the scene to the menu
+     * */
     @FXML
     private void goToMenu() throws Exception {
         App.currentController.changeScene(Scenes.MENU,null);

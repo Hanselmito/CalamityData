@@ -287,11 +287,19 @@ public class ObjectController extends Controller implements Initializable {
         }
     }
 
+    /**
+     * The showAlert() method is responsible for showing an alert to the user.
+     * @param message The message to be shown in the alert.
+     */
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(message);
         alert.show();
     }
+
+    /**
+     * The goToMenu() method is responsible for changing the scene to the MenuController.
+     */
     @FXML
     private void goToMenu() throws Exception {
         App.currentController.changeScene(Scenes.WIKICONTROLLER,null);

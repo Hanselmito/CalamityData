@@ -9,9 +9,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="652.0" styleClass="Object" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FromObjectController">
+<AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="652.0" styleClass="Object" stylesheets="@../../../../Style/fondo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.FromObjectController">
     <children>
-        <TableView fx:id="tableView" layoutX="13.0" layoutY="38.0" opacity="0.78" prefHeight="355.0" prefWidth="628.0">
+        <TableView fx:id="tableView" layoutX="13.0" layoutY="38.0" opacity="0.78" prefHeight="355.0" prefWidth="628.0" AnchorPane.bottomAnchor="9.666666666666686" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="10.666666666666629" AnchorPane.topAnchor="37.666666666666686">
             <columns>
                 <TableColumn fx:id="ColumnIDObject" prefWidth="55.99996852874756" text="ID" />
                 <TableColumn fx:id="ColumnIDWorld" prefWidth="58.666656494140625" text="IDWorld" />
@@ -21,7 +21,7 @@
                 <TableColumn fx:id="ColumnTClass" prefWidth="95.3333740234375" text="TipeClass" />
             </columns>
         </TableView>
-        <MenuBar fx:id="menuBar" layoutX="-1.0" opacity="0.87" prefHeight="28.0" prefWidth="652.0" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+        <MenuBar fx:id="menuBar" layoutX="-1.0" opacity="0.87" prefHeight="28.0" prefWidth="652.0" AnchorPane.leftAnchor="-0.6666666666666288" AnchorPane.rightAnchor="0.6666666666666288" AnchorPane.topAnchor="0.0">
             <menus>
                 <Menu mnemonicParsing="false" text="Accion">
                     <items>
@@ -51,7 +51,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <ImageView fx:id="MaxWindow" fitHeight="39.0" fitWidth="25.0" layoutX="626.0" layoutY="1.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="MaxWindow" fitHeight="39.0" fitWidth="25.0" layoutX="626.0" layoutY="1.0" onMouseClicked="#MaximizedWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
             <image>
                 <Image url="@../../../../Icons/MaterialSymbolsTab.png" />
             </image>
