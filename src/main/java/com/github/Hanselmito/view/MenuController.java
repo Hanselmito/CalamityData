@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -60,6 +61,11 @@ public class MenuController extends Controller implements Initializable {
         }
     }
 
+    /**
+     * El método PlayMusic() se encarga de reproducir la música.
+     * Si la música está en pausa, la reanuda.
+     * Si la música está en reproducción, la pausa.
+     * */
     @FXML
     public void Volumen(){
         mediaPlayer.setVolume(sliderMV.getValue());
@@ -90,21 +96,78 @@ public class MenuController extends Controller implements Initializable {
         System.exit(0);
     }
 
+    /**
+     * Los métodos goToWorldList(), goToObjectList(), goToBiomeList(), goToEnemysList() se encargan de cambiar de escena.
+     * Si se hace click en el botón correspondiente, se cambiará a la escena correspondiente.
+     * */
     @FXML
     private void goToWorldList() throws Exception {
        App.currentController.changeScene(Scenes.WLIST,null);
     }
     @FXML
+    private void goToWorldListKeyBoard(){
+        buttonW.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    App.currentController.changeScene(Scenes.WLIST,null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    /**
+     * Los métodos goToObjectList(), goToBiomeList(), goToEnemysList() se encargan de cambiar de escena.
+     * Si se hace click en el botón correspondiente, se cambiará a la escena correspondiente.
+     * */
+    @FXML
     private void goToObjectList() throws Exception {
         App.currentController.changeScene(Scenes.OLIST,null);
+    }
+    @FXML
+    private void goToObjectListKeyBoard(){
+        buttonO.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    App.currentController.changeScene(Scenes.OLIST,null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
     @FXML
     private void goToBiomeList() throws Exception {
         App.currentController.changeScene(Scenes.BLIST,null);
     }
     @FXML
+    private void goToBiomeListKeyBoard(){
+        buttonB.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    App.currentController.changeScene(Scenes.BLIST,null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+    @FXML
     private void goToEnemysList() throws Exception {
         App.currentController.changeScene(Scenes.ELIST,null);
+    }
+    @FXML
+    private void goToEnemysListKeyBoard(){
+        buttonE.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                try {
+                    App.currentController.changeScene(Scenes.ELIST,null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
     @FXML
     private void goToAdmin() throws Exception {

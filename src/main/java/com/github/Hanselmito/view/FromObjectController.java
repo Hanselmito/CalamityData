@@ -2,6 +2,8 @@ package com.github.Hanselmito.view;
 
 import com.github.Hanselmito.App;
 import com.github.Hanselmito.Model.Dao.ObjectDAO;
+import com.github.Hanselmito.Model.Dao.WorldDAO;
+import com.github.Hanselmito.Model.Entity.World;
 import com.github.Hanselmito.Model.Entity.object;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -116,6 +118,10 @@ public class FromObjectController extends Controller implements Initializable {
         this.objects = FXCollections.observableArrayList(obj);
         tableView.setItems(this.objects);
     }
+
+    /**
+     * The method lists by ID from the database
+     * */
     @FXML
     public void ListAllObject(){
         List<object> objectList = ObjectDAO.build().findAll();
@@ -153,6 +159,9 @@ public class FromObjectController extends Controller implements Initializable {
         tableView.setItems(this.objects);
     }
 
+    /**
+     * The method is responsible for updating the name of the object in the database
+     * */
     @FXML
     private void goToMenu() throws Exception {
         App.currentController.changeScene(Scenes.MENU,null);

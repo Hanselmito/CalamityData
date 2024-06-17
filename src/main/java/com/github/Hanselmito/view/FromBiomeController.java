@@ -2,9 +2,11 @@ package com.github.Hanselmito.view;
 
 import com.github.Hanselmito.App;
 import com.github.Hanselmito.Model.Dao.BiomeDAO;
+import com.github.Hanselmito.Model.Dao.ObjectDAO;
 import com.github.Hanselmito.Model.Dao.WorldDAO;
 import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.World;
+import com.github.Hanselmito.Model.Entity.object;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -85,12 +87,20 @@ public class FromBiomeController extends Controller implements Initializable {
         this.biomes = FXCollections.observableArrayList(biome);
         tableView.setItems(this.biomes);
     }
+
+    /**
+     * The method lists all from the database
+     * */
     @FXML
     public void ListAllBiome(){
         List<Biome> biomeList = BiomeDAO.build().findAll();
         this.biomes = FXCollections.observableArrayList(biomeList);
         tableView.setItems(this.biomes);
     }
+
+    /**
+     * The method lists by size from the database
+     * */
     @FXML
     private void ListBiomeLazy() {
         BiomeDAO bioDAO = BiomeDAO.build();
@@ -128,6 +138,9 @@ public class FromBiomeController extends Controller implements Initializable {
         tableView.setItems(this.biomes);
     }
 
+    /**
+     * The method is responsible for updating the name of the biome
+     * */
     @FXML
     private void goToMenu() throws Exception {
         App.currentController.changeScene(Scenes.MENU,null);

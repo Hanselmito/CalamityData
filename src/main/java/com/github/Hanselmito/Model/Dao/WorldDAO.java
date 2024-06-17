@@ -6,7 +6,6 @@ import com.github.Hanselmito.Model.Entity.Enums.*;
 import com.github.Hanselmito.Model.Entity.World;
 import com.github.Hanselmito.Model.Entity.object;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -69,6 +68,36 @@ public class WorldDAO implements DAO<World>{
             pst.setInt(1,entity.getIDWorld());
             pst.executeUpdate();
         }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return entity;
+    }
+
+    /**
+     * Método para borrar un mundo y asignarle a todos sus objetos y biomas el ID de un mundo en nulo
+     * asigna un ID del mundo en nulo que sería en 20 a todos los objetos y biomas de este mundo
+     */
+    public World deleteWorld(World entity, World newId){
+        if (entity == null || entity.getIDWorld() == 0) return entity;
+        try {
+            if (entity.getObject() != null) {
+                ObjectDAO objDAO = new ObjectDAO();
+                for (object obj : entity.getObject()) {
+                    obj.setWorld(newId);
+                    objDAO.update(obj);
+                }
+            }
+
+            if (entity.getBiome() != null) {
+                BiomeDAO bioDAO = new BiomeDAO();
+                for (Biome bio : entity.getBiome()) {
+                    bio.setWorld(newId);
+                    bioDAO.update(bio);
+                }
+            }
+            delete(entity);
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return entity;
@@ -137,6 +166,9 @@ public class WorldDAO implements DAO<World>{
 
     }
 
+    /**
+     * Clase para encontrar todos los mundos con al menos un objeto o un bioma asociado
+     */
     public class WorldLazyAll extends World {
         private final static String FIND_ALL="SELECT DISTINCT w.* FROM World w LEFT JOIN Object o ON w.IDWorld = o.IDWorld LEFT JOIN Biome b ON w.IDWorld = b.IDWorld WHERE o.IDWorld IS NOT NULL OR b.IDWorld IS NOT NULL";
 
@@ -146,6 +178,11 @@ public class WorldDAO implements DAO<World>{
 
         }
 
+        /**
+         * Método para encontrar todos los mundos con al menos un objeto o un bioma asociado
+         * Obtén y establece todos los objetos asociados a este mundo
+         * Obtén y establece todos los biomas asociados a este mundo
+         */
         public List<World> findAllWorldsWithObjectAndBiome() {
             List<World> result = new ArrayList<>();
             try (PreparedStatement pst = conn.prepareStatement(FIND_ALL)) {
@@ -156,11 +193,8 @@ public class WorldDAO implements DAO<World>{
                         world.setDificulty(Dificulty.valueOf(res.getString("Dificulty")));
                         world.setSizeWorld(SizeWorld.valueOf(res.getString("SizeWorld")));
 
-                        // Obtén y establece todos los objetos asociados a este mundo
                         List<object> obj = new ObjectDAO().FindObjectForWorld(world.getIDWorld());
                         world.setObject(obj);
-
-                        // Obtén y establece todos los biomas asociados a este mundo
                         List<Biome> biome = new BiomeDAO().FindBiomeForWorld(world.getIDWorld());
                         world.setBiome(biome);
 

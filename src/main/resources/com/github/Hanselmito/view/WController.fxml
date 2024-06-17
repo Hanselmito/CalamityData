@@ -10,36 +10,37 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.WorldController">
+<AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.WorldController">
    <children>
-      <Label layoutX="253.0" layoutY="30.0" text="WORLD">
+      <Label layoutX="253.0" layoutY="30.0" text="WORLD" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="282.99999999999994" AnchorPane.topAnchor="30.0">
          <font>
             <Font name="Book Antiqua Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Pane fx:id="pane" layoutX="35.0" layoutY="62.0" prefHeight="307.0" prefWidth="526.0">
+      <Pane fx:id="pane" layoutX="35.0" layoutY="62.0" prefHeight="307.0" prefWidth="526.0" AnchorPane.bottomAnchor="30.666666666666686" AnchorPane.leftAnchor="35.66666666666663" AnchorPane.rightAnchor="69.66666666666663" AnchorPane.topAnchor="62.0">
          <children>
-            <Label layoutX="73.0" layoutY="39.0" text="IDWorld" />
+            <Label layoutX="73.0" layoutY="26.0" text="IDWorld" />
             <Label layoutX="73.0" layoutY="100.0" prefHeight="25.0" prefWidth="53.0" text="Dificulty" />
             <Label layoutX="269.0" layoutY="99.0" prefHeight="25.0" prefWidth="56.0" text="SizeWorld" />
-            <TextField fx:id="textFieldIDWorld" layoutX="73.0" layoutY="67.0" prefHeight="25.0" prefWidth="393.0" />
-            <Button layoutX="403.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#handleInsertButtonAction" text="Insertar" />
-            <Button layoutX="397.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#handleUpdateButtonAction" text="Actualizar" />
+            <TextField fx:id="textFieldIDWorld" layoutX="73.0" layoutY="54.0" prefHeight="25.0" prefWidth="393.0" promptText="ID que quieras añadir o actualizar" />
+            <Button layoutX="403.0" layoutY="199.0" mnemonicParsing="false" onMouseClicked="#handleInsertButtonAction" text="Insertar" />
+            <Button layoutX="397.0" layoutY="237.0" mnemonicParsing="false" onMouseClicked="#handleUpdateButtonAction" text="Actualizar" />
             <CheckBox fx:id="Pre_Hardmode" layoutX="73.0" layoutY="135.0" mnemonicParsing="false" text="Pre_Hardmode" />
             <CheckBox fx:id="hardmode" layoutX="73.0" layoutY="161.0" mnemonicParsing="false" text="hardmode" />
             <CheckBox fx:id="Post_MoonLord" layoutX="73.0" layoutY="190.0" mnemonicParsing="false" text="Post_MoonLord" />
             <CheckBox fx:id="Big" layoutX="269.0" layoutY="135.0" mnemonicParsing="false" text="Big" />
             <CheckBox fx:id="Medium" layoutX="269.0" layoutY="162.0" mnemonicParsing="false" text="Medium" />
             <CheckBox fx:id="Small" layoutX="269.0" layoutY="191.0" mnemonicParsing="false" text="Small" />
-            <Button layoutX="405.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#handleDeleteButtonAction" text="Delete" />
+            <Button layoutX="335.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#handleDeleteButtonAction" text="Delete" />
+            <Button layoutX="397.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#handleDeleteWorldButtonAction" text="Delete Word" />
          </children>
       </Pane>
-      <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" />
-      <TableView fx:id="tableView" layoutX="517.0" layoutY="43.0" prefHeight="345.0" prefWidth="87.0">
+      <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <TableView fx:id="tableView" layoutX="517.0" layoutY="43.0" prefHeight="345.0" prefWidth="87.0" AnchorPane.rightAnchor="26.66666666666667">
         <columns>
           <TableColumn fx:id="ColumnIDWorld" prefWidth="85.99995930989583" text="IDWorld" />
         </columns>
       </TableView>
-      <Label layoutX="508.0" layoutY="18.0" text="Lista de los mundos" />
+      <Label layoutX="508.0" layoutY="18.0" text="Lista de los mundos" AnchorPane.rightAnchor="17.66666666666667" AnchorPane.topAnchor="17.999999999999982" />
    </children>
 </AnchorPane>

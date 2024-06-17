@@ -11,19 +11,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.ObjectController">
+<AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Hanselmito.view.ObjectController">
    <children>
-      <Label layoutX="252.0" layoutY="14.0" text="OBJECT">
+      <Label layoutX="252.0" layoutY="14.0" text="OBJECT" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="365.6666666666667" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="Book Antiqua Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Pane fx:id="pane" layoutX="37.0" layoutY="53.0" prefHeight="339.0" prefWidth="526.0">
+      <Pane fx:id="pane" layoutX="37.0" layoutY="53.0" prefHeight="339.0" prefWidth="526.0" AnchorPane.bottomAnchor="7.333333333333371" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="145.66666666666663" AnchorPane.topAnchor="53.0">
          <children>
             <Label layoutX="73.0" layoutY="14.0" text="IDObject" />
             <Label layoutX="14.0" layoutY="150.0" prefHeight="25.0" prefWidth="65.0" text="TipeObject" />
             <Label layoutX="123.0" layoutY="150.0" prefHeight="25.0" prefWidth="56.0" text="TipeClass" />
-            <TextField fx:id="textFieldIDObject" layoutX="123.0" layoutY="10.0" prefHeight="25.0" prefWidth="393.0" />
+            <TextField fx:id="textFieldIDObject" layoutX="123.0" layoutY="10.0" prefHeight="25.0" prefWidth="393.0" promptText="ID que quieras añadir, actualizar o borrar" />
             <Button layoutX="207.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleInsertButtonAction" text="Insertar" />
             <Button layoutX="286.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleUpdateButtonAction" text="Actualizar" />
             <CheckBox fx:id="Armor" layoutX="14.0" layoutY="185.0" mnemonicParsing="false" text="Armor" />
@@ -33,23 +33,23 @@
             <CheckBox fx:id="Ranger" layoutX="123.0" layoutY="213.0" mnemonicParsing="false" text="Ranger" />
             <CheckBox fx:id="Wizard" layoutX="123.0" layoutY="242.0" mnemonicParsing="false" text="Wizard" />
             <Label layoutX="73.0" layoutY="45.0" text="IDWorld" />
-            <TextField fx:id="textFieldIDWorld" layoutX="123.0" layoutY="41.0" prefHeight="25.0" prefWidth="393.0" />
+            <TextField fx:id="textFieldIDWorld" layoutX="123.0" layoutY="41.0" prefHeight="25.0" prefWidth="393.0" promptText="IDWorld que quieras añadir o actualizar" />
             <Label layoutX="53.0" layoutY="77.0" text="NameObject" />
-            <TextField fx:id="textFieldName" layoutX="123.0" layoutY="73.0" prefHeight="25.0" prefWidth="393.0" />
+            <TextField fx:id="textFieldName" layoutX="123.0" layoutY="73.0" prefHeight="25.0" prefWidth="393.0" promptText="Nombre del objeto a añadir" />
             <CheckBox fx:id="Thrower" layoutX="121.0" layoutY="292.0" mnemonicParsing="false" text="Thrower" />
             <Label layoutX="139.0" layoutY="113.0" text="Effect" />
-            <TextArea fx:id="textEffect" layoutX="193.0" layoutY="103.0" prefHeight="191.0" prefWidth="305.0" />
+            <TextArea fx:id="textEffect" layoutX="193.0" layoutY="103.0" prefHeight="191.0" prefWidth="305.0" promptText="efecto del objeto" />
             <CheckBox fx:id="Summoner" layoutX="112.0" layoutY="269.0" mnemonicParsing="false" text="Summoner" />
             <Button layoutX="371.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#handleDeleteButtonAction" text="Delete" />
          </children>
       </Pane>
-      <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" />
-      <TableView fx:id="tableView" layoutX="563.0" layoutY="53.0" prefHeight="321.0" prefWidth="139.0">
+      <Button fx:id="Menu" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMenu" text="Menu" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <TableView fx:id="tableView" layoutX="563.0" layoutY="53.0" prefHeight="321.0" prefWidth="139.0" AnchorPane.rightAnchor="6.666666666666657">
         <columns>
           <TableColumn fx:id="ColumnIDObject" prefWidth="70.0" text="IDObject" />
           <TableColumn fx:id="ColumnIDWorld" prefWidth="80.66668701171875" text="IDWorld" />
         </columns>
       </TableView>
-      <Label layoutX="591.0" layoutY="21.0" text="Lista de objetos" />
+      <Label layoutX="591.0" layoutY="21.0" text="Lista de objetos" AnchorPane.rightAnchor="34.66666666666667" AnchorPane.topAnchor="21.0" />
    </children>
 </AnchorPane>

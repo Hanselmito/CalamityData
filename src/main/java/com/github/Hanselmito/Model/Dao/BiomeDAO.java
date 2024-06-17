@@ -4,11 +4,8 @@ import com.github.Hanselmito.Model.Conection.ConnectionMariaDB;
 import com.github.Hanselmito.Model.Entity.Biome;
 import com.github.Hanselmito.Model.Entity.Enemys;
 import com.github.Hanselmito.Model.Entity.Enums.Dificulty;
-import com.github.Hanselmito.Model.Entity.Enums.SizeWorld;
-import com.github.Hanselmito.Model.Entity.Enums.TipeEnemies;
 import com.github.Hanselmito.Model.Entity.Enums.ZoneGenerate;
 import com.github.Hanselmito.Model.Entity.World;
-import com.github.Hanselmito.Model.Entity.object;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -17,8 +14,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.github.Hanselmito.Model.Dao.WorldDAO.build;
 
 public class BiomeDAO implements DAO<Biome>{
     private final static String INSERT="INSERT INTO Biome (IDBiome,IDWorld,NameBiome,ZoneGenerate,GenerationDificulty) VALUES (?,?,?,?,?)";
@@ -177,6 +172,10 @@ public class BiomeDAO implements DAO<Biome>{
         return new BiomeDAO();
     }
 
+    /**
+     * Clase BiomeLazyAll
+     * Clase que extiende de Biome y que implementa un método para encontrar todos los biomas con al menos un enemigo asociado
+     */
     public class BiomeLazyAll extends Biome {
         private final static String FIND_ALL="SELECT DISTINCT b.* FROM Biome b LEFT JOIN Enemys e ON b.IDBiome = e.IDBiome WHERE e.IDBiome IS NOT NULL";
 
@@ -185,6 +184,7 @@ public class BiomeDAO implements DAO<Biome>{
             super(IDBiome, world, nameBiome, zoneGenerate, generationDificulty, enemys);
         }
 
+        // Método para encontrar todos los biomas con al menos un enemigo asociado
         public List<Biome> findAllBiomesWithEnemys() {
             List<Biome> result = new ArrayList<>();
             try (PreparedStatement pst = conn.prepareStatement(FIND_ALL)) {

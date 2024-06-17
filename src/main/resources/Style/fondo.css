@@ -30,3 +30,9 @@
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
 }
+.MenuAdmin{
+    -fx-background-image: url(fondo4.png);
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}

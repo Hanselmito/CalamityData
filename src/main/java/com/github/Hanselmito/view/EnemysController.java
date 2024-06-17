@@ -321,6 +321,10 @@ public class EnemysController extends Controller implements Initializable {
         alert.setContentText(message);
         alert.show();
     }
+
+    /**
+     * The goToMenu() method is responsible for changing the scene to the WIKICONTROLLER scene.
+     * */
     @FXML
     private void goToMenu() throws Exception {
         App.currentController.changeScene(Scenes.WIKICONTROLLER,null);

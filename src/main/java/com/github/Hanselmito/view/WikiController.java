@@ -41,7 +41,6 @@ public class WikiController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     /**
@@ -59,22 +58,37 @@ public class WikiController extends Controller implements Initializable {
         }
     }
 
+    /**
+     * El método goToMenu() se encarga de cambiar la escena a la del menú principal.
+     * */
     @FXML
     private void goToMenu() throws Exception {
         App.currentController.changeScene(Scenes.MENU,null);
     }
+    /**
+     * El método goToWorldController() se encarga de cambiar la escena a la del controlador de mundos.
+     * */
     @FXML
     private void goToWorldController() throws Exception {
         App.currentController.changeScene(Scenes.WCONTROLLER,null);
     }
+    /**
+     * El método goToObjectController() se encarga de cambiar la escena a la del controlador de mundos.
+     * */
     @FXML
     private void goToObjectController() throws Exception {
         App.currentController.changeScene(Scenes.OCONTROLLER,null);
     }
+    /**
+     * El método goToBiomeController() se encarga de cambiar la escena a la del controlador de mundos.
+     * */
     @FXML
     private void goToBiomeController() throws Exception {
         App.currentController.changeScene(Scenes.BCONTROLLER,null);
     }
+    /**
+     * El método goToEnemysController() se encarga de cambiar la escena a la del controlador de mundos.
+     * */
     @FXML
     private void goToEnemysController() throws Exception {
         App.currentController.changeScene(Scenes.ECONTROLLER,null);
